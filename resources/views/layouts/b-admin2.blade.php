@@ -13,8 +13,7 @@
 
   <!-- Custom fonts for this template-->
   
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+  
   <!-- Custom styles for this template-->
   <link rel="stylesheet" href="{{asset('fonts/fontawesome-2/all.min.css')}}">
   <link href="{{asset('css/b-admin2.css')}}" rel="stylesheet">
@@ -42,7 +41,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/admin">
           <i class="fa fa-fw fa-tachometer"></i>
           <span>Dashboard</span></a>
       </li>
@@ -64,11 +63,11 @@
         <div id="collapse1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Tarif:</h6>
-            <a class="collapse-item" href="buttons.html">Analisis Kimia Tanah Rutin</a>
-            <a class="collapse-item" href="cards.html">Pupuk Organik/Kompos/Cair</a>
-            <a class="collapse-item" href="buttons.html">Pupuk Kimia(Anorganik)</a>
-            <a class="collapse-item" href="buttons.html">Tanaman</a>
-            <a class="collapse-item" href="buttons.html">Pengujian Air</a>
+            <a class="collapse-item" href="/tarifanalisiskimia">Analisis Kimia Tanah Rutin</a>
+            <a class="collapse-item" href="/tarifpupukorganik">Pupuk Organik/Kompos/Cair</a>
+            <a class="collapse-item" href="/tarifpupukkimia">Pupuk Kimia(Anorganik)</a>
+            <a class="collapse-item" href="/tariftanaman">Tanaman</a>
+            <a class="collapse-item" href="/tarifpengujianair">Pengujian Air</a>
 
           </div>
         </div>

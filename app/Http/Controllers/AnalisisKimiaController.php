@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\AnalisisKimiaTanah;
 
-class TanahController extends Controller
+class AnalisisKimiaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class TanahController extends Controller
      */
     public function index()
     {
-        //
+        $data = AnalisisKimiaTanah::all();
+        return view ('admin.tarif_lab.analisis_kimia.index', compact('data'));
     }
 
     /**
@@ -34,7 +36,11 @@ class TanahController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        AnalisisKimiaTanah::create($input);
+
+        return redirect('tarifanalisiskimia')->with('action','Data berhasil di tambah');
     }
 
     /**
@@ -56,7 +62,8 @@ class TanahController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ed = AnalisisKimiaTanah::find($id);
+        return view ('admin.tarif_lab.analisis_kimia.edit',compact('ed'));
     }
 
     /**
@@ -68,7 +75,11 @@ class TanahController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ed = AnalisisKimiaTanah::findOrFail($id);
+        $input = $request->all();
+        
+        $ed->update($input);
+        return redirect('tarifanalisiskimia')->with('action','Data berhasil di edit');
     }
 
     /**
@@ -79,6 +90,8 @@ class TanahController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ed = AnalisisKimiaTanah::find($id);
+        $ed->delete($ed);
+        return redirect('tarifanalisiskimia')->with('action','Data berhasil di hapus');
     }
 }
