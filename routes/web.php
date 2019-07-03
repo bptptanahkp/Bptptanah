@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/login','AuthController@login');
+Route::post('/postlogin','AuthController@postlogin');
 
 Route::resource('/admin', 'AdminController');
 
 Route::resource('/tarifanalisiskimia', 'AnalisisKimiaController');
+Route::get('/tarifanalisiskimia/search', 'AnalisisKimiaController@search');

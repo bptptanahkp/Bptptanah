@@ -6,16 +6,16 @@
 
 @section('content')
 <div class="container-fluid">
-
+    <div class="card shadow mb-4" style="padding:25px">
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800 text-center">Tarif Lab. TANAH 2018</h1>
         <p class="mb-4">Badan Pengkajian Teknologi Pertanian</P>
-@if(session('action'))
+        @if(session('action'))
 
-<div class="alert alert-info" role="alert">{{session('action')}}</div>
+        <div class="alert alert-info" role="alert">{{session('action')}}</div>
 
-@endif
-
+        @endif
+    </div>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -38,17 +38,6 @@
                     <th>Action</th>
                 </tr>
                 </thead>
-                <!-- <tfoot>
-                <tr>
-                    <th>No</th>
-                    <th>Jenis Uji</th>
-                    <th>Metode</th>
-                    <th>Tarif</th>
-                    <th>Created</th>
-                    <th>Updated</th>
-                    <th>Action</th>
-                </tr>
-                </tfoot> -->
                 <tbody>
                 @if($data)
 
