@@ -15,10 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login','AuthController@login');
+Route::get('/login','AuthController@login')->name('login');
 Route::post('/postlogin','AuthController@postlogin');
+Route::get('/logout','AuthController@logout');
 
-Route::resource('/admin', 'AdminController');
 
-Route::resource('/tarifanalisiskimia', 'AnalisisKimiaController');
-Route::get('/tarifanalisiskimia/search', 'AnalisisKimiaController@search');
+Route::group(['middleware' => 'auth'],function(){
+    Route::resource('/admin', 'AdminController');
+    Route::resource('/tarifanalisiskimia', 'AnalisisKimiaController');
+    Route::get('/tarifanalisiskimia/search', 'AnalisisKimiaController@search');
+
+});
