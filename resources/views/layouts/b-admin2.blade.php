@@ -15,7 +15,7 @@
   
   
   <!-- Custom styles for this template-->
-  <link rel="stylesheet" href="{{asset('fonts/fontawesome-2/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('fonts/fontawesome-2/css/all.min.css')}}">
   <link href="{{asset('css/b-admin2.css')}}" rel="stylesheet">
   @yield('link')
   

@@ -3,8 +3,8 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center shadow" href="index.html">
-        
-        <div class="sidebar-brand-text mx-3 shadow">BPTP</div>
+      <img src="{{asset('photo/logo.jpeg')}}" class="rounded-circle" height="250%">
+        <div class="sidebar-brand-text mx-3">BptpJatim</div>
       </a>
 
       <!-- Divider -->
