@@ -15,7 +15,7 @@
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pesan">Daftar & Pesan Pengujian tanah</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
           <li class="menu-has-children"><a>Admin</a>

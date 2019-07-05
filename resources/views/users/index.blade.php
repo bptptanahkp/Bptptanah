@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="{{asset('css/halamanuser.css')}}">
   <link rel="stylesheet" href="{{asset('fonts/fontawesome-2/css/all.min.css')}}">
 
+  <!-- Style Pesan -->
+  <link rel="stylesheet" href="{{asset('lib/pesan/pesan_1.css')}}">
+
   <!-- =======================================================
     Theme Name: BizPage
     Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
@@ -37,84 +40,8 @@
   <!--==========================
     Intro Section
   ============================-->
-  <section id="intro">
-    <div class="intro-container">
-      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-
-        <ol class="carousel-indicators"></ol>
-
-        <div class="carousel-inner" role="listbox">
-
-          <div class="carousel-item active">
-            <div class="carousel-background"><img src="img/intro-carousel/1.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>Bptp Jawa Timur</h2>
-                <p>Balai Pengkajian Teknologi Pertanian</p>
-                <a href="FormPesan/index.html" class="btn-get-started scrollto">Pesan Pengujian</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="carousel-background"><img src="img/intro-carousel/2.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>At vero eos et accusamus</h2>
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Pesan Pengujian</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="carousel-background"><img src="img/intro-carousel/3.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>Temporibus autem quibusdam</h2>
-                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Pesan Pengujian</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="carousel-background"><img src="img/intro-carousel/4.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>Nam libero tempore</h2>
-                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Pesan Pengujian</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="carousel-background"><img src="img/intro-carousel/5.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>Magnam aliquam quaerat</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Pesan Pengujian</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-
-        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-
-      </div>
-    </div>
-  </section><!-- #intro -->
+  @include('users.includes.intro_carousel')
+  <!-- #intro -->
 
   <main id="main">
 
@@ -348,6 +275,8 @@
       </div>
     </section><!-- #facts -->
 
+    @include('users.pesan.pesan')
+
     <!--==========================
       Portfolio Section
     ============================-->
@@ -371,7 +300,7 @@
 
         <div class="row portfolio-container">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
                 <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
@@ -386,7 +315,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
                 <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
@@ -510,6 +439,7 @@
 
       </div>
     </section><!-- #portfolio -->
+
 
     <!--==========================
       Clients Section
@@ -778,6 +708,10 @@
 
   <!-- JavaScript Libraries -->
   <script src="{{asset('js/halamanuser.js')}}"></script>
+
+  <!-- Script Pesan -->
+  <script src="{{asset('lib/pesan/pesan_1.js')}}"></script>
+
 
 </body>
 </html>

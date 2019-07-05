@@ -15,101 +15,102 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //Meta tags -->
 <!-- font-awesome-icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="{{('css/bootstrap.css')}}" rel="stylesheet"> 
 <!-- //font-awesome-icons -->
 <!-- Stylesheet -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="{{asset('lib/pesan/style.css')}}" rel='stylesheet' type='text/css' />
 <!-- //Stylesheet -->
 <!--fonts--> 
-<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
 <!--//fonts--> 
 </head>
 <body>
 <!--background-->
 <h1> BPTP Jatim </h1>
     <div class="bg-agile">
-	<div class="book-appointment">
-	<h2>Pesan Pengujian</h2>
-						<div class="book-form agileits-login">
-							<form action="#" method="post">
-								<div class="agileits_reservation_grid">
-								<div class="phone_email">
-									<div class="form-text">
-										<i class="fa fa-user" aria-hidden="true"></i>
-										<input type="text" name="Name" placeholder="First name" required="">
-									</div> 
-								</div>
-								<div class="phone_email phone_email1">
-									<div class="form-text">
-										<i class="fa fa-user" aria-hidden="true"></i>
-										<input type="text" name="Name" placeholder="Last name" required="">
-									</div>
-								</div>
-								
-								<div class="phone_email">
-									<div class="form-text">
-										<i class="fa fa-phone" aria-hidden="true"></i>
-										<input type="text" name="Phone no" placeholder="Phone number" required="">
-									</div> 
-								</div> 
-								<div class="phone_email phone_email1">
-									<div class="form-text">
-										<i class="fa fa-envelope-o" aria-hidden="true"></i>
-										<input type="email" name="email" placeholder="Email" required="">
-									</div>
-								</div>
-									
-								
-									<div class="span1_of_1 phone_email1">
-										<div class="book_date"> 
-											<i class="fa fa-calendar" aria-hidden="true"></i>
-												<input  id="datepicker" name="Text" type="text" value="" placeholder="Arrival Date"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+        <div class="book-appointment">
+            <h2>Pesan Pengujian</h2>
+            <div class="row justify-content-center">
+                    <div class="book-form agileits-login col-md-5">
+                        <form action="#" method="post">
+                            <div class="agileits_reservation_grid">
+                            <div class="phone_email">
+                                <div class="form-text">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <input type="text" name="Name" placeholder="First name" required="">
+                                </div> 
+                            </div>
+                            <div class="phone_email phone_email1">
+                                <div class="form-text">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <input type="text" name="Name" placeholder="Last name" required="">
+                                </div>
+                            </div>
+                            
+                            <div class="phone_email">
+                                <div class="form-text">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <input type="text" name="Phone no" placeholder="Phone number" required="">
+                                </div> 
+                            </div> 
+                            <div class="phone_email phone_email1">
+                                <div class="form-text">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <input type="email" name="email" placeholder="Email" required="">
+                                </div>
+                            </div>
+                                
+                            
+                                <div class="span1_of_1 phone_email1">
+                                    <div class="book_date"> 
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            <input  id="datepicker" name="Text" type="text" value="" placeholder="Arrival Date"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
 
-										</div>					
-									</div>
-									<div class="span1_of_1 phone_email">
-										<div class="book_date"> 
-											<i class="fa fa-calendar" aria-hidden="true"></i>
-												<input  id="datepicker1" name="Text" type="text" value="" placeholder="Departure Date"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                                    </div>					
+                                </div>
+                                <div class="span1_of_1 phone_email">
+                                    <div class="book_date"> 
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            <input  id="datepicker1" name="Text" type="text" value="" placeholder="Departure Date"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
 
-										</div>					
-									</div>
-									<div class="span1_of_1">
-										<!-- start_section_room -->
-										<div class="section_room">
-											<i class="fa fa-users" aria-hidden="true"></i>
-											<select id="country" onchange="change_country(this.value)" class="frm-field required">
-												<option value="">No.of guests</option>
-												<option value="">1</option>
-												<option value="">2 </option>         
-												<option value="">3</option>
-												<option value="">4 </option>
-												<option value="">5 </option>
-												<option value="">6 </option>
-											</select>
-										</div>	
-									</div>
-									<div class="span1_of_1 phone_email1">
-										<!-- start_section_room -->
-										<div class="section_room">
-											<i class="fa fa-h-square" aria-hidden="true"></i>
-											<select id="country1" onchange="change_country(this.value)" class="frm-field required">
-												<option value="">Room Type</option>
-												<option value="">Single Room</option>
-												<option value="">Double Room </option>         
-												<option value="">Suit Room</option>
-							
-											</select>
-										</div>	
-									</div>
-									<div class="clear"></div>
-								</div> 
-								<input type="submit" value="Book Now">
-								<div class="clear"></div>
-							</form>
-						</div>
-
+                                    </div>					
+                                </div>
+                                <div class="span1_of_1">
+                                    <!-- start_section_room -->
+                                    <div class="section_room">
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                        <select id="country" onchange="change_country(this.value)" class="frm-field required">
+                                            <option value="">No.of guests</option>
+                                            <option value="">1</option>
+                                            <option value="">2 </option>         
+                                            <option value="">3</option>
+                                            <option value="">4 </option>
+                                            <option value="">5 </option>
+                                            <option value="">6 </option>
+                                        </select>
+                                    </div>	
+                                </div>
+                                <div class="span1_of_1 phone_email1">
+                                    <!-- start_section_room -->
+                                    <div class="section_room">
+                                        <i class="fa fa-h-square" aria-hidden="true"></i>
+                                        <select id="country1" onchange="change_country(this.value)" class="frm-field required">
+                                            <option value="">Room Type</option>
+                                            <option value="">Single Room</option>
+                                            <option value="">Double Room </option>         
+                                            <option value="">Suit Room</option>
+                        
+                                        </select>
+                                    </div>	
+                                </div>
+                                <div class="clear"></div>
+                            </div> 
+                            <input type="submit" value="Book Now">
+                            <div class="clear"></div>
+                        </form>
+                    </div>
+                    <div></div>
+            
+                </div>
 		</div>
    </div>
   <!--copyright-->
@@ -117,7 +118,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<p>&copy; 2018 Resort Booking Form . All Rights Reserved  | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 	</div>
 <!--//copyright-->
-		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
 		<!-- Calendar -->
 				<link rel="stylesheet" href="css/jquery-ui.css" />
 				<script src="js/jquery-ui.js"></script>

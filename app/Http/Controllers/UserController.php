@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\AnalisisKimiaTanah;
 
 class UserController extends Controller
 {
@@ -13,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view ('users.index');
+        $ankimtan = AnalisisKimiaTanah::all();
+        return view ('users.index',compact('ankimtan'));
     }
 
     /**
@@ -23,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
