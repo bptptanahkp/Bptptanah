@@ -30,7 +30,7 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Peraturan</th>
+                    <th>Peraturan Pelanggan</th>
                     <th>Created</th>
                     <th>Updated</th>
                     <th>Action</th>
