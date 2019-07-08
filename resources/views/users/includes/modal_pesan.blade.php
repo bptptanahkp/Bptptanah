@@ -1,3 +1,14 @@
+<div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Pesan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+
 <!--==========================
       Daftar & Pesan
     ============================-->
@@ -5,7 +16,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">Daftar Pesan</h3>
+          <h3 class="section-title">Pesan</h3>
         </header>
 
         <div class="row">
@@ -17,13 +28,13 @@
               <li data-filter=".filter-pkb">Pupuk Kimia (Anorganik)</li>
               <li data-filter=".filter-tanaman">Tanaman</li>
               <li data-filter=".filter-air">Pengujian Air</li>
+
+              {!! Form::open(['method'=>'POST', 'action'=> 'UserController@store','files'=>true]) !!}
             </ul>
           </div>
-          
           <div id="daftar" class="col-sm-12 text-right">
-            <a class="btn btn-outline-success btn-block text-success" data-toggle="modal" data-target="#modalCreate">Pesan</a>
+          {!! Form::submit('Pesan', ['class'=>'btn btn-outline-success btn-block']) !!}
           </div>
-          @include('users.includes.modal_pesan')
         </div>
 
         <div class="row pesan-container">
@@ -42,18 +53,22 @@
                                 <th>Jenis Uji</th>
                                 <th>Metode</th>
                                 <th>Tarif</th>
+                                <th>Pilihan</th>
                             </tr>
                         </thead>
                     <tbody>
                     @if($ankimtan)
 
-                        @foreach($ankimtan as $ankimtans)
+                        @foreach($ankimtan as $ankimtans => $value)
 
                         <tr>
-                            <td>{{$ankimtans->id}}</td>
-                            <td class="text-left">{{$ankimtans->jenis_uji}}</td>
-                            <td class="text-left">{{$ankimtans->metode}}</td>
-                            <td>Rp.{{number_format($ankimtans->tarif)}}</td>
+                            <td>{{$value->id}}</td>
+                            <td class="text-left">{{ Form::label('jenis_uji',$value->jenis_uji) }}</td>
+                            <td class="text-left">{{ Form::label('metode',$value->metode) }}</td>
+                            <td>Rp. {{ Form::label('tarif',number_format($value->tarif))}}</td>
+                            <td>
+                                {{Form::checkbox('nilai[]',$value->id)}}
+                            </td>
                         </tr>
 
                         @endforeach
@@ -90,7 +105,7 @@
                             <td>{{$ankimtans->id}}</td>
                             <td class="text-left">{{$ankimtans->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtans->metode}}</td>
-                            <td>Rp. {{ number_format($ankimtans->tarif) }},-</td>
+                            <td class="text-left">Rp. {{ number_format($ankimtans->tarif) }},-</td>
                         </tr>
 
                         @endforeach
@@ -127,7 +142,7 @@
                             <td>{{$ankimtans->id}}</td>
                             <td class="text-left">{{$ankimtans->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtans->metode}}</td>
-                            <td>Rp. {{ number_format($ankimtans->tarif) }},-</td>
+                            <td class="text-left">Rp. {{ number_format($ankimtans->tarif) }},-</td>
                         </tr>
 
                         @endforeach
@@ -164,7 +179,7 @@
                             <td>{{$ankimtans->id}}</td>
                             <td class="text-left">{{$ankimtans->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtans->metode}}</td>
-                            <td>Rp. {{ number_format($ankimtans->tarif) }},-</td>
+                            <td class="text-left">Rp. {{ number_format($ankimtans->tarif) }},-</td>
                         </tr>
 
                         @endforeach
@@ -201,7 +216,7 @@
                             <td>{{$ankimtans->id}}</td>
                             <td class="text-left">{{$ankimtans->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtans->metode}}</td>
-                            <td>Rp. {{ number_format($ankimtans->tarif) }},-</td>
+                            <td class="text-left">Rp. {{ number_format($ankimtans->tarif) }},-</td>
                         </tr>
 
                         @endforeach
@@ -212,38 +227,25 @@
                 </div>
             </div>
             
-          <div class="col-lg-4 col-md-6 pesan-item filter-f wow fadeInUp">
-            <div class="pesan-wrap">
-              <figure>
-                <img src="{{('lib/pesan/pesan/carousel1.jpg')}}" class="img-fluid" alt="">
-                <a href="{{('lib/pesan/pesan/carousel1.jpg')}}" data-lightbox="pesan" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="pesan-info">
-                <h4><a href="#">App 1</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 pesan-item filter-a wow fadeInUp" data-wow-delay="0.1s">
-            <div class="pesan-wrap">
-              <figure>
-                  <img src="{{asset('photo/carousel1.jpg')}}" class="img-fluid" alt="">
-                  <a href="{{asset('photo/carousel1.jpg')}}" class="link-preview" data-lightbox="pesan" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="pesan-info">
-                <h4><a href="#">Web 3</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
 
         </div>
-
-        
       </div>
-    </section><!-- #pesan -->
+    </section>
+    
+    <!-- #pesan -->
+
+      
+        <div class="modal-footer">
+
+          {!! Form::submit('Pesan', ['class'=>'btn btn-outline-success btn-block']) !!}
+
+          {!! Form::close() !!}
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+

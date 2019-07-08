@@ -32,7 +32,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="{{asset('photo/carousel2.jpg')}}" alt=""></div>
+            <div class="carousel-background"><img src="{{asset('photo/carousel3.jpg')}}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Temporibus autem quibusdam</h2>
@@ -54,7 +54,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="{{asset('photo/carousel2.jpg')}}" alt=""></div>
+            <div class="carousel-background"><img src="{{asset('photo/carousel3.jpg')}}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Magnam aliquam quaerat</h2>
