@@ -1,15 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\AnalisisKimiaTanah;
-use App\PupukOrganik_Kompos_Cair;
 use App\Pupukkimia;
-use App\Tanaman;
-use App\PengujianAir;
-
-class UserController extends Controller
+class PupukkimiaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,22 +11,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $ankimtan = AnalisisKimiaTanah::all();
-        $pukorkom = PupukOrganik_Kompos_Cair::all();
-        $pukkimia = Pupukkimia::all();
-        $tanaman = Tanaman::all()->except([3,4,5,6]);
-        $pengair = PengujianAir::all();
-
-
-        $sub1 = Tanaman::find(3);
-        $sub1_1 = Tanaman::find(4);
-        $sub1_2 = Tanaman::find(5);
-        $sub1_3 = Tanaman::find(6);
-
-        return view ('users.index',compact('ankimtan','pukorkom',
-            'pukkimia','tanaman','pengair','sub1','sub1_1','sub1_2','sub1_3'));
+        $data = Pupukkimia::all();
+        return view ('admin.tarif_lab.pupuk_kimia.index', compact('data'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -41,9 +21,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        
+        //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -52,9 +31,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        Pupukkimia::create($input);
+        return redirect('tarifpupukkimia')->with('action','Data berhasil di tambah');
     }
-
     /**
      * Display the specified resource.
      *
@@ -65,7 +45,6 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -74,9 +53,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ed = Pupukkimia::find($id);
+        return view ('admin.tarif_lab.pupuk_kimia.edit',compact('ed'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -86,9 +65,12 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ed = Pupukkimia::findOrFail($id);
+        $input = $request->all();
+        
+        $ed->update($input);
+        return redirect('tarifpupukkimia')->with('action','Data berhasil di edit');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -97,6 +79,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ed = Pupukkimia::find($id);
+        $ed->delete($ed);
+        return redirect('tarifpupukkimia')->with('action','Data berhasil di hapus');
     }
 }

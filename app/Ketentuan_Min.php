@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PesanLab extends Model
+class Ketentuan_Min extends Model
 {
     //
 }

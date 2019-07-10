@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePesanLabsTable extends Migration
+class CreateTanamenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreatePesanLabsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pesan_labs', function (Blueprint $table) {
+        Schema::create('tanamen', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('jenis_uji');
+            $table->string('metode')->nullable();
+            $table->integer('tarif')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreatePesanLabsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pesan_labs');
+        Schema::dropIfExists('tanamen');
     }
 }

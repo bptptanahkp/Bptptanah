@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAnalisisKimiaTanahsTable extends Migration
+class CreatePupukOrganikKomposCairsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAnalisisKimiaTanahsTable extends Migration
      */
     public function up()
     {
-        Schema::create('analisis_kimia_tanahs', function (Blueprint $table) {
+        Schema::create('pupuk_organik__kompos__cairs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('jenis_uji');
             $table->string('metode')->nullable();
@@ -29,6 +29,6 @@ class CreateAnalisisKimiaTanahsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('analisis_kimia_tanahs');
+        Schema::dropIfExists('pupuk_organik__kompos__cairs');
     }
 }

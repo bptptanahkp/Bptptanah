@@ -3,35 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\AnalisisKimiaTanah;
-use App\PupukOrganik_Kompos_Cair;
-use App\Pupukkimia;
 use App\Tanaman;
-use App\PengujianAir;
 
-class UserController extends Controller
+class TanamanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    //
+      public function index()
     {
-        $ankimtan = AnalisisKimiaTanah::all();
-        $pukorkom = PupukOrganik_Kompos_Cair::all();
-        $pukkimia = Pupukkimia::all();
-        $tanaman = Tanaman::all()->except([3,4,5,6]);
-        $pengair = PengujianAir::all();
-
-
-        $sub1 = Tanaman::find(3);
-        $sub1_1 = Tanaman::find(4);
-        $sub1_2 = Tanaman::find(5);
-        $sub1_3 = Tanaman::find(6);
-
-        return view ('users.index',compact('ankimtan','pukorkom',
-            'pukkimia','tanaman','pengair','sub1','sub1_1','sub1_2','sub1_3'));
+        $data = Tanaman::all();
+        return view ('admin.tarif_lab.tanaman.index', compact('data'));
     }
 
     /**
@@ -41,7 +21,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -52,7 +32,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        Tanaman::create($input);
+
+        return redirect('tariftanaman')->with('action','Data berhasil di tambah');
     }
 
     /**
@@ -74,7 +58,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ed = Tanaman::find($id);
+        return view ('admin.tarif_lab.tanaman.edit',compact('ed'));
     }
 
     /**
@@ -86,7 +71,11 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ed = Tanaman::findOrFail($id);
+        $input = $request->all();
+        
+        $ed->update($input);
+        return redirect('tariftanaman')->with('action','Data berhasil di edit');
     }
 
     /**
@@ -97,6 +86,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ed = Tanaman::find($id);
+        $ed->delete($ed);
+        return redirect('tariftanaman')->with('action','Data berhasil di hapus');
     }
 }

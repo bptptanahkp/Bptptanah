@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAnalisisKimiaTanahsTable extends Migration
+class CreatePeraturanPelanggansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateAnalisisKimiaTanahsTable extends Migration
      */
     public function up()
     {
-        Schema::create('analisis_kimia_tanahs', function (Blueprint $table) {
+        Schema::create('peraturan_pelanggans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('jenis_uji');
-            $table->string('metode')->nullable();
-            $table->integer('tarif')->nullable();
+            $table->string('peraturan');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateAnalisisKimiaTanahsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('analisis_kimia_tanahs');
+        Schema::dropIfExists('peraturan_pelanggans');
     }
 }

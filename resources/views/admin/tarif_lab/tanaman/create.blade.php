@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-            <form action="/tarifanalisiskimia" method="POST" enctype="multipart/form-data">
+            <form action="/tariftanaman" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
 
                 <div class="form-group">
@@ -31,9 +31,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="tarif">Tarif<a class="text-danger">*</a></label>
+                    <label for="tarif">Tarif</label>
                     <div class="input-group">    
-                        <input name="tarif" type="text" class="form-control" placeholder="ex : 800000" required>
+                        <input name="tarif" type="text" class="form-control" placeholder="ex : 800000">
                     </div>
                 </div>
         <div class="modal-footer">

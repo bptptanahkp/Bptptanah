@@ -35,7 +35,7 @@
                         <h4><a href="#">Analisis Kimia Tanah Rutin</a></h4>
                         <p>App</p>
                     </div>
-                    <table class="table table-hover text-center">
+                    <table class="table table-hover table-responsive-sm text-center">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -59,6 +59,7 @@
                         @endforeach
 
                     @endif
+                    
                     </tbody>
                 </table>
                 </div>
@@ -72,7 +73,7 @@
                         <h4><a href="#">Pupuk Organik/Kompos/Cair</a></h4>
                         <p>App</p>
                     </div>
-                    <table class="table table-hover text-center">
+                    <table class="table table-hover table-responsive-sm text-center">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -82,15 +83,15 @@
                             </tr>
                         </thead>
                     <tbody>
-                    @if($ankimtan)
+                    @if($pukorkom)
 
-                        @foreach($ankimtan as $ankimtans)
+                        @foreach($pukorkom as $pukorkoms)
 
                         <tr>
-                            <td>{{$ankimtans->id}}</td>
-                            <td class="text-left">{{$ankimtans->jenis_uji}}</td>
-                            <td class="text-left">{{$ankimtans->metode}}</td>
-                            <td>Rp. {{ number_format($ankimtans->tarif) }},-</td>
+                            <td>{{$pukorkoms->id}}</td>
+                            <td class="text-left">{{$pukorkoms->jenis_uji}}</td>
+                            <td class="text-left">{{$pukorkoms->metode}}</td>
+                            <td>Rp. {{ number_format($pukorkoms->tarif) }},-</td>
                         </tr>
 
                         @endforeach
@@ -109,7 +110,7 @@
                         <h4><a href="#">Pupuk Kimia (Anorganik)/Batuan Mineral</a></h4>
                         <p>App</p>
                     </div>
-                    <table class="table table-hover text-center">
+                    <table class="table table-hover table-responsive-sm text-center">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -119,15 +120,15 @@
                             </tr>
                         </thead>
                     <tbody>
-                    @if($ankimtan)
+                    @if($pukkimia)
 
-                        @foreach($ankimtan as $ankimtans)
+                        @foreach($pukkimia as $pukkimias)
 
                         <tr>
-                            <td>{{$ankimtans->id}}</td>
-                            <td class="text-left">{{$ankimtans->jenis_uji}}</td>
-                            <td class="text-left">{{$ankimtans->metode}}</td>
-                            <td>Rp. {{ number_format($ankimtans->tarif) }},-</td>
+                            <td>{{$pukkimias->id}}</td>
+                            <td class="text-left">{{$pukkimias->jenis_uji}}</td>
+                            <td class="text-left">{{$pukkimias->metode}}</td>
+                            <td>Rp. {{ number_format($pukkimias->tarif) }},-</td>
                         </tr>
 
                         @endforeach
@@ -146,7 +147,7 @@
                         <h4><a href="#">Tanaman</a></h4>
                         <p>App</p>
                     </div>
-                    <table class="table table-hover text-center">
+                    <table class="table table-hover table-responsive-sm text-center">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -156,26 +157,53 @@
                             </tr>
                         </thead>
                     <tbody>
-                    @if($ankimtan)
+                    @if($tanaman)
 
-                        @foreach($ankimtan as $ankimtans)
+                        @foreach($tanaman as $tanamans)
 
                         <tr>
-                            <td>{{$ankimtans->id}}</td>
-                            <td class="text-left">{{$ankimtans->jenis_uji}}</td>
-                            <td class="text-left">{{$ankimtans->metode}}</td>
-                            <td>Rp. {{ number_format($ankimtans->tarif) }},-</td>
+                            <td>{{$tanamans->id}}</td>
+                            <td class="text-left">{{$tanamans->jenis_uji}}</td>
+                            <td class="text-left">{{$tanamans->metode}}</td>
+                            <td>Rp. {{ number_format($tanamans->tarif) }},-</td>
                         </tr>
 
                         @endforeach
 
                     @endif
+                        @if($sub1)
+                            <tr>
+                                <td>{{$sub1->id}}</td>
+                                <td class="text-left">{{$sub1->jenis_uji}}</td>
+                                <td class="text-left">{{$sub1->metode}}</td>
+                                <td></td>
+                                <tr>
+                                    <td></td>
+                                    <td class="text-left">{{$sub1_1->jenis_uji}}</td>
+                                    <td class="text-left">{{$sub1_1->metode}}</td>
+                                    <td>Rp. {{number_format($sub1_1->tarif)}},-</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="text-left">{{$sub1_2->jenis_uji}}</td>
+                                    <td class="text-left">{{$sub1_2->metode}}</td>
+                                    <td>Rp. {{number_format($sub1_2->tarif)}},-</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="text-left">{{$sub1_3->jenis_uji}}</td>
+                                    <td class="text-left">{{$sub1_3->metode}}</td>
+                                    <td>Rp. {{number_format($sub1_3->tarif)}},-</td>
+                                </tr>
+                            </tr>
+                        @endif
+ 
                     </tbody>
                 </table>
                 </div>
             </div>
 
-        <!-- Tarif Tanaman -->
+        <!-- Tarif Pengujian Air -->
 
             <div class="col-lg-12 col-md-12 pesan-item filter-air wow fadeInUp">
                 <div class="pesan-wrap">
@@ -183,7 +211,7 @@
                         <h4><a href="#">Pengujian Air</a></h4>
                         <p>App</p>
                     </div>
-                    <table class="table table-hover text-center">
+                    <table class="table table-hover table-responsive-sm text-center">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -193,15 +221,15 @@
                             </tr>
                         </thead>
                     <tbody>
-                    @if($ankimtan)
+                    @if($pengair)
 
-                        @foreach($ankimtan as $ankimtans)
+                        @foreach($pengair as $pengair)
 
                         <tr>
-                            <td>{{$ankimtans->id}}</td>
-                            <td class="text-left">{{$ankimtans->jenis_uji}}</td>
-                            <td class="text-left">{{$ankimtans->metode}}</td>
-                            <td>Rp. {{ number_format($ankimtans->tarif) }},-</td>
+                            <td>{{$pengair->id}}</td>
+                            <td class="text-left">{{$pengair->jenis_uji}}</td>
+                            <td class="text-left">{{$pengair->metode}}</td>
+                            <td>Rp. {{ number_format($pengair->tarif) }},-</td>
                         </tr>
 
                         @endforeach
@@ -212,11 +240,13 @@
                 </div>
             </div>
             
-          <div class="col-lg-4 col-md-6 pesan-item filter-f wow fadeInUp">
+
+
+<div class="col-lg-4 col-md-6 pesan-item filter-f wow fadeInUp">
             <div class="pesan-wrap">
               <figure>
-                <img src="{{('lib/pesan/pesan/carousel1.jpg')}}" class="img-fluid" alt="">
-                <a href="{{('lib/pesan/pesan/carousel1.jpg')}}" data-lightbox="pesan" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                <img src="{{asset('photo/carousel2.jpg')}}" class="img-fluid" alt="">
+                <a href="{{asset('photo/carousel2.jpg')}}" data-lightbox="pesan" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
 

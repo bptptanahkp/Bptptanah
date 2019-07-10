@@ -45,6 +45,20 @@
       </li>
       
       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#peraturan" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fa fa-fw fa-wrench"></i>
+          <span>Peraturan</span>
+        </a>
+        <div id="peraturan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Peraturan untuk pelanggan:</h6>
+            <a class="collapse-item" href="/peraturanpelanggan">Peraturan Untuk Pelangggan</a>
+            <a class="collapse-item" href="/ketentuanminimal">Ketentuan Minimal</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fa fa-fw fa-user"></i>
           <span>Components</span>

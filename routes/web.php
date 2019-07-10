@@ -25,6 +25,11 @@ Route::get('/logout','AuthController@logout');
 Route::group(['middleware' => 'auth'],function(){
     Route::resource('/admin', 'AdminController');
     Route::resource('/tarifanalisiskimia', 'AnalisisKimiaController');
-    Route::get('/tarifanalisiskimia/search', 'AnalisisKimiaController@search');
+    Route::resource('/tarifpupukkimia', 'PupukkimiaController');
+    Route::resource('/tarifpupukorganik', 'PupukOrganik_Kompos_CairController');
+    Route::resource('/tarifpengujianair', 'PengujianAirController');
+    Route::resource('/tariftanaman', 'TanamanController');
+    Route::resource('/peraturanpelanggan', 'PeraturanPelangganController');
+    Route::resource('/ketentuanminimal', 'Ketentuan_MinController');
 
 });

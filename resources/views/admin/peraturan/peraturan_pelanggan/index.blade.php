@@ -14,10 +14,9 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">ANALISIS KIMIA TANAH RUTIN</h5>
-            <a class="text-danger" target="_blank">*)per sampel</a>
+            <h5 class="m-0 font-weight-bold text-primary">Peraturan Pelanggan</h5>
             <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" data-placement="top" title="Tambahkan disini"></a>
-            @include('admin.tarif_lab.analisis_kimia.create')
+            @include('admin.peraturan.peraturan_pelanggan.create')
         </div>
         <div class="card-body">
         <div class="table-responsive">
@@ -30,9 +29,7 @@
                 <thead class="thead-light">
                 <tr>
                     <th>No</th>
-                    <th>Jenis Uji</th>
-                    <th>Metode</th>
-                    <th>Tarif</th>
+                    <th>Peraturan Pelanggan</th>
                     <th>Created</th>
                     <th>Updated</th>
                     <th>Action</th>
@@ -46,14 +43,12 @@
                     <tr>
                         
                         <td>{{$datas->id}}</td>
-                        <td class="text-left">{{$datas->jenis_uji}}</td>
-                        <td class="text-left">{{$datas->metode}}</td>
-                        <td class="text-left">Rp. {{ number_format($datas->tarif) }},-</td>
+                        <td  class="text-left">{{$datas->peraturan}}</td>
                         <td>{{$datas->created_at->diffForHumans()}}</td>
                         <td>{{$datas->updated_at}}</td>
                         <td>
-                        <a data-toggle="tooltip" title="edit disini" href="/tarifanalisiskimia/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
-                        {!! Form::open(['method' => 'DELETE','route' => ['tarifanalisiskimia.destroy', $datas->id],'style'=>'display:inline']) !!}
+                        <a data-toggle="tooltip" title="edit disini" href="/peraturanpelanggan/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
+                        {!! Form::open(['method' => 'DELETE','route' => ['peraturanpelanggan.destroy', $datas->id],'style'=>'display:inline']) !!}
 
                         <button data-toggle="tooltip" title="Hapus disini" type="submit" style="display: inline;" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
 
