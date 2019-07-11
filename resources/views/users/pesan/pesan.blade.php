@@ -59,7 +59,115 @@
                         @endforeach
 
                     @endif
+
+                    @if($ankimtansub1)
+                        <tr>
+                        <td>{{$ankimtansub1->id}}</td>
+                        <td class="text-left">{{$ankimtansub1->jenis_uji}}</td>
+                        <td class="text-left">{{$ankimtansub1->metode}}</td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub1_1->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub1_1->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub1_1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub1_2->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub1_2->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub1_2->tarif)}},-</td>
+                        </tr>
+
+                    @endif
                     
+                    @if($ankimtansub2)
+                        <tr>
+                        <td>7</td>
+                        <td class="text-left">{{$ankimtansub2->jenis_uji}}</td>
+                        <td class="text-left">{{$ankimtansub2->metode}}</td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub2_1->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub2_1->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub2_1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub2_2->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub2_2->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub2_2->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub2_3->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub2_3->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub2_3->tarif)}},-</td>
+                        </tr>
+
+                    @endif
+
+                    @if($ankimtansub3)
+                        <tr>
+                        <td>8</td>
+                        <td class="text-left">{{$ankimtansub3->jenis_uji}}</td>
+                        <td class="text-left">{{$ankimtansub3->metode}}</td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub3_1->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub3_1->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub3_1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub3_2->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub3_2->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub3_2->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub3_3->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub3_3->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub3_3->tarif)}},-</td>
+                        </tr>
+
+                    @endif
+
+                    @if($ankimtansub4)
+                        <tr>
+                        <td>9</td>
+                        <td class="text-left">{{$ankimtansub4->jenis_uji}}</td>
+                        <td class="text-left">{{$ankimtansub4->metode}}</td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub4_1->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub4_1->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub4_1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub4_2->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub4_2->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub4_2->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$ankimtansub4_3->jenis_uji}}</td>
+                            <td class="text-left">{{$ankimtansub4_3->metode}}</td>
+                            <td>Rp. {{number_format($ankimtansub4_3->tarif)}},-</td>
+                        </tr>
+
+                    @endif
+
+                    
+
                     </tbody>
                 </table>
                 </div>
@@ -171,29 +279,30 @@
                         @endforeach
 
                     @endif
-                        @if($sub1)
+
+                        @if($tanamansub1)
                             <tr>
-                                <td>{{$sub1->id}}</td>
-                                <td class="text-left">{{$sub1->jenis_uji}}</td>
-                                <td class="text-left">{{$sub1->metode}}</td>
+                                <td>{{$tanamansub1->id}}</td>
+                                <td class="text-left">{{$tanamansub1->jenis_uji}}</td>
+                                <td class="text-left">{{$tanamansub1->metode}}</td>
                                 <td></td>
                                 <tr>
                                     <td></td>
-                                    <td class="text-left">{{$sub1_1->jenis_uji}}</td>
-                                    <td class="text-left">{{$sub1_1->metode}}</td>
-                                    <td>Rp. {{number_format($sub1_1->tarif)}},-</td>
+                                    <td class="text-left">{{$tanamansub1_1->jenis_uji}}</td>
+                                    <td class="text-left">{{$tanamansub1_1->metode}}</td>
+                                    <td>Rp. {{number_format($tanamansub1_1->tarif)}},-</td>
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td class="text-left">{{$sub1_2->jenis_uji}}</td>
-                                    <td class="text-left">{{$sub1_2->metode}}</td>
-                                    <td>Rp. {{number_format($sub1_2->tarif)}},-</td>
+                                    <td class="text-left">{{$tanamansub1_2->jenis_uji}}</td>
+                                    <td class="text-left">{{$tanamansub1_2->metode}}</td>
+                                    <td>Rp. {{number_format($tanamansub1_2->tarif)}},-</td>
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td class="text-left">{{$sub1_3->jenis_uji}}</td>
-                                    <td class="text-left">{{$sub1_3->metode}}</td>
-                                    <td>Rp. {{number_format($sub1_3->tarif)}},-</td>
+                                    <td class="text-left">{{$tanamansub1_3->jenis_uji}}</td>
+                                    <td class="text-left">{{$tanamansub1_3->metode}}</td>
+                                    <td>Rp. {{number_format($tanamansub1_3->tarif)}},-</td>
                                 </tr>
                             </tr>
                         @endif
@@ -240,6 +349,7 @@
                 </div>
             </div>
             
+
 
 
 <div class="col-lg-4 col-md-6 pesan-item filter-f wow fadeInUp">

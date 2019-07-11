@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <label for="tarif">Tarif<a class="text-danger">*</a></label>
                     <div class="input-group">    
-                        <input name="tarif" type="text" class="form-control" placeholder="ex : 800000" required>
+                        <input name="tarif" type="text" class="form-control" placeholder="ex : 800000">
                     </div>
                 </div>
         <div class="modal-footer">

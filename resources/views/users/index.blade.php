@@ -131,6 +131,10 @@
       </div>
     </section><!-- #about -->
 
+    <!-- Pengaturan Untuk pelanggan -->
+    @include('users.includes.peraturan')
+
+
     <!--==========================
       Services Section
     ============================-->

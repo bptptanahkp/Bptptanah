@@ -36,7 +36,7 @@
 
         <div class="form-group">
             {!! Form::label('tarif', 'Tarif :') !!}
-            {!! Form::text('tarif', null,['class'=>'form-control','placeholder'=>'Tarif', 'required']) !!}
+            {!! Form::text('tarif', null,['class'=>'form-control','placeholder'=>'Tarif']) !!}
         </div>
 
         <div class="form-group">

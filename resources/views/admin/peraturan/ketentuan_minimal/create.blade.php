@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-            <form action="/tarifanalisiskimia" method="POST" enctype="multipart/form-data">
+            <form action="/ketentuanminimal" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
 
                 <div class="form-group">
@@ -19,21 +19,15 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="jenis_uji">Jenis Uji<a class="text-danger">*</a></label> 
+                    <label for="jenis_cth">Jenis Contoh<a class="text-danger">*</a></label> 
                     <div class="input-group">  	
-                        <input name="jenis_uji" type="text" class="form-control" placeholder="Jenis Uji" required>  	
+                        <input name="jenis_cth" type="text" class="form-control" placeholder="Jenis Contoh" required>  	
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="metode">Metode</label>
+                    <label for="jml_min">Jumlah Minimal</label>
                     <div class="input-group">  	
-                        <input name="metode" type="text" class="form-control" placeholder="Metode">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="tarif">Tarif<a class="text-danger">*</a></label>
-                    <div class="input-group">    
-                        <input name="tarif" type="text" class="form-control" placeholder="ex : 800000" required>
+                        <input name="jml_min" type="text" class="form-control" placeholder="Jumlah Minimal" required>
                     </div>
                 </div>
         <div class="modal-footer">
