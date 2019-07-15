@@ -18,7 +18,7 @@ class CreatePemesananUsersTable extends Migration
             $table->string('nama');
             $table->string('instansi');
             $table->string('alamat');
-            $table->integer('ntelp');
+            $table->double('ntelp');
             $table->string('contohygdianalisis');
             $table->string('unsurygdianalisis');
             $table->string('jml_contoh');

@@ -10,6 +10,9 @@ use App\PupukOrganik_Kompos_Cair;
 use App\Pupukkimia;
 use App\Tanaman;
 use App\PengujianAir;
+use App\PemesananUser;
+use App\PermintaanPelanggan;
+use App\Transaksi;
 
 class UserController extends Controller
 {
@@ -76,9 +79,38 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        PemesananUser::create($input);
-        return redirect('/*****')->with('berhasil','Pemesanan Berhasil ditambahkan');
+        $datauser = ([ 'nomorSPA' => $request->get('nomorSPA'),
+                    'nama' => $request->get('nama'),
+                    'instansi' => $request->get('instansi'),
+                    'alamat' => $request->get('alamat'),
+                    'ntelp' => $request->get('ntelp'),
+                    'contohygdianalisis' => $request->get('contohygdianalisis'),
+                    'unsurygdianalisis' => $request->get('unsurygdianalisis'),
+                    'jml_contoh' => $request->get('jml_contoh'),
+                    'bentuk' => $request->get('bentuk'),
+                    'asal_contoh' => $request->get('asal_contoh'),
+                    'merk' => $request->get('merk'),
+                 ]);
+
+        $permintaan = (['id_permintaanpelanggan' => $request->get('id_permintaanpelanggan'),
+                        'id_ankimtan' => $request->get('id_ankimtan'),
+                        'id_pupukkimia' => $request->get('id_pupukkimia'),
+                        'id_pupukorganik' => $request->get('id_pupukorganik'),
+                        'id_tanaman' => $request->get('id_tanaman'),
+                        'id_pengujianair' => $request->get('id_pengujianair'),
+                        'harga' => $request->get('harga'),
+        ]);
+        $transaksi = ([ 'id' => $request->get('id'),
+                        'nomorSPA' => $request->get('nomorSPA'),
+                        'id_permintaanpelanggan' => $request->get('id_permintaanpelanggan'),
+                        'totalHarga' => $request->get('totalHarga'),
+        ]);
+
+
+        PemesananUser::create($datauser);
+        PermintaanPelanggan::create($permintaan);
+        //Transaksi::create($transaksi);
+        return redirect('/')->with('berhasil','Pemesanan Berhasil ditambahkan');
     }
 
     /**

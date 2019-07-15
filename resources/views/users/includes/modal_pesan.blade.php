@@ -18,54 +18,66 @@
 
             <div class="form-row justify-content-center">
                 <div class="col-sm-5">
+                    <a class="text-danger">*</a>
                     {!! Form::label('nama', 'Nama :') !!}
-                    {!! Form::text('nama', null,['class'=>'form-control']) !!}
+                    {!! Form::text('nama', null,['class'=>'form-control','required']) !!}
                 </div>
                 <div class="col-sm-5">
+                    <a class="text-danger">*</a>
                     {!! Form::label('instansi', 'Instansi/Perusahaan :') !!}
-                    {!! Form::text('instansi', null,['class'=>'form-control']) !!}
+                    {!! Form::text('instansi', null,['class'=>'form-control','required']) !!}
                 </div>
             </div>
 
             <div class="form-row justify-content-center">
                 <div class="col-sm-5">
+                    <a class="text-danger">*</a>
                     {!! Form::label('alamat', 'Alamat :') !!}
-                    {!! Form::text('alamat', null,['class'=>'form-control']) !!}
+                    {!! Form::text('alamat', null,['class'=>'form-control','required']) !!}
                 </div>
                 <div class="col-sm-5">
+                    <a class="text-danger">*</a>
                     {!! Form::label('ntelp', 'Nomer Telepon :') !!}
-                    {!! Form::text('ntelp', null,['class'=>'form-control']) !!}
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">+62</span>
+                    {!! Form::text('ntelp', null,['class'=>'form-control','required']) !!}
+                    </div>
                 </div>
             </div>
 
             <div class="form-row justify-content-center">
                 <div class="col-sm-5">
+                    <a class="text-danger">*</a>
                     {!! Form::label('contohygdianalisis', 'Contoh Yang Dianalisis :') !!}
-                    {!! Form::text('contohygdianalisis', null,['class'=>'form-control','placeholder'=>'tanah,pupuk organik,pupuk anorganik, .........................']) !!}
+                    {!! Form::text('contohygdianalisis', null,['class'=>'form-control','placeholder'=>'tanah,pupuk organik,pupuk anorganik, .........................','required']) !!}
                 </div>
                 <div class="col-sm-5">
+                    <a class="text-danger">*</a>
                     {!! Form::label('unsurygdianalisis', 'Unsur Yang Dianalisis :') !!}
-                    {!! Form::text('unsurygdianalisis', null,['class'=>'form-control','placeholder'=>'Lengkap, ......................']) !!}
+                    {!! Form::text('unsurygdianalisis', null,['class'=>'form-control','placeholder'=>'Lengkap, ......................','required']) !!}
                 </div>
             </div>
 
             <div class="form-row justify-content-center">
                 <div class="col-sm-5">
+                    <a class="text-danger">*</a>
                     {!! Form::label('jml_contoh', 'Jumlah Contoh :') !!}
-                    {!! Form::text('jml_contoh', null,['class'=>'form-control']) !!}
+                    {!! Form::text('jml_contoh', null,['class'=>'form-control','required']) !!}
                 </div>
                 <div class="col-sm-5">
+                    <a class="text-danger">*</a>
                     {!! Form::label('bentuk', 'Bentuk :') !!}
                     {!! Form::select('bentuk', [
                         'padat'=>'Padat','cair'=>'Cair','granula'=>'Granula','remah'=>'Remah'
-                        ],null,['class'=>'form-control chosen-type', 'placeholder' => 'Please Choose']) !!}
+                        ],null,['class'=>'form-control chosen-type', 'placeholder' => 'Please Choose','required']) !!}
                 </div>
             </div>
 
             <div class="form-row justify-content-center">
                 <div class="col-sm-5">
+                    <a class="text-danger">*</a>
                     {!! Form::label('asal_contoh', 'Asal Contoh :') !!}
-                    {!! Form::text('asal_contoh', null,['class'=>'form-control']) !!}
+                    {!! Form::text('asal_contoh', null,['class'=>'form-control','required']) !!}
                 </div>
                 <div class="col-sm-5">
                     {!! Form::label('merk', 'Merk :') !!}
@@ -132,7 +144,7 @@
                             <td class="text-left">{{ Form::label('metode',$value->metode) }}</td>
                             <td>Rp. {{ Form::label('tarif',number_format($value->tarif))}}</td>
                             <td>
-                                {{Form::checkbox('nilai[]',$value->id)}}
+                                {{Form::checkbox('id_ankimtan',$value->id)}}
                             </td>
                         </tr>
 
@@ -153,14 +165,14 @@
                             <td class="text-left">{{$ankimtansub1_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub1_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub1_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('nilai[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">{{$ankimtansub1_2->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub1_2->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub1_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('nilai[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
                         </tr>
 
                     @endif
@@ -178,21 +190,21 @@
                             <td class="text-left">{{$ankimtansub2_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub2_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub2_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('nilai[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">{{$ankimtansub2_2->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub2_2->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub2_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('nilai[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">{{$ankimtansub2_3->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub2_3->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub2_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('nilai[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
                         </tr>
 
                     @endif
@@ -210,7 +222,7 @@
                             <td class="text-left">{{$ankimtansub3_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub3_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub3_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('nilai[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
