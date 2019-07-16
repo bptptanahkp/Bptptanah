@@ -144,7 +144,9 @@
                             <td class="text-left">{{ Form::label('metode',$value->metode) }}</td>
                             <td>Rp. {{ Form::label('tarif',number_format($value->tarif))}}</td>
                             <td>
-                                {{Form::checkbox('id_ankimtan',$value->id)}}
+                                <label>
+                                {{Form::checkbox('id_ankimtan[]',$value->id)}}
+                                </label>
                             </td>
                         </tr>
 
@@ -165,14 +167,14 @@
                             <td class="text-left">{{$ankimtansub1_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub1_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub1_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">{{$ankimtansub1_2->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub1_2->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub1_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
                         </tr>
 
                     @endif
@@ -190,21 +192,21 @@
                             <td class="text-left">{{$ankimtansub2_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub2_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub2_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">{{$ankimtansub2_2->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub2_2->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub2_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">{{$ankimtansub2_3->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub2_3->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub2_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
                         </tr>
 
                     @endif
@@ -222,7 +224,7 @@
                             <td class="text-left">{{$ankimtansub3_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub3_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub3_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>

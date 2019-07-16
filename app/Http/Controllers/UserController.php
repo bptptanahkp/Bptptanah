@@ -23,6 +23,8 @@ class UserController extends Controller
      */
     public function index()
     {
+        $pemesananuser = PemesananUser::all();
+
         $peraturan = PeraturanPelanggan::all();
         $ketentuan_min = Ketentuan_Min::all();
 
@@ -54,7 +56,7 @@ class UserController extends Controller
         $tanamansub1_2 = Tanaman::find(5);
         $tanamansub1_3 = Tanaman::find(6);
 
-        return view ('users.index',compact('peraturan','ankimtan','pukorkom','ketentuan_min',
+        return view ('users.index',compact('pemesananuser','peraturan','ankimtan','pukorkom','ketentuan_min',
             'pukkimia','tanaman','pengair','tanamansub1','tanamansub1_1','tanamansub1_2','tanamansub1_3',
             'ankimtansub1','ankimtansub1_1','ankimtansub1_2','ankimtansub2','ankimtansub2_1','ankimtansub2_2','ankimtansub2_3',
             'ankimtansub3','ankimtansub3_1','ankimtansub3_2','ankimtansub3_3',
@@ -93,13 +95,13 @@ class UserController extends Controller
                  ]);
 
         $permintaan = (['id_permintaanpelanggan' => $request->get('id_permintaanpelanggan'),
-                        'id_ankimtan' => $request->get('id_ankimtan'),
                         'id_pupukkimia' => $request->get('id_pupukkimia'),
                         'id_pupukorganik' => $request->get('id_pupukorganik'),
                         'id_tanaman' => $request->get('id_tanaman'),
                         'id_pengujianair' => $request->get('id_pengujianair'),
                         'harga' => $request->get('harga'),
         ]);
+
         $transaksi = ([ 'id' => $request->get('id'),
                         'nomorSPA' => $request->get('nomorSPA'),
                         'id_permintaanpelanggan' => $request->get('id_permintaanpelanggan'),
@@ -107,6 +109,13 @@ class UserController extends Controller
         ]);
 
 
+        foreach($request->id_ankimtan as $id){
+            $check = new PermintaanPelanggan;
+            $pemesananuser = new PemesananUser;
+            $check->id_permintaanpelanggan = $pemesananuser->nomorSPA;
+            $check->id_ankimtan = $id;
+            $check->save();
+        }
         PemesananUser::create($datauser);
         PermintaanPelanggan::create($permintaan);
         //Transaksi::create($transaksi);

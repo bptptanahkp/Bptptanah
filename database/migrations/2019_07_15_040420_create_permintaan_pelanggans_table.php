@@ -14,7 +14,7 @@ class CreatePermintaanPelanggansTable extends Migration
     public function up()
     {
         Schema::create('permintaan_pelanggans', function (Blueprint $table) {
-            $table->bigIncrements('id_permintaanpelanggan');
+            $table->integer('id_permintaanpelanggan')->nullable();
             $table->integer('id_ankimtan')->nullable();
             $table->integer('id_pupukkimia')->nullable();
             $table->integer('id_pupukorganik')->nullable();
