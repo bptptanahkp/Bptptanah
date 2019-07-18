@@ -205,6 +205,48 @@
                         @endforeach
 
                     @endif
+
+                    @if($pupukorganiksub1)
+                        <tr>
+                        <td>{{$pupukorganiksub1->id}}</td>
+                        <td class="text-left">{{$pupukorganiksub1->jenis_uji}}</td>
+                        <td class="text-left">{{$pupukorganiksub1->metode}}</td>
+                        <td>Rp. {{number_format($pupukorganiksub1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukorganiksub1_1->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukorganiksub1_1->metode}}</td>
+                            <td>Rp. {{number_format($pupukorganiksub1_1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukorganiksub1_2->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukorganiksub1_2->metode}}</td>
+                            <td>Rp. {{number_format($pupukorganiksub1_2->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukorganiksub1_3->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukorganiksub1_3->metode}}</td>
+                            <td>Rp. {{number_format($pupukorganiksub1_3->tarif)}},-</td>
+                        </tr>
+
+                    @endif
+                    @if($pupukorganiksub2)
+                        <tr>
+                        <td>10</td>
+                        <td class="text-left">{{$pupukorganiksub2->jenis_uji}}</td>
+                        <td class="text-left">{{$pupukorganiksub2->metode}}</td>
+                        <td>Rp. {{number_format($pupukorganiksub2->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukorganiksub2_1->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukorganiksub2_1->metode}}</td>
+                            <td>Rp. {{number_format($pupukorganiksub2_1->tarif)}},-</td>
+                        </tr>
+                    @endif
                     </tbody>
                 </table>
                 </div>
@@ -242,6 +284,90 @@
                         @endforeach
 
                     @endif
+
+                    @if($pupukkimiasub1)
+                        <tr>
+                        <td>{{$pupukkimiasub1->id}}</td>
+                        <td class="text-left">{{$pupukkimiasub1->jenis_uji}}</td>
+                        <td class="text-left">{{$pupukkimiasub1->metode}}</td>
+                        <td>Rp. {{number_format($pupukkimiasub1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukkimiasub1_1->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukkimiasub1_1->metode}}</td>
+                            <td>Rp. {{number_format($pupukkimiasub1_1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukkimiasub1_2->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukkimiasub1_2->metode}}</td>
+                            <td>Rp. {{number_format($pupukkimiasub1_2->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukkimiasub1_3->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukkimiasub1_3->metode}}</td>
+                            <td>Rp. {{number_format($pupukkimiasub1_3->tarif)}},-</td>
+                        </tr>
+
+                    @endif
+                    @if($pupukkimiasub2)
+                        <tr>
+                        <td>7</td>
+                        <td class="text-left">{{$pupukkimiasub2->jenis_uji}}</td>
+                        <td class="text-left">{{$pupukkimiasub2->metode}}</td>
+                        <td>Rp. {{number_format($pupukkimiasub2->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukkimiasub2_1->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukkimiasub2_1->metode}}</td>
+                            <td>Rp. {{number_format($pupukkimiasub2_1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukkimiasub2_2->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukkimiasub2_2->metode}}</td>
+                            <td>Rp. {{number_format($pupukkimiasub2_2->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukkimiasub2_3->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukkimiasub2_3->metode}}</td>
+                            <td>Rp. {{number_format($pupukkimiasub2_3->tarif)}},-</td>
+                        </tr>
+
+                    @endif
+                    @if($pupukkimiasub3)
+                        <tr>
+                        <td>8</td>
+                        <td class="text-left">{{$pupukkimiasub3->jenis_uji}}</td>
+                        <td class="text-left">{{$pupukkimiasub3->metode}}</td>
+                        <td>Rp. {{number_format($pupukkimiasub3->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukkimiasub3_1->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukkimiasub3_1->metode}}</td>
+                            <td>Rp. {{number_format($pupukkimiasub3_1->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukkimiasub3_2->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukkimiasub3_2->metode}}</td>
+                            <td>Rp. {{number_format($pupukkimiasub3_2->tarif)}},-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-left">{{$pupukkimiasub3_3->jenis_uji}}</td>
+                            <td class="text-left">{{$pupukkimiasub3_3->metode}}</td>
+                            <td>Rp. {{number_format($pupukkimiasub3_3->tarif)}},-</td>
+                        </tr>
+
+                    @endif
+                    
+                    
                     </tbody>
                 </table>
                 </div>
