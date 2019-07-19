@@ -21,6 +21,8 @@ class CreatePermintaanPelanggansTable extends Migration
             $table->integer('id_tanaman')->nullable();
             $table->integer('id_pengujianair')->nullable();
             $table->integer('harga')->nullable();
+            $table->double('ntelp')->nullable();
+            $table->string('unsuryangdipilih')->nullable();
             $table->timestamps();
         });
     }

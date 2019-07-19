@@ -113,8 +113,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $datauser = ([ 'nomorSPA' => $request->get('nomorSPA'),
-                    'nama' => $request->get('nama'),
+        $datauser = (['nama' => $request->get('nama'),
                     'instansi' => $request->get('instansi'),
                     'alamat' => $request->get('alamat'),
                     'ntelp' => $request->get('ntelp'),
@@ -142,11 +141,21 @@ class UserController extends Controller
 
         foreach($request->id_ankimtan as $id){
             $check = new PermintaanPelanggan;
+            $pemesananuser = new pemesananuser;
+            $check->nomorSPA = $request->nomorSPA;
             $check->id_ankimtan = $id;
+            $ankimtan = new AnalisisKimiaTanah;
+            $ankimtan = AnalisisKimiaTanah::find($id);
+            $check->harga = $ankimtan->tarif;
+            $check->ntelp = $request->ntelp;
             $check->save();
         }
+
+        // $checkboxunsur = new PermintaanPelanggan;
+        // $checkboxunsur->unsuryangdipilih = implode(",",$request->unsuryangdipilih);
+        // $checkboxunsur->save();
+        
         PemesananUser::create($datauser);
-        PermintaanPelanggan::create($permintaan);
         //Transaksi::create($transaksi);
         return redirect('/')->with('berhasil','Pemesanan Berhasil ditambahkan');
     }

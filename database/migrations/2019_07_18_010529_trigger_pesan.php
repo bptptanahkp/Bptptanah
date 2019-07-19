@@ -16,7 +16,7 @@ class TriggerPesan extends Migration
         DB::unprepared('CREATE TRIGGER `trigger_pesan` AFTER INSERT ON 
         `pemesanan_users` FOR EACH ROW BEGIN 
         UPDATE permintaan_pelanggans 
-        SET nomorSPA = NEW.nomorSPA WHERE created_at = NEW.created_at; 
+        SET nomorSPA = NEW.nomorSPA WHERE ntelp = NEW.ntelp; 
         END');
     }
 
