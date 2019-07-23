@@ -41,6 +41,7 @@
                     <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroupPrepend">+62</span>
                     {!! Form::text('ntelp', null,['class'=>'form-control','required']) !!}
+                    @include('users.includes.pesan_error')
                     </div>
                 </div>
             </div>

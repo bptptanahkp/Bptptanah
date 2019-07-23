@@ -14,7 +14,7 @@ class CreatePemesananUsersTable extends Migration
     public function up()
     {
         Schema::create('pemesanan_users', function (Blueprint $table) {
-            $table->bigIncrements('nomorSPA');
+            $table->bigIncrements('id');
             $table->string('nama');
             $table->string('instansi');
             $table->string('alamat');

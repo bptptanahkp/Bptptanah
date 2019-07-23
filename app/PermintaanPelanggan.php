@@ -16,6 +16,9 @@ class PermintaanPelanggan extends Model
         return $this->belongsTo('App\Transaksi');
     }
 
-
+    public function ankimtan()
+    {
+        return $this->belongsTo('App\AnalisisKimiaTanah');
+    }
     
 }

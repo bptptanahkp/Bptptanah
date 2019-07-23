@@ -10,8 +10,8 @@ class AnalisisKimiaTanah extends Model
         'id','jenis_uji', 'metode', 'tarif',
     ];
 
-    public function pemesananuser()
+    public function permintaanpelanggan()
     {
-        return $this->hasMany('App\PemesananUser');
+        return $this->hasMany('App\PermintaanPelanggan');
     }
 }

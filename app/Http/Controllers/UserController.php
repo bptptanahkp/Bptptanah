@@ -14,6 +14,8 @@ use App\PemesananUser;
 use App\PermintaanPelanggan;
 use App\Transaksi;
 
+use App\Http\Requests\PesanRequest;
+
 class UserController extends Controller
 {
     /**
@@ -91,7 +93,7 @@ class UserController extends Controller
             'pupukkimiasub2','pupukkimiasub2_1','pupukkimiasub2_2','pupukkimiasub2_3',
             'pupukkimiasub3','pupukkimiasub3_1','pupukkimiasub3_2','pupukkimiasub3_3',
             'tanamansub1','tanamansub1_1','tanamansub1_2','tanamansub1_3',
-            'pengujianairsub1','pengujianairsub2',
+            'pengujianairsub1','pengujianairsub2'
         ));
     }
 
@@ -113,18 +115,35 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $datauser = (['nama' => $request->get('nama'),
-                    'instansi' => $request->get('instansi'),
-                    'alamat' => $request->get('alamat'),
-                    'ntelp' => $request->get('ntelp'),
-                    'contohygdianalisis' => $request->get('contohygdianalisis'),
-                    'unsurygdianalisis' => $request->get('unsurygdianalisis'),
-                    'jml_contoh' => $request->get('jml_contoh'),
-                    'bentuk' => $request->get('bentuk'),
-                    'asal_contoh' => $request->get('asal_contoh'),
-                    'merk' => $request->get('merk'),
-                 ]);
+        // $datauser = (['nama' => $request->get('nama'),
+        //             'instansi' => $request->get('instansi'),
+        //             'alamat' => $request->get('alamat'),
+        //             'ntelp' => $request->get('ntelp'),
+        //             'contohygdianalisis' => $request->get('contohygdianalisis'),
+        //             'unsurygdianalisis' => $request->get('unsurygdianalisis'),
+        //             'jml_contoh' => $request->get('jml_contoh'),
+        //             'bentuk' => $request->get('bentuk'),
+        //             'asal_contoh' => $request->get('asal_contoh'),
+        //             'merk' => $request->get('merk'),
+        //          ]);
 
+            $datauser = $request->all();
+            $lastid = PemesananUser::create($datauser)->id;
+            if(count($request->id_ankimtan) > 0)
+            {
+                foreach($request->id_ankimtan as $item=>$v){
+                    // $ankimtan = new AnalisisKimiaTanah;
+                    // $ankimtan = AnalisisKimiaTanah::find($item);
+                    // $harga = $ankimtan->tarif;
+                    $data2=array(
+                        'pemesanan_id'=>$lastid,
+                        'id_ankimtan'=>$request->id_ankimtan[$item],
+                        // 'harga'=>$harga,
+                        
+                    );  
+                    PermintaanPelanggan::insert($data2);
+                }
+            }
         $permintaan = (['id_pupukkimia' => $request->get('id_pupukkimia'),
                         'id_pupukorganik' => $request->get('id_pupukorganik'),
                         'id_tanaman' => $request->get('id_tanaman'),
@@ -132,31 +151,34 @@ class UserController extends Controller
                         'harga' => $request->get('harga'),
         ]);
 
-        $transaksi = ([ 'id' => $request->get('id'),
-                        'nomorSPA' => $request->get('nomorSPA'),
-                        'id_permintaanpelanggan' => $request->get('id_permintaanpelanggan'),
-                        'totalHarga' => $request->get('totalHarga'),
-        ]);
 
+        
 
         foreach($request->id_ankimtan as $id){
             $check = new PermintaanPelanggan;
-            $pemesananuser = new pemesananuser;
-            $check->nomorSPA = $request->nomorSPA;
-            $check->id_ankimtan = $id;
+            $check->id_ankimtan = $request->id_ankimtan;
             $ankimtan = new AnalisisKimiaTanah;
             $ankimtan = AnalisisKimiaTanah::find($id);
             $check->harga = $ankimtan->tarif;
             $check->ntelp = $request->ntelp;
-            $check->save();
+            // $check->save();
         }
+
+        $transaksi = new Transaksi;
+        $transaksi->nama = $request->nama;
+        // $transaksi->save();
+
+        // foreach($request->nomorSPA as $nomorSPA){
+        //     $transaksi = new Transaksi;
+        //     $
+        // }
 
         // $checkboxunsur = new PermintaanPelanggan;
         // $checkboxunsur->unsuryangdipilih = implode(",",$request->unsuryangdipilih);
         // $checkboxunsur->save();
         
-        PemesananUser::create($datauser);
-        //Transaksi::create($transaksi);
+        // PemesananUser::create($datauser);
+        // Transaksi::create($transaksi);
         return redirect('/')->with('berhasil','Pemesanan Berhasil ditambahkan');
     }
 

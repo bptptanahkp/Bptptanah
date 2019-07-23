@@ -14,6 +14,8 @@ class PemesananUser extends Model
 
     public function transaksi()
     {
-        return $this->hasMany('App\Transaksi');
+        return $this->belongsTo('App\Transaksi');
     }
+
+    
 }
