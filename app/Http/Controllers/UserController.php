@@ -61,42 +61,104 @@ class UserController extends Controller
         $pupukorganiksub1_1 = PupukOrganik_Kompos_Cair::find(10);
         $pupukorganiksub1_2 = PupukOrganik_Kompos_Cair::find(11);
         $pupukorganiksub1_3 = PupukOrganik_Kompos_Cair::find(12);
-        $pupukorganiksub2 = PupukOrganik_Kompos_Cair::find(13);
-        $pupukorganiksub2_1 = PupukOrganik_Kompos_Cair::find(14);
+        $pupukorganiksub1_4 = PupukOrganik_Kompos_Cair::find(13);
+        $pupukorganiksub1_5 = PupukOrganik_Kompos_Cair::find(14);
+        $pupukorganiksub1_6 = PupukOrganik_Kompos_Cair::find(15);
+        $pupukorganiksub1_7 = PupukOrganik_Kompos_Cair::find(16);
+        $pupukorganiksub1_8 = PupukOrganik_Kompos_Cair::find(17);
+        $pupukorganiksub1_9 = PupukOrganik_Kompos_Cair::find(18);
+        $pupukorganiksub1_10 = PupukOrganik_Kompos_Cair::find(19);
+        $pupukorganiksub1_11 = PupukOrganik_Kompos_Cair::find(20);
+        $pupukorganiksub1_12 = PupukOrganik_Kompos_Cair::find(21);
+        $pupukorganiksub1_13 = PupukOrganik_Kompos_Cair::find(22);
+        $pupukorganiksub2 = PupukOrganik_Kompos_Cair::find(23);
+        $pupukorganiksub2_1 = PupukOrganik_Kompos_Cair::find(24);
 
         $pupukkimiasub1 = Pupukkimia::find(6);
         $pupukkimiasub1_1 = Pupukkimia::find(7);
         $pupukkimiasub1_2 = Pupukkimia::find(8);
         $pupukkimiasub1_3 = Pupukkimia::find(9);
-        $pupukkimiasub2 = Pupukkimia::find(10);
-        $pupukkimiasub2_1 = Pupukkimia::find(11);
-        $pupukkimiasub2_2 = Pupukkimia::find(12);
-        $pupukkimiasub2_3 = Pupukkimia::find(13);
-        $pupukkimiasub3 = Pupukkimia::find(14);
-        $pupukkimiasub3_1 = Pupukkimia::find(15);
-        $pupukkimiasub3_2 = Pupukkimia::find(16);
-        $pupukkimiasub3_3 = Pupukkimia::find(17);
+        $pupukkimiasub1_4 = Pupukkimia::find(10);
+        $pupukkimiasub1_5 = Pupukkimia::find(11);
+        $pupukkimiasub1_6 = Pupukkimia::find(12);
+        $pupukkimiasub1_7 = Pupukkimia::find(13);
+        $pupukkimiasub1_8 = Pupukkimia::find(14);
+        $pupukkimiasub1_9 = Pupukkimia::find(15);
+        $pupukkimiasub1_10 = Pupukkimia::find(16);
+        $pupukkimiasub1_11 = Pupukkimia::find(17);
+        $pupukkimiasub1_12 = Pupukkimia::find(18);
+        $pupukkimiasub1_13 = Pupukkimia::find(19);
+        
+        $pupukkimiasub2 = Pupukkimia::find(20);
+        $pupukkimiasub2_1 = Pupukkimia::find(21);
+        $pupukkimiasub2_2 = Pupukkimia::find(22);
+        $pupukkimiasub2_3 = Pupukkimia::find(23);
+        $pupukkimiasub2_4 = Pupukkimia::find(24);
+        $pupukkimiasub2_5 = Pupukkimia::find(25);
+        $pupukkimiasub2_6 = Pupukkimia::find(26);
+        $pupukkimiasub2_7 = Pupukkimia::find(27);
+        $pupukkimiasub2_8 = Pupukkimia::find(28);
+        $pupukkimiasub2_9 = Pupukkimia::find(29);
+        $pupukkimiasub2_10 = Pupukkimia::find(30);
+        $pupukkimiasub2_11 = Pupukkimia::find(31);
+        $pupukkimiasub2_12 = Pupukkimia::find(32);
+        $pupukkimiasub2_13 = Pupukkimia::find(33);
+        $pupukkimiasub3 = Pupukkimia::find(34);
+        $pupukkimiasub3_1 = Pupukkimia::find(35);
+        $pupukkimiasub3_2 = Pupukkimia::find(36);
+        $pupukkimiasub3_3 = Pupukkimia::find(37);
+        $pupukkimiasub3_4 = Pupukkimia::find(38);
+        $pupukkimiasub3_5 = Pupukkimia::find(39);
+        $pupukkimiasub3_6 = Pupukkimia::find(40);
+        $pupukkimiasub3_7 = Pupukkimia::find(41);
+        $pupukkimiasub3_8 = Pupukkimia::find(42);
+        $pupukkimiasub3_9 = Pupukkimia::find(43);
+        $pupukkimiasub3_10 = Pupukkimia::find(44);
+        $pupukkimiasub3_11 = Pupukkimia::find(45);
+
 
         $tanamansub1 = Tanaman::find(3);
         $tanamansub1_1 = Tanaman::find(4);
         $tanamansub1_2 = Tanaman::find(5);
         $tanamansub1_3 = Tanaman::find(6);
+        $tanamansub1_4 = Tanaman::find(7);
+        $tanamansub1_5 = Tanaman::find(8);
+        $tanamansub1_6 = Tanaman::find(9);
+        $tanamansub1_7 = Tanaman::find(10);
+        $tanamansub1_8 = Tanaman::find(11);
+        $tanamansub1_9 = Tanaman::find(12);
 
-        $pengujianairsub1 = PengujianAir::find(3);
-        $pengujianairsub2 = PengujianAir::find(4);
+        $pengujianairsub1_1 = PengujianAir::find(3);
+        $pengujianairsub1_2 = PengujianAir::find(4);
+        $pengujianairsub1_3 = PengujianAir::find(5);
+        $pengujianairsub1_4 = PengujianAir::find(6);
+        $pengujianairsub1_5 = PengujianAir::find(7);
+        $pengujianairsub1_6 = PengujianAir::find(8);
+        $pengujianairsub2_1 = PengujianAir::find(9);
+        $pengujianairsub2_2 = PengujianAir::find(10);
+        $pengujianairsub2_3 = PengujianAir::find(11);
+        $pengujianairsub2_4 = PengujianAir::find(12);
+        $pengujianairsub2_5 = PengujianAir::find(13);
+        
 
         return view ('users.index',compact('pemesananuser','peraturan','ankimtan','pukorkom','ketentuan_min',
             'pukkimia','tanaman','pengair',
             'ankimtansub1','ankimtansub1_1','ankimtansub1_2','ankimtansub2','ankimtansub2_1','ankimtansub2_2','ankimtansub2_3',
             'ankimtansub3','ankimtansub3_1','ankimtansub3_2','ankimtansub3_3', 'ankimtansub3_4','ankimtansub3_5',
             'ankimtansub4','ankimtansub4_1','ankimtansub4_2','ankimtansub4_3' ,'ankimtansub4_4' ,'ankimtansub4_5' ,'ankimtansub4_6' ,'ankimtansub4_7',
-            'pupukorganiksub1','pupukorganiksub1_1','pupukorganiksub1_2','pupukorganiksub1_3',
+
+            'pupukorganiksub1','pupukorganiksub1_1','pupukorganiksub1_2','pupukorganiksub1_3', 'pupukorganiksub1_4','pupukorganiksub1_5','pupukorganiksub1_6','pupukorganiksub1_7', 'pupukorganiksub1_8','pupukorganiksub1_9','pupukorganiksub1_10','pupukorganiksub1_11',
+                'pupukorganiksub1_12', 'pupukorganiksub1_13',
             'pupukorganiksub2','pupukorganiksub2_1',
-            'pupukkimiasub1','pupukkimiasub1_1','pupukkimiasub1_2','pupukkimiasub1_3',
-            'pupukkimiasub2','pupukkimiasub2_1','pupukkimiasub2_2','pupukkimiasub2_3',
-            'pupukkimiasub3','pupukkimiasub3_1','pupukkimiasub3_2','pupukkimiasub3_3',
-            'tanamansub1','tanamansub1_1','tanamansub1_2','tanamansub1_3',
-            'pengujianairsub1','pengujianairsub2'
+
+            'pupukkimiasub1','pupukkimiasub1_1','pupukkimiasub1_2','pupukkimiasub1_3', 'pupukkimiasub1_4','pupukkimiasub1_5','pupukkimiasub1_6','pupukkimiasub1_7', 'pupukkimiasub1_8','pupukkimiasub1_9','pupukkimiasub1_10','pupukkimiasub1_11', 'pupukkimiasub1_12','pupukkimiasub1_13',
+            'pupukkimiasub2','pupukkimiasub2_1','pupukkimiasub2_2','pupukkimiasub2_3', 'pupukkimiasub2_4','pupukkimiasub2_5','pupukkimiasub2_6','pupukkimiasub2_7', 'pupukkimiasub2_8','pupukkimiasub2_9','pupukkimiasub2_10','pupukkimiasub2_11', 'pupukkimiasub2_12','pupukkimiasub2_13',
+            'pupukkimiasub3','pupukkimiasub3_1','pupukkimiasub3_2','pupukkimiasub3_3', 'pupukkimiasub3_4','pupukkimiasub3_5','pupukkimiasub3_6','pupukkimiasub3_7', 'pupukkimiasub3_8','pupukkimiasub3_9','pupukkimiasub3_10','pupukkimiasub3_11',
+
+            'tanamansub1','tanamansub1_1','tanamansub1_2','tanamansub1_3', 'tanamansub1_4','tanamansub1_5','tanamansub1_6','tanamansub1_7', 'tanamansub1_8','tanamansub1_9','tanamansub1_10','tanamansub1_11'
+            'pengujianairsub1_1', 'pengujianairsub1_2', 'pengujianairsub1_3', 'pengujianairsub1_4', 'pengujianairsub1_5', 'pengujianairsub1_6',
+            'pengujianairsub2_1', 'pengujianairsub2_2', 'pengujianairsub2_3', 'pengujianairsub2_4', 'pengujianairsub2_5'
+            
         ));
     }
 
