@@ -7,18 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class PermintaanPelanggan extends Model
 {
     protected $fillable = [
-        'id_permintaanpelanggan','id_ankimtan', 'id_pupukkimia', 'id_pupukorganik',
-        'id_tanaman','id_pengujianair','harga','ntelp'
+        'id',
+        'pemesanan_id','id_ankimtan', 'id_pupukkimia', 'id_pupukorganik',
+        'id_tanaman','id_pengujianair','harga',
     ];
+
 
     public function transaksi()
     {
         return $this->belongsTo('App\Transaksi');
     }
-
-    public function ankimtan()
+    
+    public function ankimtanah()
     {
-        return $this->belongsTo('App\AnalisisKimiaTanah');
+        return $this->belongsTo('App\AnilisisKimiaTanah');
     }
     
 }

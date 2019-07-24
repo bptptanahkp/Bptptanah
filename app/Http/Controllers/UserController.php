@@ -115,70 +115,23 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // $datauser = (['nama' => $request->get('nama'),
-        //             'instansi' => $request->get('instansi'),
-        //             'alamat' => $request->get('alamat'),
-        //             'ntelp' => $request->get('ntelp'),
-        //             'contohygdianalisis' => $request->get('contohygdianalisis'),
-        //             'unsurygdianalisis' => $request->get('unsurygdianalisis'),
-        //             'jml_contoh' => $request->get('jml_contoh'),
-        //             'bentuk' => $request->get('bentuk'),
-        //             'asal_contoh' => $request->get('asal_contoh'),
-        //             'merk' => $request->get('merk'),
-        //          ]);
-
-            $datauser = $request->all();
-            $lastid = PemesananUser::create($datauser)->id;
-            if(count($request->id_ankimtan) > 0)
-            {
-                foreach($request->id_ankimtan as $item=>$v){
-                    // $ankimtan = new AnalisisKimiaTanah;
-                    // $ankimtan = AnalisisKimiaTanah::find($item);
-                    // $harga = $ankimtan->tarif;
-                    $data2=array(
-                        'pemesanan_id'=>$lastid,
-                        'id_ankimtan'=>$request->id_ankimtan[$item],
-                        // 'harga'=>$harga,
-                        
-                    );  
-                    PermintaanPelanggan::insert($data2);
-                }
+        $datauser = $request->all();
+        $lastid = PemesananUser::create($datauser)->id;
+        
+        if(count($request->id_ankimtan) > 0)
+        {
+            foreach($request->id_ankimtan as $item=>$v){
+                $harga = AnalisisKimiaTanah::find($v)->tarif;
+                $data2=([
+                    'pemesanan_id'=>$lastid,
+                    'id_ankimtan'=>$request->id_ankimtan[$item],
+                    'harga' =>$harga,
+                    
+                ]); 
+                PermintaanPelanggan::create($data2);
             }
-        $permintaan = (['id_pupukkimia' => $request->get('id_pupukkimia'),
-                        'id_pupukorganik' => $request->get('id_pupukorganik'),
-                        'id_tanaman' => $request->get('id_tanaman'),
-                        'id_pengujianair' => $request->get('id_pengujianair'),
-                        'harga' => $request->get('harga'),
-        ]);
-
-
-        
-
-        foreach($request->id_ankimtan as $id){
-            $check = new PermintaanPelanggan;
-            $check->id_ankimtan = $request->id_ankimtan;
-            $ankimtan = new AnalisisKimiaTanah;
-            $ankimtan = AnalisisKimiaTanah::find($id);
-            $check->harga = $ankimtan->tarif;
-            $check->ntelp = $request->ntelp;
-            // $check->save();
         }
-
-        $transaksi = new Transaksi;
-        $transaksi->nama = $request->nama;
-        // $transaksi->save();
-
-        // foreach($request->nomorSPA as $nomorSPA){
-        //     $transaksi = new Transaksi;
-        //     $
-        // }
-
-        // $checkboxunsur = new PermintaanPelanggan;
-        // $checkboxunsur->unsuryangdipilih = implode(",",$request->unsuryangdipilih);
-        // $checkboxunsur->save();
-        
-        // PemesananUser::create($datauser);
-        // Transaksi::create($transaksi);
+ 
         return redirect('/')->with('berhasil','Pemesanan Berhasil ditambahkan');
     }
 

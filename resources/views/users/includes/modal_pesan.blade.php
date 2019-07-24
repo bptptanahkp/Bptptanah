@@ -85,6 +85,7 @@
                     {!! Form::text('merk', null,['class'=>'form-control']) !!}
                 </div>
             </div>
+            <div></div>
 
 
 
@@ -259,12 +260,12 @@
                             <td class="text-left">{{$ankimtansub4_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub4_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('nilai[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">b. Pengukuran Fe {{Form::checkbox('nilai[]',$value->id)}} Zn {{Form::checkbox('nilai[]',$value->id)}}
-                                Mn {{Form::checkbox('nilai[]',$value->id)}} Cu {{Form::checkbox('nilai[]',$value->id)}} S {{Form::checkbox('nilai[]',$value->id)}}</td>
+                                Mn {{Form::checkbox('id_ankimtan[]',$value->id)}} Cu {{Form::checkbox('nilai[]',$value->id)}} S {{Form::checkbox('nilai[]',$value->id)}}</td>
                             <td class="text-left">{{$ankimtansub4_2->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_2->tarif)}},-</td>
                             <td></td>
@@ -274,7 +275,7 @@
                             <td class="text-left">{{$ankimtansub4_3->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub4_3->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('nilai[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
                         </tr>
 
                     @endif
