@@ -16,21 +16,34 @@ mix.js('resources/js/app.js', 'public/js')
      
     mix.styles([
 
-        'resources/assets/assetsadmin2/fontawesome-free/css/all.min.css',
-        'resources/assets/assetsadmin2/css/sb-admin-2.min.css',
-        'resources/assets/css/libs/font-awesome.css'
- 
-    ], 'public/css/b-admin2.css');
+        'public/lib/bootstrap/css/bootstrap.min.css',
+        'public/lib/font-awesome/css/font-awesome.min.css',
+        'public/lib/animate/animate.min.css',
+        'public/lib/ionicons/css/ionicons.min.css',
+        'public/lib/owlcarousel/assets/owl.carousel.min.css',
+        'public/lib/lightbox/css/lightbox.min.css',
+        'public/lib/style.css'
+        
+        
+    ], 'public/css/halamanuser.css');
 
     mix.scripts([
 
-        'resources/assets/assetsadmin2/jquery/jquery.min.js',
-        'resources/assets/assetsadmin2/bootstrap/js/bootstrap.bundle.min.js',
-        'resources/assets/assetsadmin2/jquery-easing/jquery.easing.min.js',
-        'resources/assets/assetsadmin2/js/sb-admin-2.min.js',
-        'resources/assets/assetsadmin2/chart.js/Chart.min.js',
-        'resources/assets/assetsadmin2/js/demo/chart-area-demo.js',
-        'resources/assets/assetsadmin2/js/demo/chart-pie-demo.js'
+        'public/lib/jquery/jquery.min.js',
+        'public/lib/jquery/jquery-migrate.min.js',
+        'public/lib/bootstrap/js/bootstrap.bundle.min.js',
+        'public/lib/easing/easing.min.js',
+        'public/lib/superfish/hoverIntent.js',
+        'public/lib/superfish/superfish.min.js',
+        'public/lib/wow/wow.min.js',
+        'public/lib/waypoints/waypoints.min.js',
+        'public/lib/counterup/counterup.min.js',
+        'public/lib/owlcarousel/owl.carousel.min.js',
+        'public/lib/isotope/isotope.pkgd.min.js',
+        'public/lib/lightbox/js/lightbox.min.js',
+        'public/lib/touchSwipe/jquery.touchSwipe.min.js',
+        'public/lib/contactform.js',
+        'public/lib/main.js'
 
-    ], 'public/js/b-admin2.js');   
+    ], 'public/js/halamanuser.js');   
      

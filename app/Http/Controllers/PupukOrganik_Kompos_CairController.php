@@ -15,7 +15,7 @@ class PupukOrganik_Kompos_CairController extends Controller
      public function index()
     {
         $data = PupukOrganik_Kompos_Cair::all();
-        return view ('admin.tarif_lab.pupuk.index', compact('data'));
+        return view ('admin.tarif_lab.pupuk_organik.index', compact('data'));
     }
 
     /**
@@ -63,7 +63,7 @@ class PupukOrganik_Kompos_CairController extends Controller
     public function edit($id)
     {
         $ed = PupukOrganik_Kompos_Cair::find($id);
-        return view ('admin.tarif_lab.pupuk.edit',compact('ed'));
+        return view ('admin.tarif_lab.pupuk_organik.edit',compact('ed'));
     }
 
     /**

@@ -7,13 +7,16 @@ use App\Ketentuan_Min;
 
 class Ketentuan_MinController extends Controller
 {
-    //
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $data = Ketentuan_Min::all();
-        return view ('admin.tarif_lab.ketentuan_min.index', compact('data'));
+        return view ('admin.peraturan.ketentuan_minimal.index', compact('data'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -23,7 +26,6 @@ class Ketentuan_MinController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -33,12 +35,9 @@ class Ketentuan_MinController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-
         Ketentuan_Min::create($input);
-
         return redirect('ketentuanminimal')->with('action','Data berhasil di tambah');
     }
-
     /**
      * Display the specified resource.
      *
@@ -49,7 +48,6 @@ class Ketentuan_MinController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -59,9 +57,8 @@ class Ketentuan_MinController extends Controller
     public function edit($id)
     {
         $ed = Ketentuan_Min::find($id);
-        return view ('admin.tarif_lab.ketentuan_min.edit',compact('ed'));
+        return view ('admin.peraturan.ketentuan_minimal.edit',compact('ed'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -77,7 +74,6 @@ class Ketentuan_MinController extends Controller
         $ed->update($input);
         return redirect('ketentuanminimal')->with('action','Data berhasil di edit');
     }
-
     /**
      * Remove the specified resource from storage.
      *

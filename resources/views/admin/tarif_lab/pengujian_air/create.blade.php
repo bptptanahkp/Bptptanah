@@ -1,6 +1,6 @@
 
 <div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Tambah data</h5>
@@ -11,11 +11,11 @@
       <div class="modal-body">
             <form action="/tarifpengujianair" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
-                
+
                 <div class="form-group">
-                    <label for="id">Nomor<a class="text-danger">*</a></label> 
+                    <label for="id">Nomor</label> 
                     <div class="input-group">   
-                        <input name="id" type="text" class="form-control" placeholder="Nomor" required>      
+                        <input name="id" type="text" class="form-control" placeholder="Nomor">      
                     </div>
                 </div>
                 <div class="form-group">
@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <label for="tarif">Tarif<a class="text-danger">*</a></label>
                     <div class="input-group">    
-                        <input name="tarif" type="text" class="form-control" placeholder="ex : 800000" required>
+                        <input name="tarif" type="text" class="form-control" placeholder="ex : 800000">
                     </div>
                 </div>
         <div class="modal-footer">

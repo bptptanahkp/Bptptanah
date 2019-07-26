@@ -17,7 +17,7 @@ class CreateAnalisisKimiaTanahsTable extends Migration
             $table->bigIncrements('id');
             $table->string('jenis_uji');
             $table->string('metode')->nullable();
-            $table->integer('tarif');
+            $table->integer('tarif')->nullable();
             $table->timestamps();
         });
     }

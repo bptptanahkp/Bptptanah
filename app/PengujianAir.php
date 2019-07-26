@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PengujianAir extends Model
 {
-    //
-      protected $fillable = [
+    protected $fillable = [
         'id','jenis_uji', 'metode', 'tarif',
     ];
 }

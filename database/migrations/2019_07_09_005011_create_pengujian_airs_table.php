@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKetentuanMinsTable extends Migration
+class CreatePengujianAirsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateKetentuanMinsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ketentuan__mins', function (Blueprint $table) {
+        Schema::create('pengujian_airs', function (Blueprint $table) {
             $table->bigIncrements('id');
-             $table->string('jenis_cth');
-              $table->string('jml_min');
+            $table->string('jenis_uji');
+            $table->string('metode')->nullable();
+            $table->integer('tarif')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateKetentuanMinsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ketentuan__mins');
+        Schema::dropIfExists('pengujian_airs');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePupukOrganikKomposCairsTable extends Migration
+class CreateTanamenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreatePupukOrganikKomposCairsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pupuk_organik__kompos__cairs', function (Blueprint $table) {
+        Schema::create('tanamen', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('jenis_uji');
             $table->string('metode')->nullable();
-            $table->integer('tarif');
+            $table->integer('tarif')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreatePupukOrganikKomposCairsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pupuk_organik__kompos__cairs');
+        Schema::dropIfExists('tanamen');
     }
 }

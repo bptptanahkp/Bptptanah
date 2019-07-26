@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PupukOrganik_Kompos_Cair extends Model
 {
-    //
-     protected $fillable = [
+    protected $fillable = [
         'id','jenis_uji', 'metode', 'tarif',
     ];
-
 }

@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class AnalisisKimiaTanah extends Model
 {
     protected $fillable = [
-        'jenis_uji', 'metode', 'tarif',
+        'id','jenis_uji', 'metode', 'tarif',
     ];
+
+    public function pemesananuser()
+    {
+        return $this->hasMany('App\PemesananUser');
+    }
 }

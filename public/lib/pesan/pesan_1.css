@@ -1,0 +1,157 @@
+/* pesan Section
+--------------------------------*/
+
+#pesan {
+    padding: 60px 0;
+  }
+  
+  #pesan #pesan-flters {
+    padding: 0;
+    margin: 5px 0 35px 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  #pesan #pesan-flters li {
+    cursor: pointer;
+    margin: 15px 15px 15px 0;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background: #fff;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #pesan #pesan-flters li:hover,
+  #pesan #pesan-flters li.filter-active {
+    background: #18d26e;
+    color: #fff;
+  }
+  
+  #pesan #pesan-flters li:last-child {
+    margin-right: 0;
+  }
+  
+  #pesan .pesan-wrap {
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+  }
+  
+  #pesan .pesan-wrap:hover {
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+  }
+  
+  #pesan .pesan-item {
+    position: relative;
+    height: relative;
+    overflow: hidden;
+  }
+  
+  #pesan .pesan-item figure {
+    background: #000;
+    overflow: hidden;
+    height: 240px;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+  }
+  
+  #pesan .pesan-item figure:hover img {
+    opacity: 0.4;
+    transition: 0.3s;
+  }
+  
+  #pesan .pesan-item figure .link-preview,
+  #pesan .pesan-item figure .link-details {
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    line-height: 1;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.2s linear;
+  }
+  
+  #pesan .pesan-item figure .link-preview i,
+  #pesan .pesan-item figure .link-details i {
+    padding-top: 6px;
+    font-size: 22px;
+    color: #333;
+  }
+  
+  #pesan .pesan-item figure .link-preview:hover,
+  #pesan .pesan-item figure .link-details:hover {
+    background: #18d26e;
+  }
+  
+  #pesan .pesan-item figure .link-preview:hover i,
+  #pesan .pesan-item figure .link-details:hover i {
+    color: #fff;
+  }
+  
+  #pesan .pesan-item figure .link-preview {
+    left: calc(50% - 38px);
+    top: calc(50% - 18px);
+  }
+  
+  #pesan .pesan-item figure .link-details {
+    right: calc(50% - 38px);
+    top: calc(50% - 18px);
+  }
+  
+  #pesan .pesan-item figure:hover .link-preview {
+    opacity: 1;
+    left: calc(50% - 44px);
+  }
+  
+  #pesan .pesan-item figure:hover .link-details {
+    opacity: 1;
+    right: calc(50% - 44px);
+  }
+  
+  #pesan .pesan-item .pesan-info {
+    background: #fff;
+    text-align: center;
+    padding: 30px;
+    height: 90px;
+    border-radius: 0 0 3px 3px;
+  }
+  
+  #pesan .pesan-item .pesan-info h4 {
+    font-size: 18px;
+    line-height: 1px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    padding-bottom: 0;
+  }
+  
+  #pesan .pesan-item .pesan-info h4 a {
+    color: #333;
+  }
+  
+  #pesan .pesan-item .pesan-info h4 a:hover {
+    color: #18d26e;
+  }
+  
+  #pesan .pesan-item .pesan-info p {
+    padding: 0;
+    margin: 0;
+    color: #b8b8b8;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  #daftar {
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+  

@@ -14,7 +14,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">Edit Pengujian Air </h5>
+            <h5 class="m-0 font-weight-bold text-primary">EDIT PENGUJIAN AIR </h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
         </div>
         <div class="card-body">
@@ -36,7 +36,7 @@
 
         <div class="form-group">
             {!! Form::label('tarif', 'Tarif :') !!}
-            {!! Form::text('tarif', null,['class'=>'form-control','placeholder'=>'Tarif', 'required']) !!}
+            {!! Form::text('tarif', null,['class'=>'form-control','placeholder'=>'Tarif']) !!}
         </div>
 
         <div class="form-group">

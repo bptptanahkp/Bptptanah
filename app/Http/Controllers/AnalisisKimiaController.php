@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\AnalisisKimiaTanah;
+use Illuminate\Support\Facades\DB;
 
 class AnalisisKimiaController extends Controller
 {
@@ -26,6 +27,13 @@ class AnalisisKimiaController extends Controller
     public function create()
     {
         //
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $data = AnalisisKimiaTanah::all()->where('jenis_uji','like','%'.$search.'%');
+        return view('admin.tarif_lab.analisis_kimia.index', compact('data'));
     }
 
     /**

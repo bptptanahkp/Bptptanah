@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTanamenTable extends Migration
+class CreatePupukOrganikKomposCairsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTanamenTable extends Migration
      */
     public function up()
     {
-        Schema::create('tanamen', function (Blueprint $table) {
+        Schema::create('pupuk_organik__kompos__cairs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('jenis_uji');
             $table->string('metode')->nullable();
-            $table->integer('tarif');
+            $table->integer('tarif')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTanamenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tanamen');
+        Schema::dropIfExists('pupuk_organik__kompos__cairs');
     }
 }

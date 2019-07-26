@@ -11,7 +11,7 @@ class PeraturanPelangganController extends Controller
       public function index()
     {
         $data = PeraturanPelanggan::all();
-        return view ('admin.tarif_lab.peraturan_pelanggan.index', compact('data'));
+        return view ('admin.peraturan.peraturan_pelanggan.index', compact('data'));
     }
 
     /**
@@ -59,7 +59,7 @@ class PeraturanPelangganController extends Controller
     public function edit($id)
     {
         $ed = PeraturanPelanggan::find($id);
-        return view ('admin.tarif_lab.peraturan_pelanggan.edit',compact('ed'));
+        return view ('admin.peraturan.peraturan_pelanggan.edit',compact('ed'));
     }
 
     /**

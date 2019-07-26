@@ -20,10 +20,6 @@
         <div class="card-body">
         {!! Form::model($ed,['method'=>'PATCH', 'action'=> ['AnalisisKimiaController@update',$ed->id],'files'=>true]) !!}
 
-         <div class="form-group">
-            {!! Form::label('id', 'No :') !!}
-            {{ Form::text('id', null,['class'=>'form-control','placeholder'=>'Nomor' ,'required'])}}
-        </div>
         <div class="form-group">
             {!! Form::label('jenis_uji', 'Jenis Uji :') !!}
             {{ Form::text('jenis_uji', null,['class'=>'form-control','placeholder'=>'Jenis Uji' ,'required'])}}
@@ -36,7 +32,7 @@
 
         <div class="form-group">
             {!! Form::label('tarif', 'Tarif :') !!}
-            {!! Form::text('tarif', null,['class'=>'form-control','placeholder'=>'Tarif', 'required']) !!}
+            {!! Form::text('tarif', null,['class'=>'form-control','placeholder'=>'Tarif']) !!}
         </div>
 
         <div class="form-group">
