@@ -25,6 +25,7 @@ Route::get('logout','AuthController@logout');
 Route::group(['middleware' => 'auth'],function(){
     Route::resource('admin', 'AdminController');
     Route::resource('tarifanalisiskimia', 'AnalisisKimiaController');
+    Route::post('CariTarifAnkimtan', 'AnalisisKimiaController@cariTarif');
     Route::resource('tarifpupukkimia', 'PupukkimiaController');
     Route::resource('tarifpupukorganik', 'PupukOrganik_Kompos_CairController');
     Route::resource('tarifpengujianair', 'PengujianAirController');

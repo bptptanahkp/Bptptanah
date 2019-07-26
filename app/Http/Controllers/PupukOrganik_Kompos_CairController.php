@@ -14,7 +14,7 @@ class PupukOrganik_Kompos_CairController extends Controller
 
      public function index()
     {
-        $data = PupukOrganik_Kompos_Cair::all();
+        $data = PupukOrganik_Kompos_Cair::paginate(10);
         return view ('admin.tarif_lab.pupuk_organik.index', compact('data'));
     }
 

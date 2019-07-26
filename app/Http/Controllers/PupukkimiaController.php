@@ -11,7 +11,7 @@ class PupukkimiaController extends Controller
      */
     public function index()
     {
-        $data = Pupukkimia::all();
+        $data = Pupukkimia::paginate(10);
         return view ('admin.tarif_lab.pupuk_kimia.index', compact('data'));
     }
     /**

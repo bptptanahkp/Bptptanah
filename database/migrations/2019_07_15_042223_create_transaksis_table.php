@@ -16,8 +16,8 @@ class CreateTransaksisTable extends Migration
         Schema::create('transaksis', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('pemesanan_id')->unsigned();
-            $table->foreign('pemesanan_id')->references('pemesanan_id')->on('permintaan_pelanggans');
-            $table->integer('nama');
+            $table->foreign('pemesanan_id')->references('id')->on('pemesanan_users');
+            $table->string('nama');
             $table->biginteger('totalHarga')->nullable();
             $table->timestamps();
         });

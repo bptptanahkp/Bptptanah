@@ -68,6 +68,8 @@
                 @endif
                 </tbody>
             </table>
+            <div class="row justify-content-center">{!! $data->render() !!}
+            </div>
         </div>
     </div>
 

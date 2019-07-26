@@ -18,6 +18,8 @@ class AdminController extends Controller
         return view ('admin.index', compact('user'));
     }
 
+    
+
     /**
      * Show the form for creating a new resource.
      *
