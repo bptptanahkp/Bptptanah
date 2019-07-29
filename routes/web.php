@@ -16,6 +16,8 @@ Route::get('/welcome', function () {
 });
 
 Route::resource('','UserController');
+Route::get('/hasilpesan/{id}','UserController@hasilpesan');
+Route::get('/hasilpesan/{id}/cetakpesan_pdf','UserController@cetak_pdf');
 
 Route::get('login','AuthController@login')->name('login');
 Route::post('postlogin','AuthController@postlogin');

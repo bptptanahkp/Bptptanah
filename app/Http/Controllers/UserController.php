@@ -14,6 +14,8 @@ use App\PemesananUser;
 use App\PermintaanPelanggan;
 use App\Transaksi;
 
+use PDF;
+
 use App\Http\Requests\PesanRequest;
 
 class UserController extends Controller
@@ -147,6 +149,20 @@ class UserController extends Controller
         ));
     }
 
+    public function hasilpesan($id)
+    {
+        $pesan = PemesananUser::find($id);
+        return view('users.pesan.hasilpesan',compact('pesan'));
+    }
+
+    public function cetak_pdf($id)
+    {
+        $pesan = PemesananUser::find($id);
+
+        $pdf = PDF::loadview('hasilpesan_pdf',compact('pesan'));
+        return $pdf->stream();
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -214,11 +230,17 @@ class UserController extends Controller
             $tarifpukorkom = PupukOrganik_Kompos_Cair::find($v);
             $hargapukorkom += $tarifpukorkom['tarif'];
         }   
+
         $transak = Transaksi::where('pemesanan_id',$lastid)->get();
         $totalHarga = $hargaankimtan+$hargapukorkom;
         $transaksi->update(['totalHarga' => $totalHarga]);
 
-            return redirect('/')->with('berhasil','Pemesanan Berhasil ditambahkan');
+       
+        return redirect('hasilpesan/'.$lastid);
+
+        // $transaksifix = Transaksi::where('pemesanan_id',$lastid);
+
+        //     return redirect('hasilpesan.id, ['id' =>]')->with('berhasil','Pemesanan Berhasil ditambahkan');
         }
 
     /**
