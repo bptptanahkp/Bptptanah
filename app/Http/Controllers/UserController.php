@@ -1,31 +1,5 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@harisaa03 
-1
-0 0 bptptanahkp/Bptptanah Template
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights  Settings
-Bptptanah/app/Http/Controllers/UserController.php  / 
-@adefian adefian berhasil menambah relasi antara 3 tabel permintaan_pelanggans,pemesan…
-0d3f0b0 3 days ago
-We found a potential security vulnerability in one of your dependencies.
-You can see this message because you have been granted access to security alerts for this repository. 
-Manage your notification settings or learn more about security alerts.
-
-269 lines (237 sloc)  10.8 KB
-    
-Jump to definition is available!Beta
-Navigate your code with ease. In select public repositories, you can now click on function and method calls to jump to their definitions in the same repository. Learn more
-
- You're using jump to definition to discover and navigate code.  Beta
-Learn more or give us feedback
 <?php
+
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\PeraturanPelanggan;
