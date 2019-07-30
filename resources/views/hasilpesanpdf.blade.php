@@ -30,13 +30,58 @@
 </head>
 <style>
 
+@page {
+    margin: 0cm 0cm;
+}
+body{
+    margin-top:2cm;
+    margin-left:3cm;
+    margin-right:2cm;
+    margin-bottom:2cm;
+}
 .tab {position:absolute;left:250px; }
+header {
+    position: fixed;
+    top: -60px;
+    left: 0cm;
+    right: 0cm;
+    height: 2cm;
+
+    /** Extra personal styles **/
+    background-color: #03a9f4;
+    color: white;
+    text-align: center;
+    line-height: 1.5cm;
+}
+footer {
+    position: fixed; 
+    bottom: 0cm; 
+    left: 0cm; 
+    right: 0cm;
+    height: 2cm;
+
+    /** Extra personal styles **/3221l7 7
+    background-color: #03a9f4;
+    color: white;
+    text-align: center;
+    line-height: 1.5cm;
+}
+
+
 
 }
 
 </style>
 <body>
+    <header>
+        <img src="{{asset('photo/logo.jpeg')}}" width="100%" height="100%"/>
+    </header>
+    <footer>
+            <img src="{{asset('photo/logo.jpeg')}}" width="100%" height="100%"/>
+    </footer>
     <div class="row justify-content-center">
+        <div class="header">
+        </div>
         <div class="col-sm-6"><br>
             <h6 class="text-center">Laboratorium Tanah</h6>
             <h6 class="text-center">Balai Pengkajian Teknologi Pertanian Jawa Timur</h6>

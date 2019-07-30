@@ -46,7 +46,7 @@
                 <h6>Nama <span class="tab">: {{$pesan->nama}}</span></h6>
                 <h6>Instansi/Perusahaan <span class="tab">: {{$pesan->instansi}}</span></h6>
                 <h6>Alamat <span class="tab">: {{$pesan->alamat}}</span></h6>
-                <h6>Nomer Telepon <span class="tab">: {{$pesan->ntelp}}</span></h6>
+                <h6>Nomer Telepon <span class="tab">: +62 {{$pesan->ntelp}}</span></h6>
                 <h6>Contoh yang dianalisis <span class="tab">: {{$pesan->contohygdianalisis}}</span></h6>
                 <h6>Unsur yang dianalisis <span class="tab">: {{$pesan->unsurygdianalisis}}</span></h6>
                 <h6>Jumlah Contoh <span class="tab">: {{$pesan->jml_contoh}}</span></h6>

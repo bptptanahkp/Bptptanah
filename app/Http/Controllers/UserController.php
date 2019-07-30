@@ -149,19 +149,6 @@ class UserController extends Controller
         ));
     }
 
-    public function hasilpesan($id)
-    {
-        $pesan = PemesananUser::find($id);
-        return view('users.pesan.hasilpesan',compact('pesan'));
-    }
-
-    public function cetak_pdf($id)
-    {
-        $pesan = PemesananUser::find($id);
-
-        $pdf = PDF::loadview('hasilpesan_pdf',compact('pesan'));
-        return $pdf->stream();
-    }
 
     /**
      * Show the form for creating a new resource.
