@@ -30,101 +30,71 @@
 </head>
 <style>
 
-@page {
-    margin: 0cm 0cm;
-}
 body{
-    margin-top:2cm;
-    margin-left:3cm;
-    margin-right:2cm;
-    margin-bottom:2cm;
-}
-.tab {position:absolute;left:250px; }
-header {
-    position: fixed;
-    top: -60px;
-    left: 0cm;
-    right: 0cm;
-    height: 2cm;
 
-    /** Extra personal styles **/
-    background-color: #03a9f4;
-    color: white;
-    text-align: center;
-    line-height: 1.5cm;
-}
-footer {
-    position: fixed; 
-    bottom: 0cm; 
-    left: 0cm; 
-    right: 0cm;
-    height: 2cm;
-
-    /** Extra personal styles **/3221l7 7
-    background-color: #03a9f4;
-    color: white;
-    text-align: center;
-    line-height: 1.5cm;
 }
 
-
+.judul{
+    text-align:center;
+}
+.datauser{
+}
+.tab{
+    padding-right:40px;
+}
 
 }
 
 </style>
 <body>
-    <header>
-        <img src="{{asset('photo/logo.jpeg')}}" width="100%" height="100%"/>
-    </header>
-    <footer>
-            <img src="{{asset('photo/logo.jpeg')}}" width="100%" height="100%"/>
-    </footer>
-    <div class="row justify-content-center">
-        <div class="header">
-        </div>
-        <div class="col-sm-6"><br>
-            <h6 class="text-center">Laboratorium Tanah</h6>
-            <h6 class="text-center">Balai Pengkajian Teknologi Pertanian Jawa Timur</h6>
-            <h6 class="text-center">Permintaan Pelanggan</h6>
-                <h6>Nomor SPA <span class="tab">: {{$pesan->id}}</span></h6>
-                <h6>Nama <span class="tab">: {{$pesan->nama}}</span></h6>
-                <h6>Instansi/Perusahaan <span class="tab">: {{$pesan->instansi}}</span></h6>
-                <h6>Alamat <span class="tab">: {{$pesan->alamat}}</span></h6>
-                <h6>Nomer Telepon <span class="tab">: {{$pesan->ntelp}}</span></h6>
-                <h6>Contoh yang dianalisis <span class="tab">: {{$pesan->contohygdianalisis}}</span></h6>
-                <h6>Unsur yang dianalisis <span class="tab">: {{$pesan->unsurygdianalisis}}</span></h6>
-                <h6>Jumlah Contoh <span class="tab">: {{$pesan->jml_contoh}}</span></h6>
-                <h6>Bentuk <span class="tab">: {{$pesan->bentuk}}</span></h6>
-                <h6>Asal Contoh <span class="tab">: {{$pesan->asal_contoh}}</span></h6>
-                <h6>Merk <span class="tab">: {{$pesan->merk}}</span></h6>
-                <h6>Tanggal pesan <span class="tab">: {{$pesan->created_at}}</span></h6>
-                <h6>Tanggal diterima <span class="tab">:</span></h6>
-        </div>
+            <h6 class="judul">Laboratorium Tanah</h6>
+            <h6 class="judul">Balai Pengkajian Teknologi Pertanian Jawa Timur</h6>
+            <h6 class="judul">Permintaan Pelanggan</h6>
+                <h6 class="datauser">Nomor SPA <span class="tab">: {{$pesan->id}}</span></h6>
+                <h6 class="datauser">Nama <span class="tab">: {{$pesan->nama}}</span></h6>
+                <h6 class="datauser">Instansi/Perusahaan <span class="tab">: {{$pesan->instansi}}</span></h6>
+                <h6 class="datauser">Alamat <span class="tab">: {{$pesan->alamat}}</span></h6>
+                <h6 class="datauser">Nomer Telepon <span class="tab">: {{$pesan->ntelp}}</span></h6>
+                <h6 class="datauser">Contoh yang dianalisis <span class="tab">: {{$pesan->contohygdianalisis}}</span></h6>
+                <h6 class="datauser">Unsur yang dianalisis <span class="tab">: {{$pesan->unsurygdianalisis}}</span></h6>
+                <h6 class="datauser">Jumlah Contoh <span class="tab">: {{$pesan->jml_contoh}}</span></h6>
+                <h6 class="datauser">Bentuk <span class="tab">: {{$pesan->bentuk}}</span></h6>
+                <h6 class="datauser">Asal Contoh <span class="tab">: {{$pesan->asal_contoh}}</span></h6>
+                <h6 class="datauser">Merk <span class="tab">: {{$pesan->merk}}</span></h6>
+                <h6 class="datauser">Tanggal pesan <span class="tab">: {{$pesan->created_at}}</span></h6>
+                <h6 class="datauser">Tanggal diterima <span class="tab">:</span></h6>
+                <h6 class="datauser">Total Bayar <span class="tab">: Rp. {{$transaksi->totalHarga}},-</span></h6>
 
         <div class="col-sm-8">
-                <table class="table table-borderless table-responsive-sm">
+                <table class="table table-responsive-sm">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
+                                <th>No</th>
+                                <th>Unsur</th>
+                                <th>Tarif</th>
                             </tr>
                         </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        
+                @if($pesan)
+
+                    @foreach($pesan as $pesans)
+
+                    <tr>
+                        <td>{{$pesans->id}}</td>
+                        <td></td>
+                    </tr>
+
+                    @endforeach
+
+                @endif
+
                     </tbody>
                 </table>
-
                 
 		
         </div>
-    </div>
 
-<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
   <!-- <div id="preloader"></div> -->
 

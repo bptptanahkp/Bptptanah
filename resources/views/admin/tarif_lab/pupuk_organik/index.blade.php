@@ -39,13 +39,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                @if($data)
-
+                @php $no=0; @endphp
                     @foreach($data as $datas)
+                        @php $no++; @endphp
 
                     <tr>
                         
-                        <td>{{$datas->id}}</td>
+                        <td>{{$no}}</td>
                         <td class="text-left">{{$datas->jenis_uji}}</td>
                         <td class="text-left">{{$datas->metode}}</td>
                         <td class="text-left">Rp. {{ number_format($datas->tarif) }},-</td>
@@ -64,7 +64,6 @@
 
                     @endforeach
 
-                @endif
                 </tbody>
             </table>
             <div class="row justify-content-center">{!! $data->render() !!}

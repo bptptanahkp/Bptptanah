@@ -55,6 +55,7 @@
                 <h6>Merk <span class="tab">: {{$pesan->merk}}</span></h6>
                 <h6>Tanggal pesan <span class="tab">: {{$pesan->created_at}}</span></h6>
                 <h6>Tanggal diterima <span class="tab">:</span></h6>
+                <h6 class="datauser">Total Bayar <span class="tab">: Rp. {{$transaksi->totalHarga}},-</span></h6>
         </div>
 
         <div class="col-sm-8">

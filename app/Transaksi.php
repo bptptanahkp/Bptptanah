@@ -13,11 +13,7 @@ class Transaksi extends Model
 
     public function pemesananuser()
     {
-        return $this->hasOne('App\PemesananUser');
+        return $this->hasMany('App\PemesananUser');
     }
 
-    public function permintaanpelanggan()
-    {
-        return $this->hasMany('App\PermintaanPelanggan');
-    }
 }

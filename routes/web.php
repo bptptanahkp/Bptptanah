@@ -34,5 +34,6 @@ Route::group(['middleware' => 'auth'],function(){
     Route::resource('tariftanaman', 'TanamanController');
     Route::resource('peraturanpelanggan', 'PeraturanPelangganController');
     Route::resource('ketentuanminimal', 'Ketentuan_MinController');
+    Route::resource('saran', 'SaranController');
 
 });
