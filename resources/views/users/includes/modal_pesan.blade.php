@@ -165,14 +165,14 @@
                             <td class="text-left">{{$ankimtansub1_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub1_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub1_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub1_1->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">{{$ankimtansub1_2->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub1_2->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub1_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub1_2->id)}}</td>
                         </tr>
 
                     @endif
@@ -190,21 +190,21 @@
                             <td class="text-left">{{$ankimtansub2_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub2_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub2_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub2_1->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">{{$ankimtansub2_2->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub2_2->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub2_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub2_2->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="text-left">{{$ankimtansub2_3->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub2_3->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub2_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub2_3->id)}}</td>
                         </tr>
 
                     @endif
@@ -225,7 +225,7 @@
                             <td class="text-left">{{$ankimtansub3_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub3_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub3_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub3_1->id)}}</td>
                         </tr>
                     @endif
 
@@ -235,7 +235,7 @@
                             <td class="text-left">{{$ankimtansub3_2->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub3_2->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub3_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub3_2->id)}}</td>
                         </tr>
                     @endif
 
@@ -245,7 +245,7 @@
                             <td class="text-left">{{$ankimtansub3_3->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub3_3->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub3_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub3_3->id)}}</td>
                         </tr>
                     @endif
 
@@ -255,7 +255,7 @@
                             <td class="text-left">{{$ankimtansub3_4->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub3_4->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub3_4->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub3_4->id)}}</td>
                         </tr>
                     @endif
 
@@ -265,7 +265,7 @@
                             <td class="text-left">{{$ankimtansub3_5->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub3_5->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub3_5->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub3_5->id)}}</td>
                         </tr>
 
                     @endif
@@ -286,7 +286,7 @@
                             <td class="text-left">{{$ankimtansub4_1->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub4_1->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub4_1->id)}}</td>
                         </tr>
                     @endif
 
@@ -296,7 +296,7 @@
                             <td class="text-left">{{$ankimtansub4_2->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub4_2->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub4_2->id)}}</td>
                         </tr>
                     @endif
 
@@ -306,7 +306,7 @@
                             <td class="text-left">{{$ankimtansub4_3->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub4_3->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub4_3->id)}}</td>
                         </tr>
                     @endif
 
@@ -316,7 +316,7 @@
                             <td class="text-left">{{$ankimtansub4_4->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub4_4->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_4->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub4_4->id)}}</td>
                         </tr>
                     @endif
 
@@ -326,7 +326,7 @@
                             <td class="text-left">{{$ankimtansub4_5->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub4_5->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_5->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub4_5->id)}}</td>
                         </tr>
                     @endif
 
@@ -336,7 +336,7 @@
                             <td class="text-left">{{$ankimtansub4_6->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub4_6->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_6->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub4_6->id)}}</td>
                         </tr>
                     @endif
 
@@ -346,7 +346,7 @@
                             <td class="text-left">{{$ankimtansub4_7->jenis_uji}}</td>
                             <td class="text-left">{{$ankimtansub4_7->metode}}</td>
                             <td>Rp. {{number_format($ankimtansub4_7->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_ankimtan[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_ankimtan[]',$ankimtansub4_7->id)}}</td>
                         </tr>
                     @endif
                     </tbody>
@@ -404,7 +404,7 @@
                             <td class="text-left">{{$pupukorganiksub1_1->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_1->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_1->id)}}</td>
                     @endif
 
                     @if($pupukorganiksub1_2)    
@@ -413,7 +413,7 @@
                             <td class="text-left">{{$pupukorganiksub1_2->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_2->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_2->id)}}</td>
                             
                         </tr>
                     @endif
@@ -424,7 +424,7 @@
                             <td class="text-left">{{$pupukorganiksub1_3->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_3->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_3->id)}}</td>
                             
                         </tr>
                     @endif
@@ -435,7 +435,7 @@
                             <td class="text-left">{{$pupukorganiksub1_4->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_4->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_4->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_4->id)}}</td>
                             
                         </tr>
                     @endif
@@ -446,7 +446,7 @@
                             <td class="text-left">{{$pupukorganiksub1_5->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_5->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_5->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_5->id)}}</td>
                             
                         </tr>
                     @endif
@@ -457,7 +457,7 @@
                             <td class="text-left">{{$pupukorganiksub1_6->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_6->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_6->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_6->id)}}</td>
                     @endif
 
                     @if($pupukorganiksub1_7)    
@@ -466,7 +466,7 @@
                             <td class="text-left">{{$pupukorganiksub1_7->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_7->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_7->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_7->id)}}</td>
                             
                         </tr>
                     @endif
@@ -477,7 +477,7 @@
                             <td class="text-left">{{$pupukorganiksub1_8->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_8->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_8->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_8->id)}}</td>
                             
                         </tr>
                     @endif
@@ -488,7 +488,7 @@
                             <td class="text-left">{{$pupukorganiksub1_9->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_9->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_9->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_9->id)}}</td>
                             
                         </tr>
                     @endif
@@ -499,7 +499,7 @@
                             <td class="text-left">{{$pupukorganiksub1_10->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_10->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_10->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_10->id)}}</td>
                             
                         </tr>
                     @endif
@@ -510,7 +510,7 @@
                             <td class="text-left">{{$pupukorganiksub1_11->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_11->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_11->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_11->id)}}</td>
                             
                         </tr>
                     @endif
@@ -521,7 +521,7 @@
                             <td class="text-left">{{$pupukorganiksub1_12->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_12->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_12->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_12->id)}}</td>
                             
                         </tr>
                     @endif
@@ -532,7 +532,7 @@
                             <td class="text-left">{{$pupukorganiksub1_13->jenis_uji}}</td>
                             <td class="text-left">{{$pupukorganiksub1_13->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub1_13->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukorganik[]',$pupukorganiksub1_13->id)}}</td>
                             
                         </tr>
                     @endif
@@ -544,7 +544,7 @@
                         <td class="text-left">{{$pupukorganiksub2->metode}}</td>
                         <td>Rp. {{number_format($pupukorganiksub2->tarif)}},-</td>
                         <td>
-                            {{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                            {{Form::checkbox('id_pupukorganik[]',$pupukorganiksub2->id)}}</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -552,7 +552,7 @@
                             <td class="text-left">{{$pupukorganiksub2_1->metode}}</td>
                             <td>Rp. {{number_format($pupukorganiksub2_1->tarif)}},-</td>
                             <td>
-                                {{Form::checkbox('id_pupukorganik[]',$value->id)}}</td>
+                                {{Form::checkbox('id_pupukorganik[]',$pupukorganiksub2_1->id)}}</td>
                         </tr>
                     @endif
                     </tbody>
@@ -611,7 +611,7 @@
                             <td class="text-left">{{$pupukkimiasub1_1->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_1->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_1->id)}}</td>
                         </tr>
                     @endif
 
@@ -621,7 +621,7 @@
                             <td class="text-left">{{$pupukkimiasub1_2->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_2->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_2->id)}}</td>
                         </tr>
                     @endif
 
@@ -631,7 +631,7 @@
                             <td class="text-left">{{$pupukkimiasub1_3->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_3->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_3->id)}}</td>
                         </tr>
                     @endif
 
@@ -641,7 +641,7 @@
                             <td class="text-left">{{$pupukkimiasub1_4->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_4->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_4->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_4->id)}}</td>
                         </tr>
                     @endif
 
@@ -651,7 +651,7 @@
                             <td class="text-left">{{$pupukkimiasub1_5->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_5->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_5->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_5->id)}}</td>
                         </tr>
                     @endif
 
@@ -661,7 +661,7 @@
                             <td class="text-left">{{$pupukkimiasub1_6->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_6->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_6->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_6->id)}}</td>
                         </tr>
                     @endif
 
@@ -671,7 +671,7 @@
                             <td class="text-left">{{$pupukkimiasub1_7->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_7->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_7->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_7->id)}}</td>
                         </tr>
                     @endif
 
@@ -681,7 +681,7 @@
                             <td class="text-left">{{$pupukkimiasub1_8->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_8->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_8->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_8->id)}}</td>
                         </tr>
                     @endif
 
@@ -691,7 +691,7 @@
                             <td class="text-left">{{$pupukkimiasub1_9->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_9->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_9->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_9->id)}}</td>
                         </tr>
                     @endif
 
@@ -701,7 +701,7 @@
                             <td class="text-left">{{$pupukkimiasub1_10->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_10->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_10->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_10->id)}}</td>
                         </tr>
                     @endif
 
@@ -711,7 +711,7 @@
                             <td class="text-left">{{$pupukkimiasub1_11->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_11->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_11->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_11->id)}}</td>
                         </tr>
                     @endif
 
@@ -721,7 +721,7 @@
                             <td class="text-left">{{$pupukkimiasub1_12->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_12->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_12->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_12->id)}}</td>
                         </tr>
                     @endif
 
@@ -731,7 +731,7 @@
                             <td class="text-left">{{$pupukkimiasub1_13->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub1_13->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub1_13->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub_13->id)}}</td>
                         </tr>
                     @endif
 
@@ -751,7 +751,7 @@
                             <td class="text-left">{{$pupukkimiasub2_1->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_1->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_1->id)}}</td>
                         </tr>
                     @endif
 
@@ -761,7 +761,7 @@
                             <td class="text-left">{{$pupukkimiasub2_2->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_2->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_2->id)}}</td>
                         </tr>
                     @endif
 
@@ -771,7 +771,7 @@
                             <td class="text-left">{{$pupukkimiasub2_3->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_3->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_3->id)}}</td>
                         </tr>
                     @endif
 
@@ -781,7 +781,7 @@
                             <td class="text-left">{{$pupukkimiasub2_4->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_4->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_4->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_4->id)}}</td>
                         </tr>
                     @endif
 
@@ -791,7 +791,7 @@
                             <td class="text-left">{{$pupukkimiasub2_5->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_5->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_5->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_5->id)}}</td>
                         </tr>
                     @endif
 
@@ -801,7 +801,7 @@
                             <td class="text-left">{{$pupukkimiasub2_6->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_6->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_6->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_6->id)}}</td>
                         </tr>
                     @endif
 
@@ -811,7 +811,7 @@
                             <td class="text-left">{{$pupukkimiasub2_7->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_7->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_7->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_7->id)}}</td>
                         </tr>
                     @endif
 
@@ -821,7 +821,7 @@
                             <td class="text-left">{{$pupukkimiasub2_8->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_8->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_8->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_8->id)}}</td>
                         </tr>
                     @endif
 
@@ -831,7 +831,7 @@
                             <td class="text-left">{{$pupukkimiasub2_9->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_9->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_9->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_9->id)}}</td>
                         </tr>
                     @endif
 
@@ -841,7 +841,7 @@
                             <td class="text-left">{{$pupukkimiasub2_10->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_10->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_10->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_10->id)}}</td>
                         </tr>
                     @endif
 
@@ -851,7 +851,7 @@
                             <td class="text-left">{{$pupukkimiasub2_11->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_11->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_11->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_11->id)}}</td>
                         </tr>
                     @endif
 
@@ -861,7 +861,7 @@
                             <td class="text-left">{{$pupukkimiasub2_12->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_12->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_12->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_12->id)}}</td>
                         </tr>
                     @endif
 
@@ -871,7 +871,7 @@
                             <td class="text-left">{{$pupukkimiasub2_13->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub2_13->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub2_13->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub2_13->id)}}</td>
                         </tr>
                     @endif
 
@@ -891,7 +891,7 @@
                             <td class="text-left">{{$pupukkimiasub3_1->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_1->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_1->id)}}</td>
                         </tr>
                     @endif
 
@@ -901,7 +901,7 @@
                             <td class="text-left">{{$pupukkimiasub3_2->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_2->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_2->id)}}</td>
                         </tr>
                     @endif
 
@@ -911,7 +911,7 @@
                             <td class="text-left">{{$pupukkimiasub3_3->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_3->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_3->id)}}</td>
                         </tr>
                     @endif
 
@@ -921,7 +921,7 @@
                             <td class="text-left">{{$pupukkimiasub3_4->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_4->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_4->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_4->id)}}</td>
                         </tr>
                     @endif
 
@@ -931,7 +931,7 @@
                             <td class="text-left">{{$pupukkimiasub3_5->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_5->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_5->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_5->id)}}</td>
                         </tr>
                     @endif
 
@@ -941,7 +941,7 @@
                             <td class="text-left">{{$pupukkimiasub3_6->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_6->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_6->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_6->id)}}</td>
                         </tr>
                     @endif
 
@@ -951,7 +951,7 @@
                             <td class="text-left">{{$pupukkimiasub3_7->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_7->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_7->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_7->id)}}</td>
                         </tr>
                     @endif
 
@@ -961,7 +961,7 @@
                             <td class="text-left">{{$pupukkimiasub3_8->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_8->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_8->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_8->id)}}</td>
                         </tr>
                     @endif
 
@@ -971,7 +971,7 @@
                             <td class="text-left">{{$pupukkimiasub3_9->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_9->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_9->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_9->id)}}</td>
                         </tr>
                     @endif
 
@@ -981,7 +981,7 @@
                             <td class="text-left">{{$pupukkimiasub3_10->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_10->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_10->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_10->id)}}</td>
                         </tr>
                     @endif
 
@@ -991,7 +991,7 @@
                             <td class="text-left">{{$pupukkimiasub3_11->jenis_uji}}</td>
                             <td class="text-left">{{$pupukkimiasub3_11->metode}}</td>
                             <td>Rp. {{number_format($pupukkimiasub3_11->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_pupukkimia[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_pupukkimia[]',$pupukkimiasub3_11->id)}}</td>
                         </tr>
                     @endif
 
@@ -1038,7 +1038,7 @@
 
                     @if($tanamansub1)
                         <tr>
-                        <td>8</td>
+                        <td>3</td>
                         <td class="text-left">{{$tanamansub1->jenis_uji}}</td>
                         <td class="text-left">{{$tanamansub1->metode}}</td>
                         <td></td>
@@ -1052,7 +1052,7 @@
                             <td class="text-left">{{$tanamansub1_1->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_1->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_1->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_1->id)}}</td>
                         </tr>
                     @endif
 
@@ -1062,7 +1062,7 @@
                             <td class="text-left">{{$tanamansub1_2->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_2->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_2->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_2->id)}}</td>
                         </tr>
                     @endif
 
@@ -1072,7 +1072,7 @@
                             <td class="text-left">{{$tanamansub1_3->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_3->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_3->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_3->id)}}</td>
                         </tr>
                     @endif
 
@@ -1082,7 +1082,7 @@
                             <td class="text-left">{{$tanamansub1_4->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_4->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_4->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_4->id)}}</td>
                         </tr>
                     @endif
 
@@ -1092,7 +1092,7 @@
                             <td class="text-left">{{$tanamansub1_5->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_5->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_5->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_5->id)}}</td>
                         </tr>
                     @endif
 
@@ -1102,7 +1102,7 @@
                             <td class="text-left">{{$tanamansub1_6->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_6->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_6->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_6->id)}}</td>
                         </tr>
                     @endif
 
@@ -1112,7 +1112,7 @@
                             <td class="text-left">{{$tanamansub1_7->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_7->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_7->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_7->id)}}</td>
                         </tr>
                     @endif
 
@@ -1122,7 +1122,7 @@
                             <td class="text-left">{{$tanamansub1_8->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_8->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_8->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_8->id)}}</td>
                         </tr>
                     @endif
 
@@ -1132,7 +1132,7 @@
                             <td class="text-left">{{$tanamansub1_9->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_9->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_9->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_9->id)}}</td>
                         </tr>
                     @endif
 
@@ -1142,7 +1142,7 @@
                             <td class="text-left">{{$tanamansub1_10->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_10->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_10->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_10->id)}}</td>
                         </tr>
                     @endif
 
@@ -1152,7 +1152,7 @@
                             <td class="text-left">{{$tanamansub1_11->jenis_uji}}</td>
                             <td class="text-left">{{$tanamansub1_11->metode}}</td>
                             <td>Rp. {{number_format($tanamansub1_11->tarif)}},-</td>
-                            <td>{{Form::checkbox('id_tanaman[]',$value->id)}}</td>
+                            <td>{{Form::checkbox('id_tanaman[]',$tanamansub1_11->id)}}</td>
                         </tr>
                     @endif
                     </tbody>

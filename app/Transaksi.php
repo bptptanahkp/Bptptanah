@@ -13,7 +13,8 @@ class Transaksi extends Model
 
     public function pemesananuser()
     {
-        return $this->hasMany('App\PemesananUser');
+        return $this->belongsTo('App\PemesananUser','pemesanan_id');
     }
+
 
 }

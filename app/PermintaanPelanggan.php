@@ -11,16 +11,30 @@ class PermintaanPelanggan extends Model
         'pemesanan_id','id_ankimtan', 'id_pupukkimia', 'id_pupukorganik',
         'id_tanaman','id_pengujianair','harga',
     ];
-
-
-    public function transaksi()
-    {
-        return $this->belongsTo('App\Transaksi');
-    }
     
-    public function ankimtanah()
+    public function ankimtan()
     {
-        return $this->belongsTo('App\AnilisisKimiaTanah');
+        return $this->belongsTo('App\AnalisisKimiaTanah','id_ankimtan');
+    }
+
+    public function pukorkom()
+    {
+        return $this->belongsTo('App\PupukOrganik_Kompos_Cair','id_pupukorganik');
+    }
+
+    public function pupukkimia()
+    {
+        return $this->belongsTo('App\Pupukkimia','id_pupukkimia');
+    }
+
+    public function tanaman()
+    {
+        return $this->belongsTo('App\AnilisisKimiaTanah','id_tanaman');
+    }
+
+    public function pengair()
+    {
+        return $this->belongsTo('App\PengujianAir','id_pengujianair');
     }
     
 }

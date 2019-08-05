@@ -1007,37 +1007,6 @@
                 </table>
                 </div>
             </div>
-        
-
-          <div class="col-lg-4 col-md-6 pesan-item filter-f wow fadeInUp">
-            <div class="pesan-wrap">
-              <figure>
-                <img src="{{asset('photo/carousel2.jpg')}}" class="img-fluid" alt="">
-                <a href="{{asset('photo/carousel2.jpg')}}" data-lightbox="pesan" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="pesan-info">
-                <h4><a href="#">App 1</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 pesan-item filter-a wow fadeInUp" data-wow-delay="0.1s">
-            <div class="pesan-wrap">
-              <figure>
-                  <img src="{{asset('photo/carousel1.jpg')}}" class="img-fluid" alt="">
-                  <a href="{{asset('photo/carousel1.jpg')}}" class="link-preview" data-lightbox="pesan" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="pesan-info">
-                <h4><a href="#">Web 38</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
 
         </div>
 

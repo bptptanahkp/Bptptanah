@@ -187,8 +187,8 @@ class UserController extends Controller
                         ]); 
                         
                         PermintaanPelanggan::create($data2);
+                }
             }
-        }
         
             
         if ($request->id_pupukorganik) {
@@ -203,7 +203,41 @@ class UserController extends Controller
 
                     PermintaanPelanggan::create($data2);
                 }
-        }  
+            } 
+        
+        if ($request->id_pupukkimia) {
+            foreach ($request->id_pupukkimia as $item => $v) {
+                $harga = Pupukkimia::find($v)->tarif;
+                $data2=([
+                    'pemesanan_id'=>$lastid,
+                    'id_pupukkimia'=>$request->id_pupukkimia[$item],
+                    'harga' =>$harga,
+                    ]); 
+                    PermintaanPelanggan::create($data2);
+                }
+            } 
+        if ($request->id_tanaman) {
+            foreach ($request->id_tanaman as $item => $v) {
+                $harga = Tanaman::find($v)->tarif;
+                $data2=([
+                    'pemesanan_id'=>$lastid,
+                    'id_tanaman'=>$request->id_tanaman[$item],
+                    'harga' =>$harga,
+                    ]); 
+                    PermintaanPelanggan::create($data2);
+                }
+            } 
+        if ($request->id_pengujianair) {
+            foreach ($request->id_pengujianair as $item => $v) {
+                $harga = PengujianAir::find($v)->tarif;
+                $data2=([
+                    'pemesanan_id'=>$lastid,
+                    'id_pengujianair'=>$request->id_pengujianair[$item],
+                    'harga' =>$harga,
+                    ]); 
+                    PermintaanPelanggan::create($data2);
+                }
+            }
             
 
         $hargaankimtan = 0;
@@ -218,8 +252,26 @@ class UserController extends Controller
             $hargapukorkom += $tarifpukorkom['tarif'];
         }   
 
+        $hargapukim = 0;
+        foreach((array)$request->id_pupukkimia as $nama=>$v) {
+            $tarifpukim = Pupukkimia::find($v);
+            $hargapukim += $tarifpukim['tarif'];
+        }
+
+        $hargatanaman = 0;
+        foreach((array)$request->id_tanaman as $nama=>$v) {
+            $tariftanaman = Tanaman::find($v);
+            $hargatanaman += $tariftanaman['tarif'];
+        }
+
+        $hargapengair = 0;
+        foreach((array)$request->id_tanaman as $nama=>$v) {
+            $tarifpengair = PengujianAir::find($v);
+            $hargapengair += $tarifpengair['tarif'];
+        }
+
         $transak = Transaksi::where('pemesanan_id',$lastid)->get();
-        $totalHarga = $hargaankimtan+$hargapukorkom;
+        $totalHarga = $hargaankimtan+$hargapukorkom+$hargapukim+$hargatanaman+$hargapengair;
         $transaksi->update(['totalHarga' => $totalHarga]);
 
        

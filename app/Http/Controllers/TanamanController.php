@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Tanaman;
 
+use Alert;
+
 class TanamanController extends Controller
 {
     //
@@ -35,8 +37,8 @@ class TanamanController extends Controller
         $input = $request->all();
 
         Tanaman::create($input);
-
-        return redirect('tariftanaman')->with('action','Data berhasil di tambah');
+        Alert::success('Success','berhasil menambahkan');
+        return redirect()->route('tariftanaman.index');
     }
 
     /**
@@ -88,6 +90,6 @@ class TanamanController extends Controller
     {
         $ed = Tanaman::find($id);
         $ed->delete($ed);
-        return redirect('tariftanaman')->with('action','Data berhasil di hapus');
+        return redirect('tariftanaman');
     }
 }

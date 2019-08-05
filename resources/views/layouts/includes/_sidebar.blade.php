@@ -28,7 +28,7 @@
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-          <i class="fa fa-fw fa-money"></i>
+          <i class="fa fa-dollar"></i>
           <span>Tarif Lab. Tanah 2018</span>
         </a>
         <div id="collapse1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -56,6 +56,11 @@
             <a class="collapse-item" href="/ketentuanminimal">Ketentuan Minimal</a>
           </div>
         </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/saran">
+          <i class="fa fa-fw fa-book"></i>
+          <span>Saran</span></a>
       </li>
 
         
@@ -106,7 +111,7 @@
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle">
+        <button class="rounded-circle border-1" id="sidebarToggle">
         </button>
       </div>
 

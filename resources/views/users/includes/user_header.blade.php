@@ -13,18 +13,16 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="#about">Tentang BPTP</a></li>
           <li><a href="#services">Peraturan</a></li>
           <li><a href="#pesan">Daftar & Pesan Pengujian tanah</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="menu-has-children"><a>Admin</a>
+          <li><a href="#contact">Layanan</a></li>
             <ul>
             @if (Route::has('login'))
                     @auth
-                        <li><a href="/admin">Masuk</a></li>
+                        <!-- <li><a href="/admin">Masuk</a></li> -->
                     @else
-                        <li><a href="/login">Login</a></li>
+                        <!-- <li><a href="/login">Login</a></li> -->
                     @endauth
             @endif
               

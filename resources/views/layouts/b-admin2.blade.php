@@ -73,6 +73,7 @@
   <!-- Bootstrap core JavaScript-->
   <script src="{{asset('js/b-admin2.js')}}"></script>
   <script src="{{asset('fonts/fontawesome/all.min.js')}}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   @yield('script')
 </body>
 

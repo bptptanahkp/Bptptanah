@@ -50,20 +50,20 @@ body{
             <h6 class="judul">Laboratorium Tanah</h6>
             <h6 class="judul">Balai Pengkajian Teknologi Pertanian Jawa Timur</h6>
             <h6 class="judul">Permintaan Pelanggan</h6>
-                <h6 class="datauser">Nomor SPA <span class="tab">: {{$pesan->id}}</span></h6>
-                <h6 class="datauser">Nama <span class="tab">: {{$pesan->nama}}</span></h6>
-                <h6 class="datauser">Instansi/Perusahaan <span class="tab">: {{$pesan->instansi}}</span></h6>
-                <h6 class="datauser">Alamat <span class="tab">: {{$pesan->alamat}}</span></h6>
-                <h6 class="datauser">Nomer Telepon <span class="tab">: {{$pesan->ntelp}}</span></h6>
-                <h6 class="datauser">Contoh yang dianalisis <span class="tab">: {{$pesan->contohygdianalisis}}</span></h6>
-                <h6 class="datauser">Unsur yang dianalisis <span class="tab">: {{$pesan->unsurygdianalisis}}</span></h6>
-                <h6 class="datauser">Jumlah Contoh <span class="tab">: {{$pesan->jml_contoh}}</span></h6>
-                <h6 class="datauser">Bentuk <span class="tab">: {{$pesan->bentuk}}</span></h6>
-                <h6 class="datauser">Asal Contoh <span class="tab">: {{$pesan->asal_contoh}}</span></h6>
-                <h6 class="datauser">Merk <span class="tab">: {{$pesan->merk}}</span></h6>
-                <h6 class="datauser">Tanggal pesan <span class="tab">: {{$pesan->created_at}}</span></h6>
+                <h6 class="datauser">Nomor SPA <span class="tab">: {{$pesan->pemesanan_id}}</span></h6>
+                <h6 class="datauser">Nama <span class="tab">: {{$pesan->pemesananuser->nama}}</span></h6>
+                <h6 class="datauser">Instansi/Perusahaan <span class="tab">: {{$pesan->pemesananuser->instansi}}</span></h6>
+                <h6 class="datauser">Alamat <span class="tab">: {{$pesan->pemesananuser->alamat}}</span></h6>
+                <h6 class="datauser">Nomer Telepon <span class="tab">: {{$pesan->pemesananuser->ntelp}}</span></h6>
+                <h6 class="datauser">Contoh yang dianalisis <span class="tab">: {{$pesan->pemesananuser->contohygdianalisis}}</span></h6>
+                <h6 class="datauser">Unsur yang dianalisis <span class="tab">: {{$pesan->pemesananuser->unsurygdianalisis}}</span></h6>
+                <h6 class="datauser">Jumlah Contoh <span class="tab">: {{$pesan->pemesananuser->jml_contoh}}</span></h6>
+                <h6 class="datauser">Bentuk <span class="tab">: {{$pesan->pemesananuser->bentuk}}</span></h6>
+                <h6 class="datauser">Asal Contoh <span class="tab">: {{$pesan->pemesananuser->asal_contoh}}</span></h6>
+                <h6 class="datauser">Merk <span class="tab">: {{$pesan->pemesananuser->merk}}</span></h6>
+                <h6 class="datauser">Tanggal pesan <span class="tab">: {{$pesan->pemesananuser->created_at}}</span></h6>
                 <h6 class="datauser">Tanggal diterima <span class="tab">:</span></h6>
-                <h6 class="datauser">Total Bayar <span class="tab">: Rp. {{$transaksi->totalHarga}},-</span></h6>
+                <h6 class="datauser">Total Bayar <span class="tab">: Rp. {{$pesan->totalHarga}},-</span></h6>
 
         <div class="col-sm-8">
                 <table class="table table-responsive-sm">
@@ -74,22 +74,13 @@ body{
                                 <th>Tarif</th>
                             </tr>
                         </thead>
-                    <tbody>
-                        
-                @if($pesan)
-
-                    @foreach($pesan as $pesans)
-
-                    <tr>
-                        <td>{{$pesans->id}}</td>
-                        <td></td>
-                    </tr>
-
-                    @endforeach
-
-                @endif
-
-                    </tbody>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>jajal</td>
+                                <td>80000</td>
+                            </tr>
+                        </tbody>
                 </table>
                 
 		

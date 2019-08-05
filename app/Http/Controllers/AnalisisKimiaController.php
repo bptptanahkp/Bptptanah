@@ -91,10 +91,9 @@ class AnalisisKimiaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(AnalisisKimiaTanah $tarifanalisiskimium)
     {
-        $ed = AnalisisKimiaTanah::find($id);
-        $ed->delete($ed);
-        return redirect('tarifanalisiskimia')->with('action','Data berhasil di hapus');
+        $tarifanalisiskimium->delete();
+        return redirect()->route('tarifanalisiskimia.index');
     }
 }

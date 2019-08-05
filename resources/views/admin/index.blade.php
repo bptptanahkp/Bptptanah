@@ -25,5 +25,9 @@
     <script src="{{asset('../resources/assets/assetsadmin2/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('../resources/assets/assetsadmin2/datatables/dataTables.bootstrap4.min.js')}}"></script>
     <script src="{{asset('js/app2.js')}}" type="application/javascript"></script>
+
+    <script>
+        swal("Login Berhasil", "Selamat Datang", "success");
+    </script>
     
 @stop

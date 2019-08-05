@@ -3,27 +3,46 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\PeraturanPelanggan;
+use App\Ketentuan_Min;
+use App\AnalisisKimiaTanah;
+use App\PupukOrganik_Kompos_Cair;
+use App\Pupukkimia;
+use App\Tanaman;
+use App\PengujianAir;
 use App\PemesananUser;
+use App\PermintaanPelanggan;
 use App\Transaksi;
 use PDF;
 use TCPDF;
 
 class PesanController extends Controller
 {
+    public function recordpesan()
+    {
+        $pesan = Transaksi::paginate(10);
+        return view('admin.pesan.index',compact('pesan'));
+    }
     
     public function hasilpesan($id)
     {
-        $pesan = PemesananUser::find($id);
-        $transaksi = Transaksi::find($id);
-        return view('users.pesan.hasilpesan',compact('pesan','transaksi'));
+        $pesan = Transaksi::where('pemesanan_id',$id)->first();
+        $pemesananuser = Pemesananuser::find($id);
+        $permintaan = $pemesananuser->permintaanpelanggan()->get();
+        $permintaanuser = PermintaanPelanggan::where('pemesanan_id',$id)->first();
+        return view('users.pesan.hasilpesan',compact('pesan','permintaan'));
     }
 
 
     public function cetak_pdf($id)
     {
-        $pesan = PemesananUser::find($id);
-        $transaksi = Transaksi::find($id);
-        $view = \View::make('hasilpesanpdf',['pesan'=>$pesan],['transaksi'=>$transaksi]);
+        $pesan = Transaksi::find($id);
+        $permintaanuser = PermintaanPelanggan::where('pemesanan_id',$id)->first();
+        $permintaanuser = $permintaanuser;
+        $ankimtan = $permintaanuser->ankimtan;
+
+        $view = \View::make('hasilpesanpdf',['pesan'=>$pesan],['permintaanuser'=>$permintaanuser]);
+
         $html_content = $view->render();
 
         // PDF::setTitle("Pesan PDF");

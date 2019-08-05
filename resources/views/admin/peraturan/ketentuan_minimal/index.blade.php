@@ -6,15 +6,10 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="card shadow mb-4" style="padding:25px">
-    <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800 text-center">Tarif Lab. TANAH 2018</h1>
-        <p class="mb-4">Badan Pengkajian Teknologi Pertanian</P>
-    </div>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">Ketentuan Minimal contoh tiap jenis analisis:</h5>
+            <h5 class="m-1 font-weight-bold text-success">Ketentuan Minimal contoh tiap jenis analisis:</h5>
             <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" data-placement="top" title="Tambahkan disini"></a>
             @include('admin.peraturan.ketentuan_minimal.create')
         </div>
