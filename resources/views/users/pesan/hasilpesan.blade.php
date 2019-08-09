@@ -90,7 +90,30 @@
                     </tbody>
                 </table>
 
-            
+                <!-- <table class="table table-border table-responsive-sm">
+                        <thead>Analisis Kimia Tanah Rutin
+                            <tr>
+                                <th>No</th>
+                                <th>Jenis Uji</th>
+                                <th>Harga</th>
+                                <th width="1%">Jumlah</th>
+                            </tr>
+                        </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Analisis Kimia Tanah</td>
+                            <td>
+                                <ul>
+                                    @foreach($permintaan->ankimtan as $a)
+                                    <li>{{$a->jenis_uji}}</li>
+                                    @endforeach
+                                </ul>
+                            </td>
+                            <td>{{$permintaan->ankimtan->count()}}</td>
+                        </tr>
+                    </tbody>
+                </table> -->
 		
         </div>
     </div>

@@ -26,10 +26,14 @@ class PesanController extends Controller
     
     public function hasilpesan($id)
     {
+        //data diri user
         $pesan = Transaksi::where('pemesanan_id',$id)->first();
-        $pemesananuser = Pemesananuser::find($id);
+
+        //data yang dipesan user
+        $pemesananuser = PemesananUser::find($id);
         $permintaan = $pemesananuser->permintaanpelanggan()->get();
-        $permintaanuser = PermintaanPelanggan::where('pemesanan_id',$id)->first();
+        // $permintaanuser = PermintaanPelanggan::where('pemesanan_id',$id)->first();
+        // dd($permintaan);
         return view('users.pesan.hasilpesan',compact('pesan','permintaan'));
     }
 
@@ -38,10 +42,8 @@ class PesanController extends Controller
     {
         $pesan = Transaksi::find($id);
         $permintaanuser = PermintaanPelanggan::where('pemesanan_id',$id)->first();
-        $permintaanuser = $permintaanuser;
-        $ankimtan = $permintaanuser->ankimtan;
 
-        $view = \View::make('hasilpesanpdf',['pesan'=>$pesan],['permintaanuser'=>$permintaanuser]);
+        // $view = \View::make('hasilpesanpdf',['pesan'=>$pesan],['permintaanuser'=>$permintaanuser]);
 
         $html_content = $view->render();
 

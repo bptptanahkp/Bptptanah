@@ -46,7 +46,7 @@
                         <td class="text-left">{{$datas->metode}}</td>
                         <td class="text-left">Rp. {{ number_format($datas->tarif) }},-</td>
                         <td>{{$datas->created_at->diffForHumans()}}</td>
-                        <td>{{$datas->updated_at}}</td>
+                        <td>{{$datas->updated_at->diffForHumans()}}</td>
                         <td>
                         <a data-toggle="tooltip" title="Edit disini" href="/tariftanaman/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
                         <button  id="delete" class="btn btn-danger btn-sm" data-title="{{$datas->jenis_uji}}" href="{{ route('tariftanaman.destroy', $datas)}}"><i class="fa fa-trash"></i></button>
