@@ -10,8 +10,8 @@ class PengujianAir extends Model
         'id','jenis_uji', 'metode', 'tarif',
     ];
 
-    public function pemesananuser()
+    public function permintaanpelanggan()
     {
-        return $this->belongsToMany('App\PemesananUser','permintaan_pelanggans','id_pengujianair');
+        return $this->hasMany('App\PermintaanPelanggan');
     }
 }

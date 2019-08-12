@@ -9,8 +9,9 @@ class PupukOrganik_Kompos_Cair extends Model
     protected $fillable = [
         'id','jenis_uji', 'metode', 'tarif',
     ];
-    public function pemesananuser()
+    
+    public function permintaanpelanggan()
     {
-        return $this->belongsToMany('App\PemesananUser','permintaan_pelanggans','id_pupukorganik');
+        return $this->hasMany('App\PermintaanPelanggan');
     }
 }

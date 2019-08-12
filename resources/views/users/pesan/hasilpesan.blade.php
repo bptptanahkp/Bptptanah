@@ -38,7 +38,7 @@
 <body>
     <div class="row justify-content-center">
         <div class="col-sm-6"><br>
-            <a href="/hasilpesan/{{$pesan->id}}/cetakpesan_pdf" class="btn btn-info btn-sm" target="_blank">Cetak PDF</a>
+            <a href="/hasilpesan/{{$pesan->pemesanan_id}}/cetakpesan_pdf" class="btn btn-info btn-sm" target="_blank">Cetak PDF</a>
             <h6 class="text-center">Laboratorium Tanah</h6>
             <h6 class="text-center">Balai Pengkajian Teknologi Pertanian Jawa Timur</h6>
             <h6 class="text-center">Permintaan Pelanggan</h6>
@@ -59,8 +59,8 @@
         </div>
 
         <div class="col-sm-8">
-                <table class="table table-border table-responsive-sm">
-                        <thead>Analisis Kimia Tanah Rutin
+                <table class="table table-bordered table-responsive-sm">
+                        <thead>Data yang dipilih
                             <tr>
                                 <th>No</th>
                                 <th>Analisis Kimia Tanah Rutin</th>
@@ -69,7 +69,7 @@
                                 <th>Tanaman</th>
                                 <th>Pengujian Air</th>
                                 <th>Metode</th>
-                                <th>Tarif</th>
+                                <th>Tarif (Rp.)</th>
                             </tr>
                         </thead>
                     <tbody>
@@ -78,42 +78,30 @@
                             @php $no++; @endphp
                         <tr>
                             <td>{{$no}}</td>
-                            <td>{{$datas->id_ankimtan ? $datas->id_ankimtan : '-'}}</td>
-                            <td>{{$datas->id_pupukkimia ? $datas->id_pupukkimia : '-'}}</td>
-                            <td>{{$datas->id_pupukorganik ? $datas->id_pupukorganik : '-'}}</td>
-                            <td>{{$datas->id_tanaman ? $datas->id_tanaman : '-'}}</td>
-                            <td>{{$datas->id_pengujianair ? $datas->id_pengujianair : '-'}}</td>
-                            <td></td>
-                            <td>{{$datas->harga}}</td>
+                            <td>{{$datas->id_ankimtan ? $datas->ankimtan->jenis_uji : '-'}}</td>
+                            <td>{{$datas->id_pupukkimia ? $datas->pupukkimia->jenis_uji : '-'}}</td>
+                            <td>{{$datas->id_pupukorganik ? $datas->pukorkom->jenis_uji : '-'}}</td>
+                            <td>{{$datas->id_tanaman ? $datas->tanaman->jenis_uji : '-'}}</td>
+                            <td>{{$datas->id_pengujianair ? $datas->pengair->jenis_uji : '-'}}</td>
+                            <td>
+                                @if ($datas->ankimtan)
+                                    {{$datas->ankimtan->metode ? $datas->ankimtan->metode : '-'}}
+                                @elseif ($datas->pupukkimia)
+                                    {{$datas->pupukkimia->metode ? $datas->pupukkimia->metode : '-'}}
+                                @elseif ($datas->pukorkom)
+                                    {{$datas->pukorkom->metode ? $datas->pukorkom->metode : '-'}}
+                                @elseif ($datas->tanaman)
+                                    {{$datas->tanaman->metode ? $datas->tanaman->metode : '-'}}
+                                @else ($datas->pengair)
+                                    {{$datas->pengair->metode ? $datas->pengair->metode : '-'}}
+                                @endif
+                            </td>
+                            <td>{{number_format($datas->harga)}},-</td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
 
-                <!-- <table class="table table-border table-responsive-sm">
-                        <thead>Analisis Kimia Tanah Rutin
-                            <tr>
-                                <th>No</th>
-                                <th>Jenis Uji</th>
-                                <th>Harga</th>
-                                <th width="1%">Jumlah</th>
-                            </tr>
-                        </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Analisis Kimia Tanah</td>
-                            <td>
-                                <ul>
-                                    @foreach($permintaan->ankimtan as $a)
-                                    <li>{{$a->jenis_uji}}</li>
-                                    @endforeach
-                                </ul>
-                            </td>
-                            <td>{{$permintaan->ankimtan->count()}}</td>
-                        </tr>
-                    </tbody>
-                </table> -->
 		
         </div>
     </div>

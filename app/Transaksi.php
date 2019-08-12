@@ -15,6 +15,5 @@ class Transaksi extends Model
     {
         return $this->belongsTo('App\PemesananUser','pemesanan_id');
     }
-
-
+    
 }

@@ -13,6 +13,7 @@ use App\PengujianAir;
 use App\PemesananUser;
 use App\PermintaanPelanggan;
 use App\Transaksi;
+use DB;
 use PDF;
 use TCPDF;
 
@@ -30,20 +31,36 @@ class PesanController extends Controller
         $pesan = Transaksi::where('pemesanan_id',$id)->first();
 
         //data yang dipesan user
-        $pemesananuser = PemesananUser::find($id);
-        $permintaan = $pemesananuser->permintaanpelanggan()->get();
+        // $pemesananuser = PemesananUser::find($id);
+        // $permintaan = $pemesananuser->permintaanpelanggan()->get();
+
+
+
         // $permintaanuser = PermintaanPelanggan::where('pemesanan_id',$id)->first();
+
+        // $users = PemesananUser::with('permintaanpelanggan.ankimtan')->get();
+
+        // $permintaan = DB::select('select * from permintaan_pelanggans where pemesanan_id = :pemesanan_id', ['pemesanan_id' => $id]);
+        $permintaan = PermintaanPelanggan::where('pemesanan_id',$id)->get();
+        // $ankimtan = $permintaan;
         // dd($permintaan);
+        
+        
         return view('users.pesan.hasilpesan',compact('pesan','permintaan'));
     }
 
 
     public function cetak_pdf($id)
     {
-        $pesan = Transaksi::find($id);
-        $permintaanuser = PermintaanPelanggan::where('pemesanan_id',$id)->first();
+        $pesan = Transaksi::where('pemesanan_id',$id)->first();
 
-        // $view = \View::make('hasilpesanpdf',['pesan'=>$pesan],['permintaanuser'=>$permintaanuser]);
+        $permintaan = PermintaanPelanggan::where('pemesanan_id',$id)->get();
+
+
+
+        // $permintaanuser = PermintaanPelanggan::where('pemesanan_id',$id)->first();
+
+        $view = \View::make('hasilpesanpdf',['pesan'=>$pesan],['permintaan'=>$permintaan]);
 
         $html_content = $view->render();
 

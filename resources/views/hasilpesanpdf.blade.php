@@ -66,23 +66,48 @@ body{
                 <h6 class="datauser">Total Bayar <span class="tab">: Rp. {{$pesan->totalHarga}},-</span></h6>
 
         <div class="col-sm-8">
-                <table class="table table-responsive-sm">
-                        <thead>
+                <table class="table table-bordered table-responsive-sm">
+                        <thead>Data yang dipilih
                             <tr>
                                 <th>No</th>
-                                <th>Unsur</th>
-                                <th>Tarif</th>
+                                <th>Analisis Kimia Tanah Rutin</th>
+                                <th>Pupuk organik/Kompos/cair</th>
+                                <th>Pupuk Kimia(ANORGANIK)/ Batuan Mineral</th>
+                                <th>Tanaman</th>
+                                <th>Pengujian Air</th>
+                                <th>Metode</th>
+                                <th>Tarif (Rp.)</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>jajal</td>
-                                <td>80000</td>
-                            </tr>
-                        </tbody>
+                    <tbody>
+                    @php $no=0; @endphp
+                        @foreach($permintaan as $datas)
+                            @php $no++; @endphp
+                        <tr>
+                            <td>{{$no}}</td>
+                            <td>{{$datas->id_ankimtan ? $datas->ankimtan->jenis_uji : '-'}}</td>
+                            <td>{{$datas->id_pupukkimia ? $datas->pupukkimia->jenis_uji : '-'}}</td>
+                            <td>{{$datas->id_pupukorganik ? $datas->pukorkom->jenis_uji : '-'}}</td>
+                            <td>{{$datas->id_tanaman ? $datas->tanaman->jenis_uji : '-'}}</td>
+                            <td>{{$datas->id_pengujianair ? $datas->pengair->jenis_uji : '-'}}</td>
+                            <td>
+                                @if ($datas->ankimtan)
+                                    {{$datas->ankimtan->metode ? $datas->ankimtan->metode : '-'}}
+                                @elseif ($datas->pupukkimia)
+                                    {{$datas->pupukkimia->metode ? $datas->pupukkimia->metode : '-'}}
+                                @elseif ($datas->pukorkom)
+                                    {{$datas->pukorkom->metode ? $datas->pukorkom->metode : '-'}}
+                                @elseif ($datas->tanaman)
+                                    {{$datas->tanaman->metode ? $datas->tanaman->metode : '-'}}
+                                @else ($datas->pengair)
+                                    {{$datas->pengair->metode ? $datas->pengair->metode : '-'}}
+                                @endif
+                            </td>
+                            <td>{{number_format($datas->harga)}},-</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
                 </table>
-                
 		
         </div>
 

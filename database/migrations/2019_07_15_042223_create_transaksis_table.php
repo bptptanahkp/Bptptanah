@@ -19,7 +19,8 @@ class CreateTransaksisTable extends Migration
             $table->foreign('pemesanan_id')
                     ->references('id')
                     ->on('pemesanan_users')
-                    ->onDelete('cascade');
+                    ->onDelete('cascade')
+                    ->onUpdate('cascade');
             $table->string('nama');
             $table->biginteger('totalHarga')->nullable();
             $table->integer('status')->default('0');
