@@ -34,7 +34,13 @@ Route::group(['middleware' => 'auth'],function(){
     Route::resource('tariftanaman', 'TanamanController');
     Route::resource('peraturanpelanggan', 'PeraturanPelangganController');
     Route::resource('ketentuanminimal', 'Ketentuan_MinController');
+    //record pesan
+    Route::get('datapesan','PesanController@datapesan')->name('datapesan.index');
+    Route::get('datapesan.{datapesan}/change-status', 'PesanController@getStatus')->name('datapesan.getStatus');
+    Route::put('datapesan.{datapesan}', 'PesanController@changeStatus')->name('datapesan.changeStatus');
+    Route::get('datapermintaan','PesanController@datapermintaan');
+
+
     Route::resource('saran', 'SaranController');
-    Route::get('recordpesan','PesanController@recordpesan');
 
 });

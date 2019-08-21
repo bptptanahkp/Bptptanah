@@ -6,16 +6,15 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="card shadow mb-4" style="padding:25px">
-    <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800 text-center">Pemesanan User Lab. TANAH 2018</h1>
-        <p class="mb-4">Badan Pengkajian Teknologi Pertanian</P>
-    </div>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h5 class="m-0 font-weight-bold text-primary">Hasil Pemesanan User</h5>
-            
+            @if(session('action'))
+
+            <div class="alert alert-info" role="alert">{{session('action')}}</div>
+
+            @endif
         </div>
         <div class="card-body">
         <div class="table-responsive">
@@ -32,6 +31,7 @@
                     <th>Merk</th>
                     <th>Total Harga</th>
                     <th>Status</th>
+                    <th>Proses</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -51,10 +51,12 @@
                         <td>{{$pesans->totalHarga}}</td>
                         <td>
                         @if($pesans->status === 0)
-                              <span class="badge badge-danger">Non Aktif</span>
+                              <span class="badge badge-danger"><a href="{{ route('datapesan.getStatus', $pesans)}}">Non Aktif</a></span>
                               @else
-                              <span class="badge badge-success">Aktif</span>
-                        @endif</td>
+                              <span class="badge badge-success"><a href="{{ route('datapesan.getStatus', $pesans)}}">Aktif</a></span>
+                        @endif
+                        </td>
+                        <td>{{$pesans->proses}}</td>
                     </tr>
 
                     @endforeach

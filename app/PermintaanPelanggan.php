@@ -12,6 +12,12 @@ class PermintaanPelanggan extends Model
         'id_tanaman','id_pengujianair','harga',
     ];
 
+    public function pemesananuser()
+    {
+        return $this->belongsTo('App\PemesananUser','pemesanan_id');
+    }
+
+
     public function ankimtan()
     {
         return $this->belongsTo('App\AnalisisKimiaTanah','id_ankimtan');

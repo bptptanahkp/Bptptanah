@@ -24,6 +24,7 @@ class CreateTransaksisTable extends Migration
             $table->string('nama');
             $table->biginteger('totalHarga')->nullable();
             $table->integer('status')->default('0');
+            $table->string('proses')->default('0');
             $table->timestamps();
         });
     }

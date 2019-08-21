@@ -1,5 +1,5 @@
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center shadow" href="/">
@@ -57,6 +57,21 @@
           </div>
         </div>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#hasilpesan" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fa fa-fw fa-book"></i>
+          <span>Hasil Pesan</span>
+        </a>
+        <div id="hasilpesan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Hasil Pesan pelanggan:</h6>
+            <a class="collapse-item" href="/datapesan">data Pemesan</a>
+            <a class="collapse-item" href="/datapermintaan">data permintaan pemesanan</a>
+          </div>
+        </div>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="/saran">
           <i class="fa fa-fw fa-book"></i>

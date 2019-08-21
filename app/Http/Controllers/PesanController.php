@@ -16,13 +16,37 @@ use App\Transaksi;
 use DB;
 use PDF;
 use TCPDF;
+use Alert;
 
 class PesanController extends Controller
 {
-    public function recordpesan()
+    public function datapesan()
     {
         $pesan = Transaksi::paginate(10);
         return view('admin.pesan.index',compact('pesan'));
+    }
+
+    public function getStatus($datapesan)
+    {
+        $getDatapesan = Transaksi::where('id', $datapesan)->first();
+        return view('admin.pesan.getStatus', compact('getDatapesan'));
+    }
+
+    public function changeStatus(Request $request, $datapesan)
+    {
+        $datapesanan = Transaksi::findOrFail($datapesan);
+        $data = $request->all();
+
+       $datapesanan->update($data);
+
+        return redirect('datapesan');
+    }
+
+    public function datapermintaan()
+    {
+        $permintaan = PermintaanPelanggan::paginate(10);
+        
+        return view ('admin.pesan.datapermintaan',compact('permintaan'));
     }
     
     public function hasilpesan($id)
