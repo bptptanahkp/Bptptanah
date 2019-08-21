@@ -54,7 +54,7 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-success btn-user btn-block">
+                    <button id="login" type="submit" class="btn btn-success btn-user btn-block Login">
                       Login
                     </button>
                   </form>
@@ -73,7 +73,21 @@
   <!-- Bootstrap core JavaScript-->
   <script src="{{asset('js/b-admin2.js')}}"></script>
   <script src="{{asset('fonts/fontawesome/all.min.js')}}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+ <script>
+        $('button#login').on('click', function(){
+            var href = $(this).attr('Login');
+            swal({
+              title: "Login Berhasil",
+              text: " ",
+              icon: "success",
+              button: false,
+            });
+            })
+</script>
 
 </body>
 
 </html>
+

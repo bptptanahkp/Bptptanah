@@ -12,7 +12,7 @@
             <form action="/tarifpengujianair" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
 
-                <div class="form-group">
+                    <div class="form-group">
                     <label for="id">Nomor</label> 
                     <div class="input-group">   
                         <input name="id" type="text" class="form-control" placeholder="Nomor">      
@@ -37,7 +37,7 @@
                     </div>
                 </div>
         <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Tambah</button>
+                    <button id="tambah" type="submit" class="btn btn-success Tambah">Tambah</button>
                 </div>
             </form>
       </div>

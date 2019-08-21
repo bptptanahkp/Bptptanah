@@ -7,17 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Transaksi extends Model
 {
     protected $fillable = [
-        'id','nomorSPA', 'nama', 'totalHarga',
+        'id','pemesanan_id', 'nama', 'totalHarga',
     ];
 
 
     public function pemesananuser()
     {
-        return $this->belongsTo('App\PemesananUser');
+        return $this->belongsTo('App\PemesananUser','pemesanan_id');
     }
 
-    public function permintaanpelanggan()
-    {
-        return $this->hasMany('App\PermintaanPelanggan');
-    }
+    
 }

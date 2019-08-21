@@ -10,7 +10,7 @@ class TanamanController extends Controller
     //
       public function index()
     {
-        $data = Tanaman::all();
+        $data = Tanaman::paginate(10);
         return view ('admin.tarif_lab.tanaman.index', compact('data'));
     }
 

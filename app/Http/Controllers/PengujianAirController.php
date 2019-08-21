@@ -10,7 +10,7 @@ class PengujianAirController extends Controller
     //
       public function index()
     {
-        $data = PengujianAir::all();
+        $data = PengujianAir::paginate(10);
         return view ('admin.tarif_lab.pengujian_air.index', compact('data'));
     }
 

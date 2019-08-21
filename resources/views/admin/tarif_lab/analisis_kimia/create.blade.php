@@ -18,6 +18,7 @@
                         <input name="id" type="text" class="form-control" placeholder="Nomor">      
                     </div>
                 </div>
+
                 <div class="form-group">
                     <label for="jenis_uji">Jenis Uji<a class="text-danger">*</a></label> 
                     <div class="input-group">  	
@@ -37,10 +38,11 @@
                     </div>
                 </div>
         <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Tambah</button>
+                    <button id="tambah" type="submit" class="btn btn-success Tambah">Tambah</button>
                 </div>
             </form>
       </div>
     </div>
   </div>
 </div>
+

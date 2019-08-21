@@ -11,39 +11,31 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');  
-     
-    mix.styles([
+mix.js('resources/assets/js/app.js', 'public/js')
+    .sass('resources/assets/sass/app.scss', 'public/css');  
+   
 
-        'public/lib/bootstrap/css/bootstrap.min.css',
-        'public/lib/font-awesome/css/font-awesome.min.css',
-        'public/lib/animate/animate.min.css',
-        'public/lib/ionicons/css/ionicons.min.css',
-        'public/lib/owlcarousel/assets/owl.carousel.min.css',
-        'public/lib/lightbox/css/lightbox.min.css',
-        'public/lib/style.css'
-        
-        
-    ], 'public/css/halamanuser.css');
+
+	mix.styles([
+    	'resources/assets/sweetalert/css/app.css',
+    	'resources/assets/sweetalert/css/guide.css',
+    	'resources/assets/sweetalert/css/header.css',
+    	'resources/assets/sweetalert/css/highlight.css',
+    	'resources/assets/sweetalert/css/index.css',
+    	'resources/assets/sweetalert/css/normalize.css',
+    	'resources/assets/sweetalert/css/table.css',
+    	'resources/assets/sweetalert/css/variables.css'
+
+    	],'public/css/sweet.css');
 
     mix.scripts([
 
-        'public/lib/jquery/jquery.min.js',
-        'public/lib/jquery/jquery-migrate.min.js',
-        'public/lib/bootstrap/js/bootstrap.bundle.min.js',
-        'public/lib/easing/easing.min.js',
-        'public/lib/superfish/hoverIntent.js',
-        'public/lib/superfish/superfish.min.js',
-        'public/lib/wow/wow.min.js',
-        'public/lib/waypoints/waypoints.min.js',
-        'public/lib/counterup/counterup.min.js',
-        'public/lib/owlcarousel/owl.carousel.min.js',
-        'public/lib/isotope/isotope.pkgd.min.js',
-        'public/lib/lightbox/js/lightbox.min.js',
-        'public/lib/touchSwipe/jquery.touchSwipe.min.js',
-        'public/lib/contactform.js',
-        'public/lib/main.js'
+        'resources/assets/sweetalert/js/add-preview-buttons.js',
+        'resources/assets/sweetalert/js/index.js',
+        'resources/assets/sweetalert/js/landing-text-rotater.js',
+        'resources/assets/sweetalert/sweetalert.min.js'
 
-    ], 'public/js/halamanuser.js');   
+    ],'public/js/sweet.js'); 
+
+    
      

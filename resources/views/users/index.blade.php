@@ -21,6 +21,9 @@
   <!-- Style Pesan -->
   <link rel="stylesheet" href="{{asset('lib/pesan/pesan_1.css')}}">
 
+ 
+  
+
   <!-- =======================================================
     Theme Name: BizPage
     Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
@@ -178,21 +181,26 @@
         </div>
 
           <div class="section-header">
+            @if(session('action'))
+
+          <div class="alert alert-info" role="alert">{{session('action')}}</div>
+
+          @endif
              <h3>Kritik dan Saran</h3>
           </div>
 
         <div class="form">
           <div id="sendmessage">Pesan telah terkirim. Terima Kasih</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
+          <form action="/saran" method="POST" enctype="multipart/form-data" role="form" class="contactForm">
+            {{csrf_field()}}
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Nama" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
 
               </div>
               <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control" name="mail" id="mail" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validation"></div>
               </div>
             </div>
@@ -201,10 +209,10 @@
               <div class="validation"></div>
             </div>
             <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Pesan"></textarea>
+              <textarea class="form-control" name="pesan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Pesan"></textarea>
               <div class="validation"></div>
             </div>
-            <div class="text-center"><button type="submit">Kirim</button></div>
+            <div class="text-center"><button id="Kirim" type="submit" class="Kirim" href="#">Kirim</button></div>
           </form>
         </div>
 
@@ -228,8 +236,20 @@
 
   <!-- Script Pesan -->
   <script src="{{asset('lib/pesan/pesan_1.js')}}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 </body>
 </html>
+@section('script')
+    <!--   <script>
+      $('button#Kirim').click(function(){
+        var Kirim = $(this).attr('href');
 
+          swal("Login Berhasil", "Selamat Datang" , "success");
+
+
+      });
+
+      </script> -->
+@stop 

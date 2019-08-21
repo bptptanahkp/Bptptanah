@@ -39,10 +39,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                @if($data)
-
+                
+                
                     @foreach($data as $datas)
-
+                         
                     <tr>
                         
                         <td>{{$datas->id}}</td>
@@ -53,20 +53,23 @@
                         <td>{{$datas->updated_at}}</td>
                         <td>
                         <a data-toggle="tooltip" title="Edit disini" href="/tarifpengujianair/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
-                        {!! Form::open(['method' => 'DELETE','route' => ['tarifpengujianair.destroy', $datas->id],'style'=>'display:inline']) !!}
-
-                        <button data-toggle="tooltip" title="Hapus disini" type="submit" style="display: inline;" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-
-                        {!! Form::close() !!}
-                        </form>
+                        
+                        <button id="delete" class="btn btn-danger btn-sm" data-title="{{$datas->jenis_uji}}" href="{{route('tarifpengujianair.destroy', $datas)}}"><i class="fa fa-trash"></i></button>
                         </td>
+                        <form action="" method="POST" id="deleteForm">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" style="display: none">
+                        </form>
                     </tr>
 
                     @endforeach
 
-                @endif
+                
                 </tbody>
             </table>
+            <div class="row justify-content-center">{!! $data->render() !!}
+            </div>
         </div>
     </div>
 
@@ -77,4 +80,41 @@
     <script src="{{asset('../resources/assets/assetsadmin2/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('../resources/assets/assetsadmin2/datatables/dataTables.bootstrap4.min.js')}}"></script>
     
+    <script>
+        $('button#delete').on('click', function(){
+            var href = $(this).attr('href');
+            var title = $(this).data('title');
+
+
+            swal({
+              title: "Apakah anda yakin menghapus " +title+ " ?",
+              text: "Apabila dihapus, Data tidak dapat dikembalikan lagi",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+            })
+            .then((willDelete) => {
+              if (willDelete) {
+                document.getElementById('deleteForm').action = href;
+                document.getElementById('deleteForm').submit();
+                swal("Sukses! Data telah Dihapus", {
+                  icon: "success",
+                });
+              } 
+            });
+        })
+    </script>
+      <script>
+        $('button#tambah').on('click', function(){
+            var href = $(this).attr('Tambah');
+            swal({
+              title: "Data Berhasil Ditambah",
+              text: " ",
+              icon: "success",
+              button: false,
+            });
+            })
+        
+    
+    </script>
 @stop

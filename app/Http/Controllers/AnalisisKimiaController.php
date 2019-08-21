@@ -15,9 +15,10 @@ class AnalisisKimiaController extends Controller
      */
     public function index()
     {
-        $data = AnalisisKimiaTanah::all();
+        $data = AnalisisKimiaTanah::paginate(10);
         return view ('admin.tarif_lab.analisis_kimia.index', compact('data'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -29,12 +30,6 @@ class AnalisisKimiaController extends Controller
         //
     }
 
-    public function search(Request $request)
-    {
-        $search = $request->get('search');
-        $data = AnalisisKimiaTanah::all()->where('jenis_uji','like','%'.$search.'%');
-        return view('admin.tarif_lab.analisis_kimia.index', compact('data'));
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -48,7 +43,7 @@ class AnalisisKimiaController extends Controller
 
         AnalisisKimiaTanah::create($input);
 
-        return redirect('tarifanalisiskimia')->with('action','Data berhasil di tambah');
+        return redirect('tarifanalisiskimia');
     }
 
     /**
@@ -87,7 +82,7 @@ class AnalisisKimiaController extends Controller
         $input = $request->all();
         
         $ed->update($input);
-        return redirect('tarifanalisiskimia')->with('action','Data berhasil di edit');
+        return redirect('tarifanalisiskimia');
     }
 
     /**
@@ -100,6 +95,6 @@ class AnalisisKimiaController extends Controller
     {
         $ed = AnalisisKimiaTanah::find($id);
         $ed->delete($ed);
-        return redirect('tarifanalisiskimia')->with('action','Data berhasil di hapus');
+        return redirect('tarifanalisiskimia');
     }
 }

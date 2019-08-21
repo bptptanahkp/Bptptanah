@@ -37,7 +37,7 @@
                     </div>
                 </div>
         <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Tambah</button>
+                    <button id="tambah" type="submit" class="btn btn-success Tambah">Tambah</button>
                 </div>
             </form>
       </div>

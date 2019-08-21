@@ -12,8 +12,9 @@ class PemesananUser extends Model
     ];
 
 
-    public function transaksi()
+	public function permintaanpelanggan()
     {
-        return $this->hasMany('App\Transaksi');
+        return $this->hasMany('App\PermintaanPelanggan','pemesanan_id','id');
     }
+    
 }

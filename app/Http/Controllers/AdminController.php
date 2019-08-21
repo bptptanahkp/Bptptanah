@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Alert;
 
 class AdminController extends Controller
 {
@@ -17,6 +18,8 @@ class AdminController extends Controller
         $user = User::all();
         return view ('admin.index', compact('user'));
     }
+
+    
 
     /**
      * Show the form for creating a new resource.

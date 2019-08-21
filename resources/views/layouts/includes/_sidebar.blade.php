@@ -81,8 +81,8 @@
             <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <a class="collapse-item" href="/saran">Saran</a>
+            <a class="collapse-item" href="blank.html">Pesanan User</a>
           </div>
         </div>
       </li>

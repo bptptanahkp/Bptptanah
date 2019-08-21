@@ -15,9 +15,15 @@ class CreateTransaksisTable extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('nomorSPA')->nullable();
+            $table->bigInteger('pemesanan_id')->unsigned();
+            $table->foreign('pemesanan_id')
+                    ->references('id')
+                    ->on('pemesanan_users')
+                    ->onDelete('cascade')
+                    ->onUpdate('cascade');
             $table->string('nama');
             $table->biginteger('totalHarga')->nullable();
+            $table->integer('status')->default('0');
             $table->timestamps();
         });
     }
@@ -30,5 +36,5 @@ class CreateTransaksisTable extends Migration
     public function down()
     {
         Schema::dropIfExists('transaksis');
-    }
+    }       
 }
