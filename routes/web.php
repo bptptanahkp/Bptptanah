@@ -40,6 +40,9 @@ Route::group(['middleware' => 'auth'],function(){
     Route::put('datapesan.{datapesan}', 'PesanController@changeStatus')->name('datapesan.changeStatus');
     Route::get('datapermintaan','PesanController@datapermintaan');
 
+    //lihatproses
+    Route::get('lihatproses','PesanController@lihatproses');
+
 
     Route::resource('saran', 'SaranController');
 

@@ -48,7 +48,7 @@
                         <td>{{$datas->updated_at}}</td>
                         <td>
                         <a data-toggle="tooltip" title="edit disini" href="/tarifanalisiskimia/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
-                        {!! Form::open(['method' => 'DELETE','route' => ['tarifanalisiskimia.destroy', $datas->id],'style'=>'display:inline']) !!}
+                        {!! Form::open(['method' => 'DELETE','route' => ['tarifanalisiskimia.destroy', $datas->id],'style'=>'display:inline'], ['onclick' => 'return confirm("Are you sure?");']) !!}
 
                         <button data-toggle="tooltip" title="Hapus disini" type="submit" style="display: inline;" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
 

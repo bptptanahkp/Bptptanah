@@ -1,7 +1,7 @@
 <!--==========================
       Daftar & Pesan
     ============================-->
-    <section id="pesan"  class="section-bg" >
+    <section id="pesan">
       <div class="container">
 
         <header class="section-header">

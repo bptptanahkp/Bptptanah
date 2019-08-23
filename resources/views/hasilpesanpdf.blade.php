@@ -1,84 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>BPTP Jatim</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+<html>
+  <body>  
+          <div class="header">
+              <table >
+                  <tr>
+                      <td><b>Laboratorium Tanah</b></td>
+                  </tr>
 
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+                  <tr>
+                      <td><b>Balai Pengkajian Teknologi Pertanian Jawa Timur</b></td>
+                  </tr>
+                  <tr>
+                    <td><b>Permintaan Pelanggan</b></td>
+                  </tr>
+              </table>
+          </div>
+              <table border="0" class="tabel">
+                      <tr>
+                            <td width="150px">Nomor </td>
+                            <td>:&nbsp;{{$pesan->pemesanan_id}} </td>
+                      </tr>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+                      <tr>
+                            <td width="150px">Nama</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->nama}}</td>
+                      </tr>
 
-  <!-- Bootstrap CSS File -->
-  <link rel="stylesheet" href="{{asset('css/halamanuser.css')}}">
-  <link rel="stylesheet" href="{{asset('fonts/fontawesome-2/css/all.min.css')}}">
+                      <tr>
+                            <td width="150px">Instansi/Perusahaan</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->instansi}}</td>
+                      </tr>
 
-  <!-- Style Pesan -->
-  <link rel="stylesheet" href="{{asset('lib/pesan/pesan_1.css')}}">
+                      <tr>
+                            <td width="150px">Alamat</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->alamat}}</td>
+                      </tr>
 
-  <!-- =======================================================
-    Theme Name: BizPage
-    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
-</head>
-<style>
+                      <tr>
+                            <td width="150px">Nomor Telp</td>
+                            <td>:&nbsp;+62{{$pesan->pemesananuser->ntelp}}</td>
+                      </tr>
 
-body{
+                      <tr>
+                            <td width="150px">Contoh yang Dianalisis</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->contohygdianalisis}}</td>
+                      </tr>
 
-}
+                      <tr>
+                            <td width="150px">Unsur yang Dianalisis</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->unsurygdianalisis}}</td>
+                      </tr>
 
-.judul{
-    text-align:center;
-}
-.datauser{
-}
-.tab{
-    padding-right:40px;
-}
+                      <tr>
+                            <td width="150px">Jumlah Contoh</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->jml_contoh}}</td>
+                      </tr>
 
-}
+                      <tr>
+                            <td width="150px">Bentuk</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->bentuk}}</td>
+                      </tr>
 
-</style>
-<body>
-            <h6 class="judul">Laboratorium Tanah</h6>
-            <h6 class="judul">Balai Pengkajian Teknologi Pertanian Jawa Timur</h6>
-            <h6 class="judul">Permintaan Pelanggan</h6>
-                <h6 class="datauser">Nomor SPA <span class="tab">: {{$pesan->pemesanan_id}}</span></h6>
-                <h6 class="datauser">Nama <span class="tab">: {{$pesan->pemesananuser->nama}}</span></h6>
-                <h6 class="datauser">Instansi/Perusahaan <span class="tab">: {{$pesan->pemesananuser->instansi}}</span></h6>
-                <h6 class="datauser">Alamat <span class="tab">: {{$pesan->pemesananuser->alamat}}</span></h6>
-                <h6 class="datauser">Nomer Telepon <span class="tab">: {{$pesan->pemesananuser->ntelp}}</span></h6>
-                <h6 class="datauser">Contoh yang dianalisis <span class="tab">: {{$pesan->pemesananuser->contohygdianalisis}}</span></h6>
-                <h6 class="datauser">Unsur yang dianalisis <span class="tab">: {{$pesan->pemesananuser->unsurygdianalisis}}</span></h6>
-                <h6 class="datauser">Jumlah Contoh <span class="tab">: {{$pesan->pemesananuser->jml_contoh}}</span></h6>
-                <h6 class="datauser">Bentuk <span class="tab">: {{$pesan->pemesananuser->bentuk}}</span></h6>
-                <h6 class="datauser">Asal Contoh <span class="tab">: {{$pesan->pemesananuser->asal_contoh}}</span></h6>
-                <h6 class="datauser">Merk <span class="tab">: {{$pesan->pemesananuser->merk}}</span></h6>
-                <h6 class="datauser">Tanggal pesan <span class="tab">: {{$pesan->pemesananuser->created_at}}</span></h6>
-                <h6 class="datauser">Tanggal diterima <span class="tab">:</span></h6>
-                <h6 class="datauser">Total Bayar <span class="tab">: Rp. {{$pesan->totalHarga}},-</span></h6>
+                      <tr>
+                            <td width="150px">Asal Contoh</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->asal_contoh}}</td>
+                      </tr>
 
-        <div class="col-sm-8">
-                <table class="table table-bordered table-responsive-sm">
-                        <thead>Data yang dipilih
+                      <tr>
+                            <td width="150px">Merk</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->merk}}</td>
+                      </tr>
+
+                      <tr>
+                            <td width="150px">Tanggal Pesan</td>
+                            <td>:&nbsp;{{$pesan->pemesananuser->created_at}}</td>
+                      </tr>
+
+                      <tr>
+                            <td width="150px">Tanggal Diterima</td>
+                            <td>:</td>
+                      </tr>
+                      <tr>
+                        <td width="150px">Total Bayar</td>
+                        <td>:&nbsp;Rp. {{number_format($pesan->totalHarga)}},-</td>
+                      </tr>
+              </table>
+
+              <br>
+              <p style="text-align: center"> Data yang dipilih </p>
+                <table class="table table-bordered table-responsive-sm tabel" border="1">
                             <tr>
-                                <th>No</th>
-                                <th>Analisis Kimia Tanah Rutin</th>
-                                <th>Pupuk organik/Kompos/cair</th>
-                                <th>Pupuk Kimia(ANORGANIK)/ Batuan Mineral</th>
-                                <th>Tanaman</th>
-                                <th>Pengujian Air</th>
-                                <th>Metode</th>
-                                <th>Tarif (Rp.)</th>
+                              <td rowspan="2" width="23px" class="tengah">No</td>
+                              <td colspan="5" align="center" width="390px">Jenis Uji</td>
+                              <td rowspan="2" class="tengah">Metode</td>
+                              <td rowspan="2" class="tengah">Tarif (Rp.)</td>
+                              
                             </tr>
-                        </thead>
+                            <tr>
+                                <th align="center">Analisis Kimia Tanah Rutin</th>
+                                <th align="center">Pupuk organik/Kompos/Cair</th>
+                                <th width="95px" align="center">Pupuk Kimia (Anorganik) / Batuan Mineral</th>
+                                <th width="61" class="tengah2">Tanaman</th>
+                                <th class="tengah2">Pengujian Air</th>
+                            </tr>
                     <tbody>
                     @php $no=0; @endphp
                         @foreach($permintaan as $datas)
@@ -108,18 +132,29 @@ body{
                         @endforeach
                     </tbody>
                 </table>
-		
-        </div>
-
-  <!-- Uncomment below i you want to use a preloader -->
-  <!-- <div id="preloader"></div> -->
-
-  <!-- JavaScript Libraries -->
-  <script src="{{asset('js/halamanuser.js')}}"></script>
-
-  <!-- Script Pesan -->
-  <script src="{{asset('lib/pesan/pesan_1.js')}}"></script>
-
-
-</body>
+        <br>
+        <br>
+        <p style="text-align:right;" class="tabel">Tanda tangan pelanggan</p>
+    </body>
+<style>
+.header{
+text-align: center;
+font-family: Times;
+font-size: 14px;
+}
+.tabel{
+  font-family: Times;
+  font-size: 12px;
+}
+.tengah{
+  display: table-cell;
+  text-align: center;
+  line-height: 65px;
+}
+.tengah2{
+display: table-cell;
+  text-align: center;
+  line-height: 50px;
+}
+</style>
 </html>

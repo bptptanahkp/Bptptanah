@@ -134,11 +134,13 @@
     <!-- Daftar & Pesan Pengujian Tanah -->
     @include('users.pesan.pesan')
 
+    @include('users.includes.lihatproses')
+
 
     <!--==========================
       Contact Section
     ============================-->
-    <section id="contact" class="section-bg wow fadeInUp">
+    <section id="contact" class="wow fadeInUp">
       <div class="container">
 
         <div class="section-header">

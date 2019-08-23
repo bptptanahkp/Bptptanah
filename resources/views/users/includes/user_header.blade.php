@@ -17,6 +17,7 @@
           <li><a href="#services">Peraturan</a></li>
           <li><a href="#pesan">Daftar & Pesan Pengujian tanah</a></li>
           <li><a href="#contact">Layanan</a></li>
+          <li><a href="#lihatproses">Lihat Proses</a></li>
             <ul>
             @if (Route::has('login'))
                     @auth
