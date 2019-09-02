@@ -103,7 +103,7 @@
         <div class="row">
           <div class="col-lg-12">
             <ul id="pesan-flters">
-              <li data-filter="*" class="filter-active">All</li>
+              <!-- <li data-filter="*" class="filter-active">All</li> -->
               <li data-filter=".filter-analisiskt">Analisis Kimia Tanah</li>
               <li data-filter=".filter-po">Pupuk Organik</li>
               <li data-filter=".filter-pkb">Pupuk Kimia (Anorganik)</li>

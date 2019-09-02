@@ -13,7 +13,7 @@
             <div class="carousel-background"><img src="{{asset('photo/carousel2.jpg')}}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Bptp Jawa Timur</h2>
+                <h2>BPTP Jawa Timur</h2>
                 <p>Balai Pengkajian Teknologi Pertanian</p>
               </div>
             </div>
@@ -23,8 +23,6 @@
             <div class="carousel-background"><img src="{{asset('photo/carousel3.jpg')}}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Magnam aliquam quaerat</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
             </div>
           </div>
@@ -33,8 +31,6 @@
             <div class="carousel-background"><img src="{{asset('photo/carousel1.jpg')}}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Magnam aliquam quaerat</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
             </div>
           </div>

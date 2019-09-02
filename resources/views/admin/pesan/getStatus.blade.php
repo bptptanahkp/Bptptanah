@@ -29,9 +29,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="status">Proses</label>
+                        <label for="proses">Proses <a class="text-danger">*</a></label>
                         <h6>contoh : 20%    </h6>
-                        <input name="proses" type="text" class="form-control" value="{{$getDatapesan->proses}}">                     
+                        <input name="proses" type="text" class="form-control" value="{{$getDatapesan->proses}}" required>                     
+                    </div>
+
+                    <div class="form-group">
+                        <label for="keterangan">Keterangan <a class="text-danger">*</a></label>
+                        <input name="keterangan" type="text" class="form-control" value="{{$getDatapesan->keterangan}}">                     
                     </div>
 
                     <button type="submit" class="btn btn-success pull-right">Simpan</button>

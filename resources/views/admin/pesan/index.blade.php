@@ -32,6 +32,7 @@
                     <th>Total Harga</th>
                     <th>Status</th>
                     <th>Proses</th>
+                    <th>Keterangan</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -57,6 +58,7 @@
                         @endif
                         </td>
                         <td>{{$pesans->proses}}</td>
+                        <td>{{$pesans->keterangan}}</td>
                     </tr>
 
                     @endforeach
