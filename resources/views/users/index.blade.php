@@ -21,6 +21,8 @@
   <!-- Style Pesan -->
   <link rel="stylesheet" href="{{asset('lib/pesan/pesan_1.css')}}">
 
+  <link rel="shortcut icon" href="{{asset('photo/logo.png')}}">
+
   <!-- =======================================================
     Theme Name: BizPage
     Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
@@ -86,7 +88,7 @@
           
 
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="about-col">
+            <div class="about-col" style="min-height:600px;">
               <div class="img">
                 <img src="{{asset('photo/carousel1.jpg')}}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-list-outline"></i></div>
@@ -99,7 +101,7 @@
           </div>
 
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="about-col">
+            <div class="about-col" style="min-height:600px;">
               <div class="img">
                 <img src="{{asset('photo/carousel3.jpg')}}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-eye-outline"></i></div>
@@ -115,7 +117,7 @@
           </div>
 
           <div class="col-md-4 wow fadeInUp">
-            <div class="about-col">
+            <div class="about-col" style="min-height:600px;">
               <div class="img">
                 <img src="{{asset('photo/carousel2.jpg')}}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>

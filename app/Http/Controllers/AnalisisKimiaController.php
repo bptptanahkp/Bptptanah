@@ -15,7 +15,7 @@ class AnalisisKimiaController extends Controller
      */
     public function index()
     {
-        $data = AnalisisKimiaTanah::paginate(10);
+        $data = AnalisisKimiaTanah::all();
         return view ('admin.tarif_lab.analisis_kimia.index', compact('data'));
     }
 

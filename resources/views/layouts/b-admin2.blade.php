@@ -15,9 +15,13 @@
   
   
   <!-- Custom styles for this template-->
+
+  
   <link rel="stylesheet" href="{{asset('fonts/fontawesome-2/css/all.min.css')}}">
   <link href="{{asset('css/b-admin2.css')}}" rel="stylesheet">
-  @yield('link')
+  <link rel="stylesheet" href="{{asset('css/datatables/dataTables.bootstrap4.min.css')}}">
+ 
+  <link rel="shortcut icon" href="{{asset('photo/logo.png')}}">
   
 
 </head>
@@ -71,10 +75,16 @@
 
 
   <!-- Bootstrap core JavaScript-->
+  <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
   <script src="{{asset('js/b-admin2.js')}}"></script>
+  <script src="{{asset('css/datatables/dataTables.bootstrap4.min.js')}}"></script>
+  <script src="{{asset('css/datatables/jquery.dataTables.min.js')}}"></script>
+  <!-- <script src="{{asset('js/app2.js')}}" type="application/javascript"></script> -->
   <script src="{{asset('fonts/fontawesome/all.min.js')}}"></script>
+  <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  @yield('script')
 </body>
 
 </html>

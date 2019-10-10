@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="{{asset('fonts/fontawesome-2/all.min.css')}}">
   <link href="{{asset('css/b-admin2.css')}}" rel="stylesheet">
 
+  <link rel="shortcut icon" href="{{asset('photo/logo.png')}}">
+
 </head>
 
 <body class="bg-gradient-success">
@@ -38,7 +40,7 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Welcome in Login Admin !</h1>
                   </div>
                   <form class="user" action="/postlogin" method="POST">
                     {{csrf_field()}}

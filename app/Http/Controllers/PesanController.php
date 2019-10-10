@@ -22,7 +22,7 @@ class PesanController extends Controller
 {
     public function datapesan()
     {
-        $pesan = Transaksi::paginate(10);
+        $pesan = Transaksi::all();
         return view('admin.pesan.index',compact('pesan'));
     }
 
@@ -44,7 +44,7 @@ class PesanController extends Controller
 
     public function datapermintaan()
     {
-        $permintaan = PermintaanPelanggan::paginate(10);
+        $permintaan = PermintaanPelanggan::all();
         
         return view ('admin.pesan.datapermintaan',compact('permintaan'));
     }

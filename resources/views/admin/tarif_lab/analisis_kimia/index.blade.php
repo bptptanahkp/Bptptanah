@@ -1,8 +1,5 @@
 @extends('layouts.b-admin2')
 
-@section('link')
-    <link rel="stylesheet" href="{{asset('../resources/assets/assetsadmin2/datatables/dataTables.bootstrap4.min.css')}}">
-@endsection
 
 @section('content')
 <div class="container-fluid">
@@ -11,8 +8,11 @@
         <div class="card-header py-3">
             <h5 class="m-1 font-weight-bold text-success">ANALISIS KIMIA TANAH RUTIN</h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
-            <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" data-placement="top" title="Tambahkan disini"></a>
+
+            @if(auth()->user()->role == 'superadmin')
+                <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" data-placement="top" title="Tambahkan disini"></a>
             @include('admin.tarif_lab.analisis_kimia.create')
+            @endif
         </div>
         <div class="card-body">
         <div class="table-responsive">
@@ -49,8 +49,9 @@
                         <td>
                         <a data-toggle="tooltip" title="edit disini" href="/tarifanalisiskimia/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
                         {!! Form::open(['method' => 'DELETE','route' => ['tarifanalisiskimia.destroy', $datas->id],'style'=>'display:inline'], ['onclick' => 'return confirm("Are you sure?");']) !!}
-
+                        @if(auth()->user()->role == 'superadmin')
                         <button data-toggle="tooltip" title="Hapus disini" type="submit" style="display: inline;" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                        @endif
 
                         {!! Form::close() !!}
                         </form>
@@ -62,7 +63,7 @@
                 @endif
                 </tbody>
             </table>
-            <div class="row justify-content-center">{!! $data->render() !!}
+            
             </div>
         </div>
     </div>

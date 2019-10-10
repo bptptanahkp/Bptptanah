@@ -45,11 +45,15 @@
                         <td>{{$datas->updated_at}}</td>
                         <td>
                         <a data-toggle="tooltip" title="edit disini" href="/ketentuanminimal/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
+
+                        @if(auth()->user()->role == 'superadmin')
                         {!! Form::open(['method' => 'DELETE','route' => ['ketentuanminimal.destroy', $datas->id],'style'=>'display:inline']) !!}
 
                         <button data-toggle="tooltip" title="Hapus disini" type="submit" style="display: inline;" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
 
                         {!! Form::close() !!}
+                        @endif
+                        
                         </form>
                         </td>
                     </tr>

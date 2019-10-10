@@ -11,8 +11,12 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h5 class="m-1 font-weight-bold text-success">Peraturan Pelanggan</h5>
+
+            @if(auth()->user()->role == 'superadmin')
             <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" data-placement="top" title="Tambahkan disini"></a>
             @include('admin.peraturan.peraturan_pelanggan.create')
+            @endif
+
         </div>
         <div class="card-body">
         <div class="table-responsive">
@@ -44,11 +48,14 @@
                         <td>{{$datas->updated_at}}</td>
                         <td>
                         <a data-toggle="tooltip" title="edit disini" href="/peraturanpelanggan/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
+
+                        @if(auth()->user()->role == 'superadmin')
                         {!! Form::open(['method' => 'DELETE','route' => ['peraturanpelanggan.destroy', $datas->id],'style'=>'display:inline']) !!}
 
                         <button data-toggle="tooltip" title="Hapus disini" type="submit" style="display: inline;" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
 
                         {!! Form::close() !!}
+                        @endif
                         </form>
                         </td>
                     </tr>

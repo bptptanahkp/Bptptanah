@@ -1,7 +1,7 @@
 @extends('layouts.b-admin2')
 
 @section('link')
-    <link rel="stylesheet" href="{{asset('../resources/assets/assetsadmin2/datatables/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/datatables/dataTables.bootstrap4.min.css')}}" >
 @endsection
 
 @section('content')
@@ -16,6 +16,7 @@
 
             @endif
         </div>
+        
         <div class="card-body">
         <div class="table-responsive">
             <table class="table table-hover table-responsive-sm text-center" id="dataTable" width="100%" cellspacing="0">
@@ -65,8 +66,6 @@
 
                 </tbody>
             </table>
-            <div class="row justify-content-center">{!! $pesan->render() !!}
-            </div>
         </div>
     </div>
 
@@ -74,7 +73,7 @@
 @endsection
 @section('script')
     <script src="{{asset('../resources/assets/assetsadmin2/js/demo/datatables-demo.js')}}"></script>
-    <script src="{{asset('../resources/assets/assetsadmin2/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('../resources/assets/assetsadmin2/datatables/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('../resources/assets/assetsadmin2/datatables/jquery.dataTables.js')}}"></script>
+    <script src="{{asset('../resources/assets/assetsadmin2/datatables/dataTables.bootstrap4.js')}}"></script>
     
 @stop

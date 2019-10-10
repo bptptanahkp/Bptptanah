@@ -24,7 +24,29 @@ Route::post('postlogin','AuthController@postlogin');
 Route::get('logout','AuthController@logout');
 
 
-Route::group(['middleware' => 'auth'],function(){
+Route::group(['middleware' => ['auth','checkRole:superadmin']],function(){
+    Route::get('superadmin', 'SuperadminController@admin');
+    Route::get('supertarifanalisiskimia', 'SuperadminController@analisiskimia');
+    Route::get('supertarifpupukkimia', 'SuperadminController@pupukkimia');
+    Route::get('supertarifpupukorganik', 'SuperadminController@pupukorganik');
+    Route::get('supertarifpengujianair', 'SuperadminController@pengujianair');
+    Route::get('supertariftanaman', 'SuperadminController@tanaman');
+    Route::get('superperaturanpelanggan', 'SuperadminController@peraturanpelanggan');
+    Route::get('superketentuanminimal', 'SuperadminController@ketentuanminimal');
+    //record pesan
+    Route::get('superdatapesan','SuperadminController@datapesan')->name('superdatapesan.index');
+    Route::get('superdatapesan.{datapesan}/change-status', 'SuperadminController@getStatus')->name('superdatapesan.getStatus');
+    Route::put('superdatapesan.{datapesan}', 'SuperadminController@changeStatus')->name('superdatapesan.changeStatus');
+    Route::get('superdatapermintaan','SuperadminController@datapermintaan');
+
+    //lihatproses
+    
+    
+    Route::resource('supersaran', 'SuperadminController@saran');
+    
+});
+
+Route::group(['middleware' => ['auth','checkRole:admin']],function(){
     Route::resource('admin', 'AdminController');
     Route::resource('tarifanalisiskimia', 'AnalisisKimiaController');
     Route::post('CariTarifAnkimtan', 'AnalisisKimiaController@cariTarif');

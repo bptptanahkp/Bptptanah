@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Transaksi;
+use App\Saran;
 
 class AdminController extends Controller
 {
@@ -15,7 +17,10 @@ class AdminController extends Controller
     public function index()
     {
         $user = User::all();
-        return view ('admin.index', compact('user'));
+        $transaksi = Transaksi::all()->count();
+        $saran = Saran::all()->count();
+
+        return view ('admin.index', compact('user','transaksi','saran'));
     }
 
     

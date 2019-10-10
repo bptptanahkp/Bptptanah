@@ -21,6 +21,9 @@
   <!-- Style Pesan -->
   <link rel="stylesheet" href="{{asset('lib/pesan/pesan_1.css')}}">
 
+
+  <link rel="shortcut icon" href="{{asset('photo/logo.png')}}">
+
   <!-- =======================================================
     Theme Name: BizPage
     Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
@@ -172,8 +175,8 @@
         transform: rotate(0deg);
     }
     100%{
-        -webkit-transform: rotate(126deg);
-        transform: rotate(126deg);
+        -webkit-transform: rotate(190deg);
+        transform: rotate(180deg);
     }
 }
 @media only screen and (max-width: 990px){
@@ -212,6 +215,7 @@
             <div class="carousel-background"><img src="{{asset('photo/carousel2.jpg')}}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
+              @if($data_lihatpesan)
                 <p>nomor SPA : {{$data_lihatpesan->pemesanan_id}}</p>
                 <h2>{{$data_lihatpesan->nama}}</h2>
                 <div class="progress green">
@@ -224,8 +228,14 @@
                   <div class="progress-value">{{$data_lihatpesan->proses}}</div>
               </div>
                 <h3 style="color: white;">Keterangan :</h3>
-                <h4 style="color: white;">{{$data_lihatpesan->Keterangan}}</h4>
-                <a style="color: white;">Balai Pengkajian Teknologi Pertanian</a>
+                <h4 style="color: white;">{{$data_lihatpesan->keterangan}}</h4>
+              
+              @else
+              <h2>Data tidak ditemukan</h2>
+              
+
+              @endif
+                <h6 style="padding-bottom:-130px;">Balai Pengkajian Teknologi Pertanian Jawa Timur</h6>
               </div>
             </div>
           </div>

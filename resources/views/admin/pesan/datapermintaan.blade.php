@@ -67,8 +67,6 @@
 
                 </tbody>
             </table>
-            <div class="row justify-content-center">{!! $permintaan->render() !!}
-            </div>
         </div>
 </div>
 @endsection

@@ -16,17 +16,18 @@
           <li><a href="#about">Tentang BPTP</a></li>
           <li><a href="#services">Peraturan</a></li>
           <li><a href="#pesan">Daftar & Pesan Pengujian tanah</a></li>
-          <li><a href="#contact">Layanan</a></li>
           <li><a href="#lihatproses">Lihat Proses</a></li>
+          <li><a href="#contact">Layanan</a></li>
+          <li class="menu-has-children">
+            <a href="sf-with-ul"></a>
             <ul>
-            @if (Route::has('login'))
-                    @auth
-                        <!-- <li><a href="/admin">Masuk</a></li> -->
-                    @else
-                        <!-- <li><a href="/login">Login</a></li> -->
-                    @endauth
-            @endif
-              
+              @if (Route::has('login'))
+                      @auth
+                          <li><a href="/admin">Masuk</a></li>
+                      @else
+                          <li><a href="/login">Login Admin</a></li>
+                      @endauth
+              @endif
             </ul>
           </li>
          
