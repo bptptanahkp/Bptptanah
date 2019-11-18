@@ -10,8 +10,8 @@
 
         <div class="card">
             <div class="card-header card-header-success">
-                <h4 class="card-title">Ubah Status Data Pesan</h4>
-                <p class="card-category">Pilih untuk Aktif atau Non Aktif</p>
+                <h4 class="card-title">Ubah Status Data Pemesanan Uji Tanah</h4>
+                <p class="card-category">Pilih untuk Belum Diproses, Diproses atau Selesai</p>
             </div>
             <div class="card-body">
                 <form action="{{ route('datapesan.changeStatus', $getDatapesan->id)}}" method="POST">
@@ -21,10 +21,11 @@
                     <div class="col-md-12">
 
                     <div class="form-group">
-                        <label for="status">Pilih Status data pesan</label>
+                        <label for="status">Pilih Status Data Pemesanan</label>
                         <select name="status" type="text" class="form-control">
-                            <option value="0" @if($getDatapesan->status == "0") selected @endif>Non Aktif</option>
-                            <option value="1" @if($getDatapesan->status == "1") selected @endif>Aktif</option>
+                            <option value="0" @if($getDatapesan->status == "0") selected @endif>Belum Diproses</option>
+                            <option value="1" @if($getDatapesan->status == "1") selected @endif>Diproses</option>
+                            <option value="2" @if($getDatapesan->status == "2") selected @endif>Selesai</option>
                         </select>                         
                     </div>
 

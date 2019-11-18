@@ -29,11 +29,11 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
           <i class="fa fa-dollar"></i>
-          <span>Tarif Lab. Tanah 2018</span>
+          <span>Kategori Uji Tanah</span>
         </a>
         <div id="collapse1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Tarif:</h6>
+            <h6 class="collapse-header">Custom Kategori:</h6>
             <a class="collapse-item" href="/supertarifanalisiskimia">Analisis Kimia Tanah Rutin</a>
             <a class="collapse-item" href="/supertarifpupukorganik">Pupuk Organik/Kompos/Cair</a>
             <a class="collapse-item" href="/supertarifpupukkimia">Pupuk Kimia(Anorganik)</a>
@@ -47,12 +47,12 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#peraturan" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fa fa-fw fa-align-justify"></i>
-          <span>Peraturan</span>
+          <span>Proser Pemesanan</span>
         </a>
         <div id="peraturan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Peraturan untuk pelanggan:</h6>
-            <a class="collapse-item" href="/superperaturanpelanggan">Peraturan Untuk Pelangggan</a>
+            <h6 class="collapse-header">Prosedur:</h6>
+            <a class="collapse-item" href="/superperaturanpelanggan">Prosedur Pesan Uji Tanah</a>
             <a class="collapse-item" href="/superketentuanminimal">Ketentuan Minimal</a>
           </div>
         </div>
@@ -61,13 +61,13 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#hasilpesan" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fa fa-fw fa-book"></i>
-          <span>Hasil Pesan</span>
+          <span>Hasil Pesanan</span>
         </a>
         <div id="hasilpesan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Hasil Pesan pelanggan:</h6>
-            <a class="collapse-item" href="/superdatapesan">data Pemesan</a>
-            <a class="collapse-item" href="/superdatapermintaan">data permintaan pemesanan</a>
+            <h6 class="collapse-header">Hasil Pesanan:</h6>
+            <a class="collapse-item" href="/superdatapesan">Pesanan Pelanggan</a>
+            <a class="collapse-item" href="/superdatapermintaan">Detail Pesanan Pelanggan</a>
           </div>
         </div>
       </li>
@@ -78,6 +78,8 @@
           <span>Saran</span></a>
       </li>
 
+      <hr class="sidebar-divider">
+
       <li class="nav-item">
         <a class="nav-link" href="/logout">
           <i class="fa fa-fw fa-book"></i>
@@ -86,7 +88,6 @@
 
         
       <!-- Divider -->
-      <hr class="sidebar-divider">
 
       <!-- Heading -->
       <!-- <div class="sidebar-heading">

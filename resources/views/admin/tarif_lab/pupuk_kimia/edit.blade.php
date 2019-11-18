@@ -14,7 +14,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">EDIT PUPUK KIMIA (ANORGANIK) / BATUAN MINERAL</h5>
+            <h5 class="m-0 font-weight-bold text-success">EDIT PUPUK KIMIA (ANORGANIK) / BATUAN MINERAL</h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
         </div>
         <div class="card-body">

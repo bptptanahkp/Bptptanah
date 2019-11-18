@@ -6,7 +6,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-1 font-weight-bold text-success">ANALISIS KIMIA TANAH RUTIN</h5>
+            <h5 class="m-1 font-weight-bold text-success">KATEGORI UJI ANALISIS KIMIA TANAH RUTIN</h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
 
             @if(auth()->user()->role == 'superadmin')

@@ -14,7 +14,7 @@
                 <p class="card-category">Pilih untuk Aktif atau Non Aktif</p>
             </div>
             <div class="card-body">
-                <form action="{{ route('datapesan.changeStatus', $getDatapesan->id)}}" method="POST">
+                <form action="{{ route('superdatapesan.changeStatus', $getDatapesan->id)}}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="row">

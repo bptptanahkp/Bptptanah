@@ -13,9 +13,9 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
-          <li><a href="#about">Tentang BPTP</a></li>
-          <li><a href="#services">Peraturan</a></li>
-          <li><a href="#pesan">Daftar & Pesan Pengujian tanah</a></li>
+          <li><a href="#about">Tentang BPTP Jatim</a></li>
+          <li><a href="#services">Prosedur Pemesanan</a></li>
+          <li><a href="#pesan">Uji Tanah</a></li>
           <li><a href="#lihatproses">Lihat Proses</a></li>
           <li><a href="#contact">Layanan</a></li>
           <li class="menu-has-children">
@@ -25,7 +25,7 @@
                       @auth
                           <li><a href="/admin">Masuk</a></li>
                       @else
-                          <li><a href="/login">Login Admin</a></li>
+                          <li><a href="/login">Login</a></li>
                       @endauth
               @endif
             </ul>

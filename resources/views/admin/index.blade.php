@@ -10,7 +10,7 @@
         <h1 class="h3 mb-2 text-gray-800 text-center">Dashboard</h1>
     </div>
     <div class="card-body">
-            <p class="mb-4">Badan Pengkajian Teknologi Pertanian</P>
+            <p class="mb-4">Balai Pengkajian Teknologi Pertanian</P>
             
             <p class="mb-4"> Halooo {{auth()->user()->name}}  Selamat datang dihalaman admin</p>
 

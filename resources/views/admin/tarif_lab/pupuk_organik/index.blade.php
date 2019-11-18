@@ -9,7 +9,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-1 font-weight-bold text-success">PUPUK ORGANIK/KOMPOS/CAIR</h5>
+            <h5 class="m-1 font-weight-bold text-success">KATEGORI UJI PUPUK ORGANIK/KOMPOS/CAIR</h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
 
             @if(auth()->user()->role == 'superadmin')
@@ -67,8 +67,6 @@
 
                 </tbody>
             </table>
-            <div class="row justify-content-center">{!! $data->render() !!}
-            </div>
         </div>
     </div>
 

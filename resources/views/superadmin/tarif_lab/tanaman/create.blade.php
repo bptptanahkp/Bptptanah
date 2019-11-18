@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-            <form action="/tariftanaman" method="POST" enctype="multipart/form-data">
+            <form action="/tambahtanaman" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
 
                 <div class="form-group">

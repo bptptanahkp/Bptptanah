@@ -9,12 +9,12 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-1 font-weight-bold text-success">PUPUK ORGANIK/KOMPOS/CAIR</h5>
+            <h5 class="m-1 font-weight-bold text-success">KATEGORI PUPUK ORGANIK/KOMPOS/CAIR</h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
             
             @if(auth()->user()->role == 'superadmin')
             <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" title="Tambahkan disini"></a>
-            @include('admin.tarif_lab.pupuk_organik.create')
+            @include('superadmin.tarif_lab.pupuk_organik.create')
             @endif
 
         </div>
@@ -51,14 +51,10 @@
                         <td>{{$datas->created_at->diffForHumans()}}</td>
                         <td>{{$datas->updated_at}}</td>
                         <td>
-                        <a data-toggle="tooltip" title="Edit disini" href="/tarifpupukorganik/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
-                        {!! Form::open(['method' => 'DELETE','route' => ['tarifpupukorganik.destroy', $datas->id],'style'=>'display:inline']) !!}
+                        <a data-toggle="tooltip" title="Edit disini" href="editpupukorganik/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
+                  
+                        <a href="hapuspupukorganik/{{$datas->id}}/hapus" data-toggle="tooltip" title="Hapus disini" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 
-                        @if(auth()->user()->role == 'superadmin')
-                        <button data-toggle="tooltip" title="Hapus disini" type="submit" style="display: inline;" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                        @endif
-
-                        {!! Form::close() !!}
                         </form>
                         </td>
                     </tr>

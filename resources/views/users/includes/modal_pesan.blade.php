@@ -8,7 +8,7 @@
                 </button>
                 <h5>Laboratorium Tanah</h5>
                 <h5>Balai Pengkajian Teknologi Pertanian Jawa Timur</h5>
-                <h5>Permintaan Pelanggan</h5>
+                <h5>Permintaan Pelanggan Uji Tanah</h5>
             </div>
         </div>
         <div class="modal-body">
@@ -97,7 +97,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">Tarif Lab. Tanah 2018</h3>
+          <h3 class="section-title">Kategori Uji Tanah</h3>
         </header>
 
         <div class="row">

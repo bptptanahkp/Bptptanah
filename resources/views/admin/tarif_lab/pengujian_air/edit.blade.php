@@ -8,13 +8,11 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800 text-center">Tarif Lab. TANAH 2018</h1>
-        <p class="mb-4">Badan Pengkajian Teknologi Pertanian</P>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">EDIT PENGUJIAN AIR </h5>
+            <h5 class="m-0 font-weight-bold text-success">EDIT PENGUJIAN AIR </h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
         </div>
         <div class="card-body">

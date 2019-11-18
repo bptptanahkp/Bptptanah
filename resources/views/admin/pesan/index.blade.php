@@ -9,7 +9,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">Hasil Pemesanan User</h5>
+            <h5 class="m-0 font-weight-bold text-primary">Data Pelanggan Pemesanan Uji Tanah</h5>
             @if(session('action'))
 
             <div class="alert alert-info" role="alert">{{session('action')}}</div>
@@ -53,9 +53,11 @@
                         <td>{{$pesans->totalHarga}}</td>
                         <td>
                         @if($pesans->status === 0)
-                              <span class="badge badge-danger"><a href="{{ route('datapesan.getStatus', $pesans)}}">Non Aktif</a></span>
+                              <span class="badge badge-danger"><a href="{{ route('datapesan.getStatus', $pesans)}}">Belum</a></span>
+                              @elseif($pesans->status === 1)
+                              <span class="badge badge-warning"><a href="{{ route('datapesan.getStatus', $pesans)}}">Diproses</a></span>
                               @else
-                              <span class="badge badge-success"><a href="{{ route('datapesan.getStatus', $pesans)}}">Aktif</a></span>
+                              <span class="badge badge-success"><a href="{{ route('datapesan.getStatus', $pesans)}}">Selesai</a></span>
                         @endif
                         </td>
                         <td>{{$pesans->proses}}</td>

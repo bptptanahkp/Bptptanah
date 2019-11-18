@@ -9,10 +9,10 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-1 font-weight-bold text-success">TANAMAN</h5>
+            <h5 class="m-1 font-weight-bold text-success">KATEGORI TANAMAN</h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
             <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" title="Tambahkan disini"></a>
-            @include('admin.tarif_lab.tanaman.create')
+            @include('superadmin.tarif_lab.tanaman.create')
         </div>
         <div class="card-body">
         <div class="table-responsive">
@@ -48,13 +48,10 @@
                         <td>{{$datas->created_at->diffForHumans()}}</td>
                         <td>{{$datas->updated_at->diffForHumans()}}</td>
                         <td>
-                        <a data-toggle="tooltip" title="Edit disini" href="/tariftanaman/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
-                        <button  id="delete" class="btn btn-danger btn-sm" data-title="{{$datas->jenis_uji}}" href="{{ route('tariftanaman.destroy', $datas)}}"><i class="fa fa-trash"></i></button>
-                        </td>
-                        <form action="" method="POST" id="deleteForm">
-                        @csrf
-                        @method('DELETE') 
-                        <input type="submit" style="display:none">
+                        <a data-toggle="tooltip" title="Edit disini" href="edittanaman/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
+                  
+                        <a href="hapustanaman/{{$datas->id}}/hapus" data-toggle="tooltip" title="Hapus disini" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+
                       </form>
                     </tr>
 

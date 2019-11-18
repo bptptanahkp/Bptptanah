@@ -11,7 +11,7 @@
         <div class="card-header py-3">
             <h5 class="m-1 font-weight-bold text-success">Ketentuan Minimal contoh tiap jenis analisis:</h5>
             <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" data-placement="top" title="Tambahkan disini"></a>
-            @include('admin.peraturan.ketentuan_minimal.create')
+            @include('superadmin.peraturan.ketentuan_minimal.create')
         </div>
         <div class="card-body">
         <div class="table-responsive">
@@ -44,12 +44,10 @@
                         <td>{{$datas->created_at->diffForHumans()}}</td>
                         <td>{{$datas->updated_at}}</td>
                         <td>
-                        <a data-toggle="tooltip" title="edit disini" href="/ketentuanminimal/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
-                        {!! Form::open(['method' => 'DELETE','route' => ['ketentuanminimal.destroy', $datas->id],'style'=>'display:inline']) !!}
-
-                        <button data-toggle="tooltip" title="Hapus disini" type="submit" style="display: inline;" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-
-                        {!! Form::close() !!}
+                        <a data-toggle="tooltip" title="edit disini" href="editketentuan/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
+                        
+                        <a href="hapusketentuan/{{$datas->id}}/hapus" data-toggle="tooltip" title="Hapus disini" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                        
                         </form>
                         </td>
                     </tr>

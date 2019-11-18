@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-            <form action="/tarifpengujianair" method="POST" enctype="multipart/form-data">
+            <form action="/tambahpengujianair" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
 
                 <div class="form-group">

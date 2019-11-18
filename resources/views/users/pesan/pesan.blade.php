@@ -5,7 +5,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">Daftar Pesan</h3>
+          <h3 class="section-title">Kategori Uji Tanah</h3>
         </header>
 
         <div class="row">
@@ -20,8 +20,8 @@
             </ul>
           </div>
           
-          <div id="daftar" class="col-sm-12 text-right">
-            <a class="btn btn-outline-success btn-block text-success" data-toggle="modal" data-target="#modalCreate">Pesan</a>
+          <div id="daftar" class="col-sm-12 text-center">
+            <a class="btn btn-outline-success text-center text-success" data-toggle="modal" data-target="#modalCreate">Pesan</a>
           </div>
           @include('users.includes.modal_pesan')
         </div>

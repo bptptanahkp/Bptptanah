@@ -5,7 +5,7 @@
       <div class="container">
 
         <header class="section-header wow fadeInUp">
-          <h3>Peraturan Untuk Pelanggan</h3>
+          <h3>Prosedur Pesan Uji Tanah</h3>
         </header>
 
         <div class="row">

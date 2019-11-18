@@ -160,7 +160,7 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Alamat</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <address>Jl. Raya Karangploso Km. 4, Kepuharjo, Karangploso, Turi Rejo, Kepuharjo, Kec. Karang Ploso, Malang, Jawa Timur 65152</address>
             </div>
           </div>
 
@@ -168,7 +168,7 @@
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Nomor Telepon</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <p><a href="tel:0341-494052">0341-494052</a></p>
             </div>
           </div>
 
@@ -176,7 +176,9 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:bptpjatim@yahoo.com">bptpjatim@yahoo.com dan</a>
+                  <a href="bptp-jatim@litbang.pertanian.go.id">bptp-jatim@litbang.pertanian.go.id</a>
+              </p>
             </div>
           </div>
 

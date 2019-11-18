@@ -6,12 +6,12 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-1 font-weight-bold text-success">ANALISIS KIMIA TANAH RUTIN</h5>
+            <h5 class="m-1 font-weight-bold text-success">KATEGORI UJI ANALISIS KIMIA TANAH RUTIN</h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
 
             @if(auth()->user()->role == 'superadmin')
                 <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" data-placement="top" title="Tambahkan disini"></a>
-            @include('admin.tarif_lab.analisis_kimia.create')
+            @include('superadmin.tarif_lab.analisis_kimia.create')
             @endif
         </div>
         <div class="card-body">
@@ -47,13 +47,9 @@
                         <td>{{$datas->created_at->diffForHumans()}}</td>
                         <td>{{$datas->updated_at}}</td>
                         <td>
-                        @if(auth()->user()->role == 'superadmin')
-                        <a data-toggle="tooltip" title="edit disini" href="/tarifanalisiskimia/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
-                        {!! Form::open(['method' => 'DELETE','route' => ['tarifanalisiskimia.destroy', $datas->id],'style'=>'display:inline'], ['onclick' => 'return confirm("Are you sure?");']) !!}
-                        @endif
-                        <button data-toggle="tooltip" title="Hapus disini" type="submit" style="display: inline;" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-
-                        {!! Form::close() !!}
+                        <a data-toggle="tooltip" title="edit disini" href="editanalisiskimia/{{$datas->id}}/edit" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
+                        
+                        <a href="hapusanalisiskimia/{{$datas->id}}/hapus" data-toggle="tooltip" title="Hapus disini" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                         </form>
                         </td>
                     </tr>

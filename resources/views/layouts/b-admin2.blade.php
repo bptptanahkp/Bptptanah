@@ -56,7 +56,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>BPTP Jatim &copy; Badan Pengkajian Teknologi Pertanian</span>
+            <span>BPTP Jatim &copy; Balai Pengkajian Teknologi Pertanian</span>
           </div>
         </div>
       </footer>

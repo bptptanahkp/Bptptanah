@@ -1,4 +1,4 @@
-@extends('layouts.b-admin2')
+@extends('superadmin.b-admin2')
 
 @section('link')
     <link rel="stylesheet" href="{{asset('../resources/assets/assetsadmin2/datatables/dataTables.bootstrap4.min.css')}}">
@@ -8,38 +8,36 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800 text-center">Tarif Lab. TANAH 2018</h1>
-        <p class="mb-4">Badan Pengkajian Teknologi Pertanian</P>
-
+ 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">EDIT ANALISIS KIMIA TANAH RUTIN</h5>
+            <h5 class="m-0 font-weight-bold text-success">EDIT KETENTUAN MINIMAL contoh tiap jenis analisis</h5>
             <a class="text-danger" target="_blank">*)per sampel</a>
         </div>
         <div class="card-body">
-        {!! Form::model($ed,['method'=>'PATCH', 'action'=> ['AnalisisKimiaController@update',$ed->id],'files'=>true]) !!}
+        <form action="/updateketentuan" method="POST" enctype="multipart/form-data">
+            {{csrf_field()}}
 
-        <div class="form-group">
-            {!! Form::label('jenis_uji', 'Jenis Uji :') !!}
-            {{ Form::text('jenis_uji', null,['class'=>'form-control','placeholder'=>'Jenis Uji' ,'required'])}}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('metode', 'Metode :') !!}
-            {!! Form::text('metode', null,['class'=>'form-control','placeholder'=>'Metode']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('tarif', 'Tarif :') !!}
-            {!! Form::text('tarif', null,['class'=>'form-control','placeholder'=>'Tarif', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::submit('Edit', ['class'=>'btn btn-warning pull-right']) !!}
-        </div>
-
-        {!! Form::close() !!}
+            <div class="form-group">
+                <div class="input-group">   
+                    <input name="id" type="hidden" class="form-control" placeholder="Nomor" value="{{$ed->id}}" >      
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="jenis_cth">Jenis Contoh<a class="text-danger">*</a></label> 
+                <div class="input-group">  	
+                    <input name="jenis_cth" type="text" class="form-control" placeholder="Jenis Contoh" value="{{$ed->jenis_cth}}" required>  	
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="jml_min">Jumlah Minimal<a class="text-danger">*</a></label>
+                <div class="input-group">  	
+                    <input name="jml_min" type="text" class="form-control" placeholder="Jumlah Minimal" value="{{$ed->jml_min}}">
+                </div>
+            </div>
+                <button type="submit" class="btn btn-warning ">Edit</button>
+        </form>
 
 </div>
 @endsection

@@ -9,7 +9,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">Hasil Permintaan User</h5>
+            <h5 class="m-0 font-weight-bold text-success">Detail Pesanan Pelanggan</h5>
         </div>
         <div class="card-body">
         <div class="table-responsive">
@@ -67,8 +67,6 @@
 
                 </tbody>
             </table>
-            <div class="row justify-content-center">{!! $permintaan->render() !!}
-            </div>
         </div>
 </div>
 @endsection

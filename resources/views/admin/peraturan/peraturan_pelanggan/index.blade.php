@@ -6,11 +6,10 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="card shadow mb-4" style="padding:25px">
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-1 font-weight-bold text-success">Peraturan Pelanggan</h5>
+            <h5 class="m-1 font-weight-bold text-success">Prosedur Pesan Uji Tanah</h5>
 
             @if(auth()->user()->role == 'superadmin')
             <a data-toggle="modal" data-target="#modalCreate" class="fa fa-plus-circle fa-2x float-right text-success" data-toggle="tooltip" data-placement="top" title="Tambahkan disini"></a>
@@ -29,7 +28,7 @@
                 <thead class="thead-light">
                 <tr>
                     <th>No</th>
-                    <th>Peraturan Pelanggan</th>
+                    <th>Prosedur Pesanan</th>
                     <th>Created</th>
                     <th>Updated</th>
                     <th>Action</th>

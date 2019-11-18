@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-            <form action="/peraturanpelanggan" method="POST" enctype="multipart/form-data">
+            <form action="/tambahperaturan" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
                  <div class="form-group">
                     <label for="id">No</label>
